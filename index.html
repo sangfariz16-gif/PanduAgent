@@ -185,7 +185,6 @@ code{font-family:ui-monospace,Menlo,Consolas,monospace;font-size:12px;color:var(
 
 <div class="wrap">
 
-  <div class="banner" id="previewBanner">⏳ <b>PREVIEW</b> — contracts are not deployed yet. Nothing here mints yet. The addresses below are predicted, not live.</div>
 
   <section class="hero">
     <div class="eyebrow">BNB SMART CHAIN · 5 TIERS · FIRST MINT FREE</div>
@@ -291,7 +290,7 @@ code{font-family:ui-monospace,Menlo,Consolas,monospace;font-size:12px;color:var(
     <div class="eyebrow2">MINT · TWO LANES</div>
     <h2>Mint <span>PanduAGENT</span></h2>
     <div class="mintbox">
-      <p class="lede" style="margin-bottom:0"><b>Preview mode.</b> The contracts are not deployed yet — nothing here mints yet. The price schedule below is final and will go live on-chain at launch.</p>
+      <p class="lede" style="margin-bottom:0"><b>Mint is LIVE.</b> The price schedule below is final and on-chain — Mint #1 FREE for Agent ID holders, then 0.00126 / 0.00316 / 0.0041 / 0.005 BNB.</p>
       <table class="price-table">
         <tr><th>MINT #</th><th>WHO</th><th>PRICE</th></tr>
         <tr><td>#1 per wallet</td><td>Agent ID only</td><td>FREE</td></tr>
@@ -326,7 +325,7 @@ code{font-family:ui-monospace,Menlo,Consolas,monospace;font-size:12px;color:var(
       </div>
       <div id="agentPromptBox" style="display:none;margin-top:6px">
         <div class="codebox" id="agentPrompt"></div>
-        <p class="fine" style="margin-top:8px">Paste this prompt to your Binance Agentic Wallet. It simulates first — and only executes after mint opens. Right now the contract is in preview and not deployed yet.</p>
+        <p class="fine" style="margin-top:8px">Paste this prompt to your Binance Agentic Wallet. It simulates first — mint is open, so it executes after you confirm.</p>
       </div>
 
       <h3 style="font-size:16px;margin:20px 0 6px">Check your Agent ID</h3>
@@ -373,24 +372,25 @@ code{font-family:ui-monospace,Menlo,Consolas,monospace;font-size:12px;color:var(
     </details>
     <details>
       <summary>When does mint open?</summary>
-      <p>Not yet — this page is a <b>preview</b>. The contracts deploy first; mint opens right after, and the bamboo above starts growing with the first mint.</p>
+      <p>Yes — mint is <b>open now</b>. The bamboo above grows with every mint.</p>
     </details>
   </section>
 
   <section id="support">
     <div class="eyebrow2">SPREAD THE WORD</div>
     <h2>Support <span>PanduAGENT</span></h2>
-    <p class="lede">PanduAGENT has no official X account yet. If you like the pack, post about them — every share helps the bamboo grow.</p>
+    <p class="lede">Follow the pack on X — <a href="https://x.com/PanduAGENT" target="_blank" rel="noopener">@PanduAGENT</a> — and post about them. Every share helps the bamboo grow.</p>
     <div class="support">
-      <button class="btn gold" id="shareBtn" type="button">Post on X</button>
+      <a class="btn gold" href="https://x.com/PanduAGENT" target="_blank" rel="noopener" style="text-align:center">Follow @PanduAGENT on X →</a>
+      <button class="btn" id="shareBtn" type="button">Post on X</button>
       <a class="btn ghost" href="market.html" style="text-align:center">Visit the Market →</a>
     </div>
   </section>
 
   <footer>
-    <div>PanduAGENT (PANDU) — NFT contract: <span class="pred">PREVIEW — PREDICTED, NOT DEPLOYED</span><br><code>0x4AB41152EdB3E2853b19828e51927db36508cd64</code></div>
-    <div>PNDX token: <span class="pred">PREVIEW — PREDICTED, NOT DEPLOYED</span><br><code>0xeDd0cf58A052Ac073a4F14BE25e5be6a203cB8aE</code></div>
-    <div>Market contract: <span class="pred">PREVIEW — PREDICTED, NOT DEPLOYED</span><br><code>0x1fCC7b529BE3D4ca8e6a943a3040413E055F561A</code></div>
+    <div>PanduAGENT (PANDU) — NFT contract: <span style="color:var(--green);font-weight:700">LIVE</span><br><code>0x4AB41152EdB3E2853b19828e51927db36508cd64</code></div>
+    <div>PNDX token: <span style="color:var(--green);font-weight:700">LIVE</span><br><code>0xeDd0cf58A052Ac073a4F14BE25e5be6a203cB8aE</code></div>
+    <div>Market contract: <span style="color:var(--green);font-weight:700">LIVE</span><br><code>0x1fCC7b529BE3D4ca8e6a943a3040413E055F561A</code></div>
     <div style="margin-top:10px">Chain: BNB Smart Chain (56) · Royalty 5% · Max 5 per wallet · Free mint: Agent ID only. Paid mints: public, wallet, flat BNB.</div>
     <div>Honest rules: no promise of financial return. Mint prices, supply, and rarity ranges are published above. PNDX has no price or liquidity yet.</div>
     <div>© 2026 PanduAGENT. Street animals, raised by bamboo.</div>
@@ -398,8 +398,8 @@ code{font-family:ui-monospace,Menlo,Consolas,monospace;font-size:12px;color:var(
 </div>
 <script>
 "use strict";
-/* PanduAGENT — PREVIEW page. Contracts are NOT deployed yet; the addresses
-   below are CREATE2 predictions. All live reads target the NFT address; if a
+/* PanduAGENT — LIVE page. Contracts are deployed on BSC mainnet; the addresses
+   below are the live contracts. All live reads target the NFT address; if a
    read fails the page shows the preview state — never 0. */
 var NFT = "0x4AB41152EdB3E2853b19828e51927db36508cd64";
 var PNDX = "0xeDd0cf58A052Ac073a4F14BE25e5be6a203cB8aE";
@@ -567,7 +567,7 @@ function setMyMintsLine() {
   if (!el) return;
   if (!connected) { el.textContent = "Your wallet: not connected."; return; }
   var total = myMinted();
-  if (total === null) { el.textContent = "Your wallet: " + connected.slice(0, 6) + "…" + connected.slice(-4) + " — minted count unknown (preview). Planned price assumes 0 paid so far."; return; }
+  if (total === null) { el.textContent = "Your wallet: " + connected.slice(0, 6) + "…" + connected.slice(-4) + " — minted count unknown. Planned price assumes 0 paid so far."; return; }
   el.textContent = "Your wallet: " + connected.slice(0, 6) + "…" + connected.slice(-4) + " — minted " + total + " / 5 (" + myFree() + " free + " + myPaid() + " paid). " + (MAX_PAID_PER_WALLET - myPaid()) + " paid mint(s) left.";
 }
 async function readMyMints() {
@@ -671,7 +671,7 @@ if (burgerBtn && mainNav) {
 
 /* ---- priority lane: agent prompt for the FREE mint ---- */
 function buildAgentPrompt() {
-  return "Use my Binance Agentic Wallet on BSC (chain 56) to call mintFree() on the PanduAGENT contract 0x4AB41152EdB3E2853b19828e51927db36508cd64 and mint my FREE PanduAGENT (mint #1, Agent ID required). My wallet holds a .ai Agent ID and has not claimed its free mint yet. NOTE: the contract is in PREVIEW — it is not deployed yet. Simulate only; do not execute until mint opens.";
+  return "Use my Binance Agentic Wallet on BSC (chain 56) to call mintFree() on the PanduAGENT contract 0x4AB41152EdB3E2853b19828e51927db36508cd64 and mint my FREE PanduAGENT (mint #1, Agent ID required). My wallet holds a .ai Agent ID and has not claimed its free mint yet. Mint is open. Simulate first, then execute.";
 }
 function openAgentPrompt() {
   var box = $("agentPromptBox");
@@ -718,13 +718,13 @@ if (agentCheckBtn) agentCheckBtn.addEventListener("click", function () {
   });
 });
 
-/* ---- share on X — draft built at click time, no handle yet ---- */
+/* ---- share on X — draft built at click time, official handle @PanduAGENT ---- */
 var shareBtn = $("shareBtn");
 if (shareBtn) {
   shareBtn.addEventListener("click", function () {
     var minted = $("bambooMinted") ? $("bambooMinted").textContent : "—";
     var text = (minted === "—")
-      ? "PanduAGENT — 2,222 street animals on BNB Chain. First mint FREE, then 0.00126 / 0.00316 / 0.0041 / 0.005 BNB. Minted by AI agents. Preview is live, mint opens soon. #PanduAGENT #BNBAgents"
+      ? "PanduAGENT — 2,222 street animals on BNB Chain. First mint FREE, then 0.00126 / 0.00316 / 0.0041 / 0.005 BNB. Minted by AI agents. Mint is LIVE now. @PanduAGENT #PanduAGENT #BNBAgents"
       : "PanduAGENT — " + minted + " / 2,222 street animals minted on BNB Chain. First mint FREE, then 0.00126 / 0.00316 / 0.0041 / 0.005 BNB. Minted by AI agents. #PanduAGENT #BNBAgents";
     var url = "https://twitter.com/intent/tweet?text=" + encodeURIComponent(text) + "&url=" + encodeURIComponent("https://panduagent.vercel.app/");
     window.open(url, "_blank", "noopener");

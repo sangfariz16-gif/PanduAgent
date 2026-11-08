@@ -107,21 +107,20 @@ code{font-family:ui-monospace,Menlo,Consolas,monospace;font-size:12px;color:var(
   <div class="mine" id="myListings"><div class="empty">Connect your wallet to see your listings.</div></div>
 
   <footer>
-    <div>Market contract: <span style="color:var(--oranged);font-weight:700">PREVIEW — PREDICTED, NOT DEPLOYED</span><br><code>0x1fCC7b529BE3D4ca8e6a943a3040413E055F561A</code></div>
-    <div>NFT contract: <span style="color:var(--oranged);font-weight:700">PREVIEW — PREDICTED, NOT DEPLOYED</span><br><code>0x4AB41152EdB3E2853b19828e51927db36508cd64</code></div>
+    <div>Market contract: <span style="color:var(--green);font-weight:700">LIVE</span><br><code>0x1fCC7b529BE3D4ca8e6a943a3040413E055F561A</code></div>
+    <div>NFT contract: <span style="color:var(--green);font-weight:700">LIVE</span><br><code>0x4AB41152EdB3E2853b19828e51927db36508cd64</code></div>
     <div>How it works: list → your animal sits in market escrow → a buyer pays the exact price → 5% royalty goes to the creator, the rest to you, and the animal goes to the buyer. Cancel any time before a sale. No platform fee, ever — the contract has no fee logic at all.</div>
     <div>⚠️ This is a new, unaudited contract. Trade only what you understand; the market never holds your BNB except during a sale, and escrowed animals can always be reclaimed by cancelling.</div>
   </footer>
 </div>
 <script>
 "use strict";
-// MARKETPLACE ADDRESS — REPLACE AFTER DEPLOY. While this is the zero address
-// the page is NOT live: stats show "not deployed", and Buy/List buttons stay disabled.
-// The predicted address lives ONLY in PREDICTED_MARKETPLACE below — never
-// copy it into the MARKETPLACE assignment (that would break isDeployed).
-var MARKETPLACE = "0x0000000000000000000000000000000000000000";
-var PREDICTED_MARKETPLACE = "0x1fCC7b529BE3D4ca8e6a943a3040413E055F561A"; /* predicted, not deployed */
-var NFT = "0x4AB41152EdB3E2853b19828e51927db36508cd64"; /* predicted, not deployed */
+// MARKETPLACE ADDRESS — live on BSC mainnet since 2026-11-08.
+// While this is the zero address the page is NOT live: stats show
+// "not deployed", and Buy/List buttons stay disabled.
+var MARKETPLACE = "0x1fCC7b529BE3D4ca8e6a943a3040413E055F561A";
+var PREDICTED_MARKETPLACE = "0x1fCC7b529BE3D4ca8e6a943a3040413E055F561A"; /* live, deployed 2026-11-08 */
+var NFT = "0x4AB41152EdB3E2853b19828e51927db36508cd64"; /* live, deployed 2026-11-08 */
 var NFT_NAME = "PanduAGENT";
 var META_BASE = "https://panduagent.vercel.app/metadata/";
 var MAX_SUPPLY = 2222;
