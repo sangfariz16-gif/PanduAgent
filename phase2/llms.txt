@@ -18,7 +18,7 @@
 - Market: fixed-price escrow, 0% platform fee, 5% creator royalty. Element Market after deploy.
 - Live status: animated growing bamboo — the stalk grows taller and sprouts leaves as mints rise.
 
-## Contracts (PREDICTED — NOT DEPLOYED, except PNDX)
+## Contracts (LIVE — deployed 10 Nov 2026)
 
 - NFT (PANDU2): 0x9e5Dd59b5Df1d36de02454A1fD6d77ee5B07778B
 - PNDX token (live, reused): 0xeDd0cf58A052Ac073a4F14BE25e5be6a203cB8aE
@@ -27,4 +27,4 @@
 
 ## Status
 
-Preview. Contracts are predicted, not deployed. Mint is not open yet. Phase 1 (0x4AB41152EdB3E2853b19828e51927db36508cd64) is sold out — do not mint there.
+LIVE. Contracts deployed 10 Nov 2026; mint opened 05:23 UTC (10 Nov 2026, 12:23 WIB). Phase 1 (0x4AB41152EdB3E2853b19828e51927db36508cd64) is sold out — do not mint there.

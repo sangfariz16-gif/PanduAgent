@@ -80,12 +80,12 @@ code{font-family:ui-monospace,Menlo,Consolas,monospace;font-size:12px;color:var(
     </nav>
   </div>
 </header>
-<div class="announce"><b>PREVIEW — the market contract is not deployed yet.</b> Listings, buying and cancelling unlock here as soon as the contract is live.</div>
+<div class="announce"><b>🔥 MARKET LIVE — list, buy and cancel now.</b> 0% platform fee, 5% creator royalty on every sale.</div>
 <div class="wrap">
   <section class="hero">
     <h1>Buy &amp; sell <span>PanduAGENT Phase 2</span> animals</h1>
     <p>Fixed-price secondary market on BNB Chain. 0% platform fee — only the 5% creator royalty applies on every sale.</p>
-    <p>Also trading on <a href="https://element.market" target="_blank" rel="noopener">Element Market</a> — the BNB Chain marketplace where anyone can list and buy PanduAGENT Phase 2. Same collection, second venue, no extra contract. The exact collection link activates after deploy.</p>
+    <p>Also trading on <a href="https://element.market" target="_blank" rel="noopener">Element Market</a> — the BNB Chain marketplace where anyone can list and buy PanduAGENT Phase 2. Same collection, second venue, no extra contract. The exact Element collection link activates once Element indexes the collection.</p>
   </section>
 
   <div id="deployBanner" class="banner" style="display:none">⏳ The market contract is <b>not deployed yet</b>. Listings, buying and cancelling will unlock here as soon as the contract is live. Nothing on this page trades until then.</div>
@@ -117,20 +117,18 @@ code{font-family:ui-monospace,Menlo,Consolas,monospace;font-size:12px;color:var(
   <div class="mine" id="myListings"><div class="empty">Connect your wallet to see your listings.</div></div>
 
   <footer>
-    <div>Market contract: <span style="color:var(--accent);font-weight:700">PREDICTED — NOT DEPLOYED</span><br><code>0x92099c1142864b9d27258f2383C315789a66997C</code></div>
-    <div>NFT contract: <span style="color:var(--accent);font-weight:700">PREDICTED — NOT DEPLOYED</span><br><code>0x9e5Dd59b5Df1d36de02454A1fD6d77ee5B07778B</code></div>
+    <div>Market contract: <span style="color:var(--ink);font-weight:700">LIVE</span><br><a href="https://bscscan.com/address/0x92099c1142864b9d27258f2383C315789a66997C" target="_blank" rel="noopener"><code>0x92099c1142864b9d27258f2383C315789a66997C</code></a></div>
+    <div>NFT contract: <span style="color:var(--ink);font-weight:700">LIVE</span><br><a href="https://bscscan.com/address/0x9e5Dd59b5Df1d36de02454A1fD6d77ee5B07778B" target="_blank" rel="noopener"><code>0x9e5Dd59b5Df1d36de02454A1fD6d77ee5B07778B</code></a></div>
     <div>How it works: list → your animal sits in market escrow → a buyer pays the exact price → 5% royalty goes to the creator, the rest to you, and the animal goes to the buyer. Cancel any time before a sale. No platform fee, ever — the contract has no fee logic at all.</div>
     <div>⚠️ This is a new, unaudited contract. Trade only what you understand; the market never holds your BNB except during a sale, and escrowed animals can always be reclaimed by cancelling.</div>
   </footer>
 </div>
 <script>
 "use strict";
-// MARKETPLACE ADDRESS — PREVIEW: predicted, not deployed yet.
-// While this is the zero address the page is NOT live: stats show
-// "not deployed", and Buy/List buttons stay disabled.
-var MARKETPLACE = "0x0000000000000000000000000000000000000000"; /* PREVIEW: not deployed yet */
-var PREDICTED_MARKETPLACE = "0x92099c1142864b9d27258f2383C315789a66997C"; /* predicted, not deployed */
-var NFT = "0x9e5Dd59b5Df1d36de02454A1fD6d77ee5B07778B"; /* predicted, not deployed */
+// MARKETPLACE ADDRESS — LIVE: deployed 10 Nov 2026, mint opened 05:23 UTC.
+// isDeployed is true, so stats read live and Buy/List buttons work.
+var MARKETPLACE = "0x92099c1142864b9d27258f2383C315789a66997C"; /* deployed */
+var NFT = "0x9e5Dd59b5Df1d36de02454A1fD6d77ee5B07778B"; /* deployed */
 var NFT_NAME = "PanduAGENT Phase 2";
 var META_BASE = "https://panduagent-phase2.vercel.app/metadata/";
 var MAX_SUPPLY = 2222;

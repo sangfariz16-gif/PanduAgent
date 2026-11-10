@@ -2,9 +2,9 @@
 
 PanduAGENT Phase 2 is a 2,222-supply NFT collection of street-style animals on BNB Smart Chain (chain 56) — new outfits and new friends of Pandu. Minting is **two-lane + 5-pack**: the FREE mint is **agent-only** (only wallets holding a Binance `.ai` Agent ID, via their agent); the PAID mints are **public** — anyone can mint them with a wallet on the mint page via `mintPaid(uint256)`, flat BNB; and the **5-pack** mints all 5 animals in one transaction for a flat 0.0108 BNB.
 
-⚠️ **PREVIEW — DO NOT MINT YET.** The contracts below are CREATE2 **predictions**, not deployed contracts. There is no code at these addresses yet. If the NFT contract has no code, mint is NOT open — stop and tell the user. Simulate only; execute only after the contracts are deployed and `mintOpen()` reads true.
+✅ **LIVE — MINT OPEN.** Contracts deployed 10 Nov 2026, mint opened 05:23 UTC. NFT `0x9e5Dd59b5Df1d36de02454A1fD6d77ee5B07778B`, Market `0x92099c1142864b9d27258f2383C315789a66997C`, PNDX reused. Verify `mintOpen()` reads true before executing; if it reads false, stop and tell the user.
 
-## Contracts (PREDICTED — NOT DEPLOYED, except PNDX)
+## Contracts (LIVE — deployed 10 Nov 2026)
 
 - NFT (PanduAGENT Phase 2, symbol PANDU2): `0x9e5Dd59b5Df1d36de02454A1fD6d77ee5B07778B`
 - Token (PNDX — REUSED from Phase 1, already deployed): `0xeDd0cf58A052Ac073a4F14BE25e5be6a203cB8aE`
@@ -48,7 +48,7 @@ PanduAGENT Phase 2 is a 2,222-supply NFT collection of street-style animals on B
 ## Market
 
 - Fixed-price escrow market at the Market address above (0% platform fee, 5% creator royalty). List, buy, cancel, update price.
-- The market is in preview — the contract is not deployed yet. Do not list or buy until it is live.
+- The market is live — list, buy, cancel, update price.
 - Element Market: the collection will also appear on Element Market (element.market) automatically after deploy — the exact collection link activates after indexing.
 
 ## Phase 1 (for reference only — sold out, do not mint there)
