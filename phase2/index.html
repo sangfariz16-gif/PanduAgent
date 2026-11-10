@@ -1,12 +1,12 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ja">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>PanduAGENT Phase 2 — 2,222 New Street Animals on BNB Chain</title>
-<meta name="description" content="PanduAGENT Phase 2 — 2,222 new street animals on BNB Chain: new outfits, new friends. First mint FREE for Agent ID holders; paid mints open to everyone, 0.00126 / 0.00316 / 0.0041 / 0.005 BNB; 5-pack 0.0108 BNB. Max 5 per wallet.">
-<meta property="og:title" content="PanduAGENT Phase 2 — 2,222 New Street Animals on BNB Chain">
-<meta property="og:description" content="First mint FREE for Agent ID holders; paid mints open to everyone, 0.00126 / 0.00316 / 0.0041 / 0.005 BNB; 5-pack 0.0108 BNB, on BNB Chain.">
+<title>PanduAGENT Phase 2 — BNBチェーンの新しいストリートアニマル 2,222体</title>
+<meta name="description" content="PanduAGENT Phase 2 — BNBチェーンの新しいストリートアニマル2,222体。初回ミントはAgent ID保有者なら無料。ペイドミントは誰でも参加可能、0.00126 / 0.00316 / 0.0041 / 0.005 BNB。5パック 0.0108 BNB。ウォレットあたり最大5体。">
+<meta property="og:title" content="PanduAGENT Phase 2 — BNBチェーンの新しいストリートアニマル 2,222体">
+<meta property="og:description" content="初回ミントはAgent ID保有者なら無料。ペイドミントは誰でも参加可能、0.00126 / 0.00316 / 0.0041 / 0.005 BNB。5パック 0.0108 BNB、BNBチェーン。">
 <meta property="og:image" content="https://panduagent-phase2.vercel.app/assets/hero-panda.png">
 <meta property="og:url" content="https://panduagent-phase2.vercel.app/">
 <style>
@@ -31,6 +31,9 @@ header nav{margin-left:auto;display:flex;gap:8px;align-items:center;flex-wrap:wr
 .burger.open span:nth-child(3){transform:translateY(-7px) rotate(-45deg)}
 .pill{display:inline-block;border:1px solid var(--ink);border-radius:999px;padding:6px 12px;font-size:12px;letter-spacing:.4px;color:var(--ink);background:var(--paper)}
 .pill:hover{text-decoration:none;background:var(--ink);color:var(--paper)}
+.langsw{display:inline-flex;border:1px solid var(--ink);border-radius:999px;overflow:hidden;vertical-align:middle}
+.langbtn{background:var(--paper);border:0;padding:6px 10px;font-size:12px;font-weight:700;color:var(--ink);cursor:pointer;font-family:inherit}
+.langbtn.on{background:var(--ink);color:var(--paper)}
 .btn{cursor:pointer;border:1px solid var(--ink);border-radius:10px;padding:10px 16px;font-size:14px;font-weight:700;background:var(--ink);color:var(--paper)}
 .btn:hover{text-decoration:none}
 .btn.gold{background:var(--accent);border-color:var(--accent);color:#F3EFE6}
@@ -169,72 +172,73 @@ code{font-family:ui-monospace,Menlo,Consolas,monospace;font-size:12px;color:var(
     <div class="logo">🎋 PanduAGENT <span>· PHASE 2</span></div>
     <button class="burger" id="burgerBtn" aria-label="Menu" aria-expanded="false" aria-controls="mainNav"><span></span><span></span><span></span></button>
     <nav id="mainNav">
-      <a class="pill" href="#art-collection">Collection</a>
-      <a class="pill" href="#art-mint">Mint</a>
+      <a class="pill" href="#art-collection" data-i18n="navCollection">コレクション</a>
+      <a class="pill" href="#art-mint" data-i18n="navMint">ミント</a>
       <a class="pill" href="#art-pndx">$PNDX</a>
-      <a class="pill" href="#art-exchange">Exchange</a>
+      <a class="pill" href="#art-exchange" data-i18n="navExchange">取引所</a>
       <a class="pill" href="#faq">FAQ</a>
-      <a class="pill" href="market.html">Market</a>
+      <a class="pill" href="market.html" data-i18n="navMarket">マーケット</a>
       <a class="pill" href="https://element.market" target="_blank" rel="noopener">Element</a>
-      <a class="btn gold" href="#mint" style="padding:8px 16px">Mint</a>
+      <span class="langsw"><button type="button" id="langJa" class="langbtn on" lang="ja">日本語</button><button type="button" id="langEn" class="langbtn" lang="en">EN</button></span>
+      <a class="btn gold" href="#mint" style="padding:8px 16px" data-i18n="navMintBtn">ミント</a>
     </nav>
   </div>
 </header>
 
-<div class="announce"><b>🔥 MINT LIVE — PanduAGENT Phase 2 is minting now.</b> First mint FREE for Agent ID holders; paid mints 0.00126–0.005 BNB, or all 5 for 0.0108 BNB.</div>
+<div class="announce" data-i18n-html="announce"><b>🔥 ミント実施中 — PanduAGENT Phase 2 は現在ミントできます。</b> 初回ミントはAgent ID保有者なら無料。ペイドミントは0.00126〜0.005 BNB、5体まとめて0.0108 BNB。</div>
 
 <div class="wrap">
 
   <section class="hero">
-    <div class="eyebrow">BNB SMART CHAIN · 5 TIERS · FIRST MINT FREE · 5-PACK 0.0108 BNB</div>
+    <div class="eyebrow" data-i18n="eyebrow">BNBスマートチェーン · 5ティア · 初回ミント無料 · 5パック 0.0108 BNB</div>
     <h1>Pandu<span>AGENT</span><br><span style="font-size:.45em;letter-spacing:2px">PHASE 2</span></h1>
-    <p class="sub"><b>2,222 new street animals</b> across <b>ten variants</b> — new outfits and new friends of Pandu: Hoodie Panda, Cap Fox, Bomber Cat, Tracksuit Dog, Raincoat Frog, Puffer Penguin and four rare outfits. <b>First mint FREE</b> for Agent ID holders — <b>paid mints open to everyone</b>, from <b>0.00126 BNB</b> up to <b>0.005 BNB</b>, max <b>5 per wallet</b> — or <b>all 5 at once for 0.0108 BNB</b> (save 0.00272 BNB).</p>
+    <p class="sub" data-i18n-html="heroSub"><b>2,222体の新しいストリートアニマル</b>、<b>全10バリエーション</b> — Panduの新しい衣装と新しい仲間たち：Hoodie Panda、Cap Fox、Bomber Cat、Tracksuit Dog、Raincoat Frog、Puffer Penguin、そしてレアな4つの衣装。<b>初回ミントは無料</b>（Agent ID保有者）— <b>ペイドミントは誰でも参加可能</b>、<b>0.00126 BNB</b>から<b>0.005 BNB</b>まで、ウォレットあたり最大<b>5体</b> — または<b>5体まとめて0.0108 BNB</b>（0.00272 BNBお得）。</p>
 
     <div class="hero-cards">
-      <div class="hcard"><img src="assets/hero-panda.png" alt="Hoodie Panda"><div class="nm">Hoodie Panda</div><div class="tg">COMMON</div></div>
-      <div class="hcard"><img src="assets/hero-fox.png" alt="Cap Fox" loading="lazy"><div class="nm">Cap Fox</div><div class="tg">COMMON</div></div>
-      <div class="hcard"><img src="assets/tier-uncommon-a.jpg" alt="Bomber Cat" loading="lazy"><div class="nm">Bomber Cat</div><div class="tg">UNCOMMON</div></div>
-      <div class="hcard"><img src="assets/tier-epic-a.jpg" alt="Cyber Panda v2" loading="lazy"><div class="nm">Cyber Panda v2</div><div class="tg">EPIC</div></div>
-      <div class="hcard"><img src="assets/tier-legendary-a.jpg" alt="Golden Panda" loading="lazy"><div class="nm">Golden Panda</div><div class="tg">LEGENDARY</div></div>
+      <div class="hcard"><img src="assets/hero-panda.png" alt="Hoodie Panda"><div class="nm">Hoodie Panda</div><div class="tg" data-i18n="tierCommon">コモン</div></div>
+      <div class="hcard"><img src="assets/hero-fox.png" alt="Cap Fox" loading="lazy"><div class="nm">Cap Fox</div><div class="tg" data-i18n="tierCommon">コモン</div></div>
+      <div class="hcard"><img src="assets/tier-uncommon-a.jpg" alt="Bomber Cat" loading="lazy"><div class="nm">Bomber Cat</div><div class="tg" data-i18n="tierUncommon">アンコモン</div></div>
+      <div class="hcard"><img src="assets/tier-epic-a.jpg" alt="Cyber Panda v2" loading="lazy"><div class="nm">Cyber Panda v2</div><div class="tg" data-i18n="tierEpic">エピック</div></div>
+      <div class="hcard"><img src="assets/tier-legendary-a.jpg" alt="Golden Panda" loading="lazy"><div class="nm">Golden Panda</div><div class="tg" data-i18n="tierLegendary">レジェンダリー</div></div>
     </div>
 
     <div class="stats">
-      <div class="stat"><b>2,222</b><span>TOTAL ANIMALS</span></div>
-      <div class="stat"><b>10</b><span>VARIANTS</span></div>
-      <div class="stat"><b>5</b><span>MAX PER WALLET</span></div>
+      <div class="stat"><b>2,222</b><span data-i18n="statTotal">総数</span></div>
+      <div class="stat"><b>10</b><span data-i18n="statVariants">バリエーション</span></div>
+      <div class="stat"><b>5</b><span data-i18n="statMax">ウォレットあたり最大</span></div>
     </div>
   </section>
 
   <article id="art-collection">
-    <div class="art-kicker">ARTICLE I — THE COLLECTION</div>
-    <h2>The variants</h2>
-    <p class="lede">Every rarity has its own artwork — and most rarities have <b>extra variants</b> inside the same tier. Your animal is decided by its token ID; the rarer the range, the fewer exist.</p>
+    <div class="art-kicker" data-i18n="art1Kicker">第1章 — コレクション</div>
+    <h2 data-i18n="art1H2">バリエーション</h2>
+    <p class="lede" data-i18n-html="art1Lede">レアリティごとにアートワークが異なり、同じティアの中にも<b>追加バリエーション</b>があります。あなたの仲間はトークンIDで決まります。レアな範囲ほど数が少なくなります。</p>
     <div class="grid" id="variants">
-      <div class="vcard"><img src="assets/hero-panda.png" alt="Hoodie Panda"><div class="bd"><div class="nm">Hoodie Panda</div><div class="rar">COMMON · A</div><div class="rng">IDs 1–556</div><div class="cnt">556 animals</div></div></div>
-      <div class="vcard"><img src="assets/hero-fox.png" alt="Cap Fox" loading="lazy"><div class="bd"><div class="nm">Cap Fox</div><div class="rar">COMMON · B</div><div class="rng">IDs 557–1,111</div><div class="cnt">555 animals</div></div></div>
-      <div class="vcard"><img src="assets/tier-uncommon-a.jpg" alt="Bomber Cat" loading="lazy"><div class="bd"><div class="nm">Bomber Cat</div><div class="rar">UNCOMMON · A</div><div class="rng">IDs 1,112–1,388</div><div class="cnt">277 animals</div></div></div>
-      <div class="vcard"><img src="assets/tier-uncommon-b.jpg" alt="Tracksuit Dog" loading="lazy"><div class="bd"><div class="nm">Tracksuit Dog</div><div class="rar">UNCOMMON · B</div><div class="rng">IDs 1,389–1,666</div><div class="cnt">278 animals</div></div></div>
-      <div class="vcard"><img src="assets/tier-rare-a.jpg" alt="Raincoat Frog" loading="lazy"><div class="bd"><div class="nm">Raincoat Frog</div><div class="rar">RARE · A</div><div class="rng">IDs 1,667–1,832</div><div class="cnt">166 animals</div></div></div>
-      <div class="vcard"><img src="assets/tier-rare-b.jpg" alt="Puffer Penguin" loading="lazy"><div class="bd"><div class="nm">Puffer Penguin</div><div class="rar">RARE · B</div><div class="rng">IDs 1,833–1,999</div><div class="cnt">167 animals</div></div></div>
-      <div class="vcard"><img src="assets/tier-epic-a.jpg" alt="Cyber Panda v2" loading="lazy"><div class="bd"><div class="nm">Cyber Panda v2</div><div class="rar">EPIC · A</div><div class="rng">IDs 2,000–2,076</div><div class="cnt">77 animals</div></div></div>
-      <div class="vcard"><img src="assets/tier-epic-b.jpg" alt="Kimono Fox" loading="lazy"><div class="bd"><div class="nm">Kimono Fox</div><div class="rar">EPIC · B</div><div class="rng">IDs 2,077–2,154</div><div class="cnt">78 animals</div></div></div>
-      <div class="vcard"><img src="assets/tier-legendary-a.jpg" alt="Golden Panda" loading="lazy"><div class="bd"><div class="nm">Golden Panda</div><div class="rar rar-legendary">LEGENDARY · A</div><div class="rng">IDs 2,155–2,188</div><div class="cnt">34 animals</div></div></div>
-      <div class="vcard"><img src="assets/tier-legendary-b.jpg" alt="Shadow Fox" loading="lazy"><div class="bd"><div class="nm">Shadow Fox</div><div class="rar rar-legendary">LEGENDARY · B</div><div class="rng">IDs 2,189–2,222</div><div class="cnt">34 animals</div></div></div>
+      <div class="vcard"><img src="assets/hero-panda.png" alt="Hoodie Panda"><div class="bd"><div class="nm">Hoodie Panda</div><div class="rar" data-i18n="rarCommonA">コモン · A</div><div class="rng" data-i18n="rng1">ID 1–556</div><div class="cnt" data-i18n="cnt556">556体</div></div></div>
+      <div class="vcard"><img src="assets/hero-fox.png" alt="Cap Fox" loading="lazy"><div class="bd"><div class="nm">Cap Fox</div><div class="rar" data-i18n="rarCommonB">コモン · B</div><div class="rng" data-i18n="rng2">ID 557–1,111</div><div class="cnt" data-i18n="cnt555">555体</div></div></div>
+      <div class="vcard"><img src="assets/tier-uncommon-a.jpg" alt="Bomber Cat" loading="lazy"><div class="bd"><div class="nm">Bomber Cat</div><div class="rar" data-i18n="rarUncommonA">アンコモン · A</div><div class="rng" data-i18n="rng3">ID 1,112–1,388</div><div class="cnt" data-i18n="cnt277">277体</div></div></div>
+      <div class="vcard"><img src="assets/tier-uncommon-b.jpg" alt="Tracksuit Dog" loading="lazy"><div class="bd"><div class="nm">Tracksuit Dog</div><div class="rar" data-i18n="rarUncommonB">アンコモン · B</div><div class="rng" data-i18n="rng4">ID 1,389–1,666</div><div class="cnt" data-i18n="cnt278">278体</div></div></div>
+      <div class="vcard"><img src="assets/tier-rare-a.jpg" alt="Raincoat Frog" loading="lazy"><div class="bd"><div class="nm">Raincoat Frog</div><div class="rar" data-i18n="rarRareA">レア · A</div><div class="rng" data-i18n="rng5">ID 1,667–1,832</div><div class="cnt" data-i18n="cnt166">166体</div></div></div>
+      <div class="vcard"><img src="assets/tier-rare-b.jpg" alt="Puffer Penguin" loading="lazy"><div class="bd"><div class="nm">Puffer Penguin</div><div class="rar" data-i18n="rarRareB">レア · B</div><div class="rng" data-i18n="rng6">ID 1,833–1,999</div><div class="cnt" data-i18n="cnt167">167体</div></div></div>
+      <div class="vcard"><img src="assets/tier-epic-a.jpg" alt="Cyber Panda v2" loading="lazy"><div class="bd"><div class="nm">Cyber Panda v2</div><div class="rar" data-i18n="rarEpicA">エピック · A</div><div class="rng" data-i18n="rng7">ID 2,000–2,076</div><div class="cnt" data-i18n="cnt77">77体</div></div></div>
+      <div class="vcard"><img src="assets/tier-epic-b.jpg" alt="Kimono Fox" loading="lazy"><div class="bd"><div class="nm">Kimono Fox</div><div class="rar" data-i18n="rarEpicB">エピック · B</div><div class="rng" data-i18n="rng8">ID 2,077–2,154</div><div class="cnt" data-i18n="cnt78">78体</div></div></div>
+      <div class="vcard"><img src="assets/tier-legendary-a.jpg" alt="Golden Panda" loading="lazy"><div class="bd"><div class="nm">Golden Panda</div><div class="rar rar-legendary" data-i18n="rarLegendaryA">レジェンダリー · A</div><div class="rng" data-i18n="rng9">ID 2,155–2,188</div><div class="cnt" data-i18n="cnt34">34体</div></div></div>
+      <div class="vcard"><img src="assets/tier-legendary-b.jpg" alt="Shadow Fox" loading="lazy"><div class="bd"><div class="nm">Shadow Fox</div><div class="rar rar-legendary" data-i18n="rarLegendaryB">レジェンダリー · B</div><div class="rng" data-i18n="rng10">ID 2,189–2,222</div><div class="cnt" data-i18n="cnt34">34体</div></div></div>
     </div>
   </article>
 
   <article id="art-mint">
-    <div class="art-kicker">ARTICLE II — MINT</div>
-    <h2>Mint</h2>
-    <p class="lede">Two routes in. <b>Route 1</b> is Phase 2 — the new collection, minting now. <b>Route 2</b> is Phase 1 — the first collection, sold out, trading on the secondary market.</p>
+    <div class="art-kicker" data-i18n="art2Kicker">第2章 — ミント</div>
+    <h2 data-i18n="art2H2">ミント</h2>
+    <p class="lede" data-i18n-html="art2Lede">2つのルートがあります。<b>ルート1</b>はフェーズ2 — 新しいコレクション、現在ミント中。<b>ルート2</b>はフェーズ1 — 最初のコレクション、完売済みでセカンダリーマーケットで取引されています。</p>
 
     <div class="route" id="route2">
-      <div class="art-kicker">ROUTE 1 — PHASE 2 · MINT LIVE</div>
-      <h3>Phase 2 <span>— the new animals</span></h3>
-      <p>Two lanes. The <b>free mint belongs to agents</b> — the <b>paid mints are open to everyone</b>, straight from this page with a wallet and BNB.</p>
+      <div class="art-kicker" data-i18n="route1Kicker">ルート1 — フェーズ2 · ミント実施中</div>
+      <h3 data-i18n-html="route1H3">フェーズ2 <span>— 新しい仲間たち</span></h3>
+      <p data-i18n-html="route1P">2つのレーンがあります。<b>無料ミントはエージェント専用</b> — <b>ペイドミントは誰でも参加可能</b>で、このページからウォレットとBNBで直接ミントできます。</p>
 
       <div class="bamboocard">
-        <h3>LIVE STATUS — THE GROWING BAMBOO</h3>
+        <h3 data-i18n="bambooH3">ライブステータス — 育つ竹</h3>
         <div class="bamboowrap">
           <div class="shoot"></div>
           <div class="stalk" id="bambooStalk"></div>
@@ -245,219 +249,219 @@ code{font-family:ui-monospace,Menlo,Consolas,monospace;font-size:12px;color:var(
           <div class="panda">🐼</div>
           <div class="ground"></div>
         </div>
-        <div class="bamboonum"><span id="bambooMinted">—</span> <small>/ 2,222 minted</small></div>
+        <div class="bamboonum"><span id="bambooMinted">—</span> <small data-i18n="bambooPer">/ 2,222 ミント済み</small></div>
         <div class="bar"><i id="bambooBar"></i></div>
-        <div class="bamboonote" id="bambooNote">The bamboo wakes when the first animal is minted.</div>
+        <div class="bamboonote" id="bambooNote">最初の仲間がミントされると竹が目覚めます。</div>
       </div>
 
       <div class="lanes">
         <div class="lane">
-          <h4>🤖 Priority Lane — <span>Agents First Class</span></h4>
-          <p>For holders of a Binance <b>.ai Agent ID</b>. Mint through your Binance Agentic Wallet with the agent skill below — <b>your first mint is FREE</b>.</p>
+          <h4 data-i18n-html="lane1H4">🤖 優先レーン — <span>エージェント・ファーストクラス</span></h4>
+          <p data-i18n-html="lane1P">Binanceの<b>.ai Agent ID</b>保有者向け。下のエージェントスキルを使ってBinance Agentic Walletからミント — <b>初回ミントは無料</b>です。</p>
           <ul>
-            <li>Mint #1 — FREE (Agent ID required)</li>
-            <li>Free mint only — paid mints are public</li>
-            <li>Max 5 per wallet total — 1 free + 4 paid</li>
-            <li>120,000 PNDX per paid mint</li>
+            <li data-i18n="lane1Li1">ミント1回目 — 無料（Agent IDが必要）</li>
+            <li data-i18n="lane1Li2">無料ミントのみ — ペイドミントはパブリック</li>
+            <li data-i18n="lane1Li3">ウォレットあたり最大5体 — 無料1体 + ペイド4体</li>
+            <li data-i18n="laneLiPndx">ペイドミント1回につき120,000 PNDX</li>
           </ul>
-          <p style="margin-top:10px"><a href="agent-skill.md" target="_blank" rel="noopener">Read the agent skill →</a></p>
+          <p style="margin-top:10px"><a href="agent-skill.md" target="_blank" rel="noopener" data-i18n="readSkill">エージェントスキルを読む →</a></p>
         </div>
         <div class="lane">
-          <h4>🐾 Public Lane — <span>Open to Everyone</span></h4>
-          <p>No Agent ID needed. Mint the paid animals with any wallet, right here on this page — <b>flat BNB, no oracle</b>.</p>
+          <h4 data-i18n-html="lane2H4">🐾 パブリックレーン — <span>誰でも参加可能</span></h4>
+          <p data-i18n-html="lane2P">Agent IDは不要です。このページでウォレットを使ってペイドミントができます — <b>BNB固定価格、オラクルなし</b>。</p>
           <ul>
-            <li>Mint #2 — 0.00126 BNB</li>
-            <li>Mint #3 — 0.00316 BNB</li>
-            <li>Mint #4 — 0.0041 BNB</li>
-            <li>Mint #5 — 0.005 BNB</li>
-            <li>Max 4 paid per wallet — 5 total with your free mint</li>
-            <li>🎁 5-pack — all 5 in one tx for 0.0108 BNB (save 0.00272)</li>
-            <li>120,000 PNDX per paid mint</li>
+            <li data-i18n="lane2Li1">ミント2回目 — 0.00126 BNB</li>
+            <li data-i18n="lane2Li2">ミント3回目 — 0.00316 BNB</li>
+            <li data-i18n="lane2Li3">ミント4回目 — 0.0041 BNB</li>
+            <li data-i18n="lane2Li4">ミント5回目 — 0.005 BNB</li>
+            <li data-i18n="lane2Li5">ペイドはウォレットあたり最大4体 — 無料ミントと合わせて合計5体</li>
+            <li data-i18n="lane2Li6">🎁 5パック — 5体まとめて1回のトランザクションで0.0108 BNB（0.00272 BNBお得）</li>
+            <li data-i18n="laneLiPndx">ペイドミント1回につき120,000 PNDX</li>
           </ul>
-          <p style="margin-top:10px"><a href="#mint">Mint with your wallet ↓</a></p>
+          <p style="margin-top:10px"><a href="#mint" data-i18n="mintWalletDown">ウォレットでミント ↓</a></p>
         </div>
       </div>
 
       <div id="mint">
         <div class="mintbox">
-          <p class="lede" style="margin-bottom:0"><b>MINT IS LIVE.</b> Mint #1 FREE for Agent ID holders, then 0.00126 / 0.00316 / 0.0041 / 0.005 BNB, or all 5 at once for <b>0.0108 BNB</b>.</p>
+          <p class="lede" style="margin-bottom:0" data-i18n-html="mintboxLede"><b>ミント実施中。</b> 初回ミントはAgent ID保有者なら無料、その後は0.00126 / 0.00316 / 0.0041 / 0.005 BNB、または5体まとめて<b>0.0108 BNB</b>。</p>
           <table class="price-table">
-            <tr><th>MINT #</th><th>WHO</th><th>PRICE</th></tr>
-            <tr><td>#1 per wallet</td><td>Agent ID only</td><td>FREE</td></tr>
-            <tr><td>#2 per wallet</td><td>Public</td><td>0.00126 BNB</td></tr>
-            <tr><td>#3 per wallet</td><td>Public</td><td>0.00316 BNB</td></tr>
-            <tr><td>#4 per wallet</td><td>Public</td><td>0.0041 BNB</td></tr>
-            <tr><td>#5 per wallet</td><td>Public</td><td>0.005 BNB</td></tr>
+            <tr><th data-i18n="thMint">ミント回数</th><th data-i18n="thWho">対象</th><th data-i18n="thPrice">価格</th></tr>
+            <tr><td data-i18n="row1">ウォレットあたり1回目</td><td data-i18n="whoAgent">Agent IDのみ</td><td data-i18n="priceFree">無料</td></tr>
+            <tr><td data-i18n="row2">ウォレットあたり2回目</td><td data-i18n="whoPublic">誰でも</td><td>0.00126 BNB</td></tr>
+            <tr><td data-i18n="row3">ウォレットあたり3回目</td><td data-i18n="whoPublic">誰でも</td><td>0.00316 BNB</td></tr>
+            <tr><td data-i18n="row4">ウォレットあたり4回目</td><td data-i18n="whoPublic">誰でも</td><td>0.0041 BNB</td></tr>
+            <tr><td data-i18n="row5">ウォレットあたり5回目</td><td data-i18n="whoPublic">誰でも</td><td>0.005 BNB</td></tr>
           </table>
-          <p class="fine">Max 5 per wallet (1 free + 4 paid). Paid mints earn 120,000 PNDX each. The free mint needs an Agent ID — checked on-chain.</p>
+          <p class="fine" data-i18n-html="mintFine1">ウォレットあたり最大5体（無料1体 + ペイド4体）。ペイドミント1回につき120,000 PNDXを獲得。無料ミントにはAgent IDが必要で、チェーン上で確認されます。</p>
 
-          <h3 style="font-size:17px;margin:20px 0 6px">🎁 5-Pack — all 5 animals in one transaction</h3>
-          <p class="fine" style="margin-bottom:10px">One transaction, five animals, <b>0.0108 BNB flat</b> — 20% off the 0.01352 BNB singles total (save 0.00272 BNB). Requires 0 mints so far; uses the full 5/wallet allowance. If your wallet holds an Agent ID, the first of the 5 is your free mint (4 paid); otherwise all 5 count as paid. Either way the pack accrues <b>480,000 PNDX</b> (the PNDX token's wallet cap).</p>
+          <h3 style="font-size:17px;margin:20px 0 6px" data-i18n="packH3">🎁 5パック — 5体を1回のトランザクションで</h3>
+          <p class="fine" style="margin-bottom:10px" data-i18n-html="packFine">1回のトランザクションで5体、<b>0.0108 BNB固定</b> — 単体合計0.01352 BNBから20%オフ（0.00272 BNBお得）。ミント0体のウォレットが対象で、ウォレットあたり5体の上限をすべて使います。Agent ID保有者の場合、5体のうち1体目が無料ミント（ペイド4体）になります。Agent IDがない場合は5体すべてペイドです。どちらの場合も<b>480,000 PNDX</b>を獲得します（PNDXトークンのウォレット上限）。</p>
           <div class="row">
-            <button class="btn gold" id="packMintBtn" type="button" disabled>Mint 5-pack — 0.0108 BNB</button>
+            <button class="btn gold" id="packMintBtn" type="button" disabled data-i18n="packBtn">5パックをミント — 0.0108 BNB</button>
           </div>
-          <div class="status" id="packStatus">Connect your wallet — the 5-pack needs 0 mints so far (0.0108 BNB).</div>
+          <div class="status" id="packStatus" data-i18n="packStatusConnect">ウォレットを接続してください — 5パックにはミント0体が必要です（0.0108 BNB）。</div>
 
-          <h3 style="font-size:17px;margin:20px 0 6px">🐾 Public Lane — mint paid animals with your wallet</h3>
-          <p class="fine" style="margin-bottom:10px">Anyone can mint the paid animals — no Agent ID needed. Connect your wallet, pick 1 to 4 paid mints (wallet mints #2–#5), and pay flat BNB. Max <b>5 per wallet</b> total — 1 free + 4 paid. The price is read from the contract for your wallet, so it is always exact.</p>
+          <h3 style="font-size:17px;margin:20px 0 6px" data-i18n="publicH3">🐾 パブリックレーン — ウォレットでペイドミント</h3>
+          <p class="fine" style="margin-bottom:10px" data-i18n-html="publicFine">誰でもペイドミントができます — Agent IDは不要です。ウォレットを接続し、ペイドミントを1〜4体選択してください（ウォレットのミント2〜5回目）。BNB固定価格でお支払い。ウォレットあたり合計<b>最大5体</b> — 無料1体 + ペイド4体。価格はコントラクトから読み取るため、常に正確です。</p>
           <div class="row">
-            <button class="btn gold" id="connectWalletBtn" type="button">Connect wallet</button>
-            <button class="btn" id="mintNowBtn" type="button" disabled>Mint now</button>
+            <button class="btn gold" id="connectWalletBtn" type="button" data-i18n="connectWallet">ウォレットを接続</button>
+            <button class="btn" id="mintNowBtn" type="button" disabled data-i18n="mintNow">今すぐミント</button>
           </div>
           <div class="stepper">
-            <span class="lbl">Paid mints:</span>
+            <span class="lbl" data-i18n="paidMintsLbl">ペイドミント数：</span>
             <button class="qtybtn" id="paidMinus" type="button">−</button>
             <span class="qtyval" id="paidQtyVal">1</span>
             <button class="qtybtn" id="paidPlus" type="button">+</button>
             <span class="total" id="paidTotal">0.00126 BNB</span>
           </div>
-          <div class="status" id="publicStatus">Connect your wallet to see your exact price.</div>
-          <div class="fine" id="myMintsLine" style="margin-top:6px">Your wallet: not connected.</div>
+          <div class="status" id="publicStatus" data-i18n="statusConnectFirst">ウォレットを接続すると、正確な価格が表示されます。</div>
+          <div class="fine" id="myMintsLine" style="margin-top:6px" data-i18n="myMintsNotConnected">ウォレット：未接続</div>
 
-          <h3 style="font-size:17px;margin:20px 0 6px">🤖 Priority Lane — free mint for Agent ID holders</h3>
-          <p class="fine" style="margin-bottom:10px">Your agent mints your FREE animal. Copy the prompt and paste it to your Binance Agentic Wallet.</p>
+          <h3 style="font-size:17px;margin:20px 0 6px" data-i18n="priorityH3">🤖 優先レーン — Agent ID保有者の無料ミント</h3>
+          <p class="fine" style="margin-bottom:10px" data-i18n-html="priorityFine">あなたのエージェントが無料の仲間をミントします。プロンプトをコピーして、Binance Agentic Walletに貼り付けてください。</p>
           <div class="row">
-            <button class="btn gold" id="showPromptBtn" type="button">🤖 Mint with your agent</button>
-            <button class="btn ghost" id="copyPromptBtn" type="button">Copy agent prompt</button>
+            <button class="btn gold" id="showPromptBtn" type="button" data-i18n="showPrompt">🤖 エージェントでミント</button>
+            <button class="btn ghost" id="copyPromptBtn" type="button" data-i18n="copyPrompt">エージェントプロンプトをコピー</button>
           </div>
           <div id="agentPromptBox" style="display:none;margin-top:6px">
             <div class="codebox" id="agentPrompt"></div>
-            <p class="fine" style="margin-top:8px">Paste this prompt to your Binance Agentic Wallet. It simulates first — mint is open, so it executes after you confirm.</p>
+            <p class="fine" style="margin-top:8px" data-i18n-html="promptFine">このプロンプトをBinance Agentic Walletに貼り付けてください。まずシミュレーションを行い、ミントが実施中のため、確認後に実行されます。</p>
           </div>
 
-          <h3 style="font-size:17px;margin:20px 0 6px">Check your Agent ID</h3>
-          <p class="fine" style="margin-bottom:10px">Paste your Agentic Wallet address. The page reads the chain to see if it holds an Agent ID — no wallet connection needed.</p>
+          <h3 style="font-size:17px;margin:20px 0 6px" data-i18n="checkAgentH3">Agent IDを確認</h3>
+          <p class="fine" style="margin-bottom:10px" data-i18n-html="checkFine">Agentic Walletのアドレスを貼り付けてください。ページがチェーンを読み取り、Agent IDを保有しているか確認します — ウォレット接続は不要です。</p>
           <div class="row">
             <input type="text" id="agentAddr" placeholder="0x…" autocomplete="off" spellcheck="false">
-            <button class="btn ghost" id="agentCheckBtn" type="button" style="flex:0 0 auto">Check Agent ID</button>
+            <button class="btn ghost" id="agentCheckBtn" type="button" style="flex:0 0 auto" data-i18n="checkAgentBtn">Agent IDを確認</button>
           </div>
           <div class="status" id="agentCheckOut"></div>
         </div>
       </div>
 
       <div id="how">
-        <h3 style="font-size:19px;margin:22px 0 6px">The rules — how it works</h3>
+        <h3 style="font-size:19px;margin:22px 0 6px" data-i18n="rulesH3">ルール — 仕組み</h3>
         <div class="rules">
-          <div class="rule"><div class="n">01</div><div><h4>Pick your lane</h4><p>Agent ID holders mint <b>free</b> through their Binance Agentic Wallet. Everyone else mints the <b>paid</b> animals with any wallet on this page — 0.00126, 0.00316, 0.0041, then 0.005 BNB. Max 5 per wallet total. Or buy all 5 at once with the <b>5-pack (0.0108 BNB)</b>.</p></div></div>
-          <div class="rule"><div class="n">02</div><div><h4>The token ID decides your animal</h4><p>Mints are sequential, 1 to 2,222. The ID you receive fixes the variant — Common, Uncommon, Rare, Epic, or the 68 Legendary animals. No choosing, no re-rolls.</p></div></div>
-          <div class="rule"><div class="n">03</div><div><h4>Your animal is revealed at mint</h4><p>There is no delayed reveal — the artwork for your token ID is visible as soon as it is minted. What you mint is what you get.</p></div></div>
-          <div class="rule"><div class="n">04</div><div><h4>Yours to keep or trade</h4><p>Show it, hold it, or list it on the <a href="market.html">PanduAGENT Phase 2 Market</a> — 0% marketplace fee, 5% creator royalty on every sale — or trade it on <a href="https://element.market" target="_blank" rel="noopener">Element Market</a> (collection link activates once Element indexes it).</p></div></div>
+          <div class="rule"><div class="n">01</div><div><h4 data-i18n="rule1H4">レーンを選ぶ</h4><p data-i18n-html="rule1P">Agent ID保有者はBinance Agentic Walletから<b>無料</b>でミントします。それ以外の方は、このページでウォレットを使って<b>ペイド</b>ミント — 0.00126、0.00316、0.0041、そして0.005 BNB。ウォレットあたり最大5体。または<b>5パック（0.0108 BNB）</b>で5体まとめて購入できます。</p></div></div>
+          <div class="rule"><div class="n">02</div><div><h4 data-i18n="rule2H4">トークンIDが仲間を決める</h4><p data-i18n-html="rule2P">ミントは1から2,222まで順番に行われます。受け取るIDがバリエーションを決めます — コモン、アンコモン、レア、エピック、または68体のレジェンダリー。選ぶことも、引き直すこともできません。</p></div></div>
+          <div class="rule"><div class="n">03</div><div><h4 data-i18n="rule3H4">ミント時に仲間が判明</h4><p data-i18n-html="rule3P">公開の遅延はありません — トークンIDのアートワークは、ミントされた瞬間から確認できます。ミントしたものが、そのままあなたのものです。</p></div></div>
+          <div class="rule"><div class="n">04</div><div><h4 data-i18n="rule4H4">保有も取引も自由</h4><p data-i18n-html="rule4P">見せても、保有しても、<a href="market.html">PanduAGENT Phase 2 マーケット</a>に出品しても — マーケット手数料0%、売却ごとにクリエイターロイヤリティ5% — または<a href="https://element.market" target="_blank" rel="noopener">Element Market</a>で取引できます（コレクションリンクはElementがインデックスしてから有効になります）。</p></div></div>
         </div>
       </div>
     </div>
 
     <div class="route" id="phase1">
-      <div class="art-kicker">ROUTE 2 — PHASE 1 · SOLD OUT 9 NOV 2026</div>
-      <h3>Phase 1 <span>— sold out</span></h3>
-      <p>Before Phase 2, there was <b>Phase 1</b> — the original 2,222 street animals. It <b>sold out on 9 Nov 2026</b> and no more can ever be minted. The collection lives on below, and its animals trade on the secondary market.</p>
+      <div class="art-kicker" data-i18n="route2Kicker">ルート2 — フェーズ1 · 2026年11月9日完売</div>
+      <h3 data-i18n-html="route2H3">フェーズ1 <span>— 完売</span></h3>
+      <p data-i18n-html="route2P">フェーズ2の前に<b>フェーズ1</b>がありました — 最初の2,222体のストリートアニマルです。<b>2026年11月9日に完売</b>し、二度とミントできません。コレクションは下に残り、その仲間たちはセカンダリーマーケットで取引されています。</p>
       <div class="stats">
-        <div class="stat"><b id="p1Minted">—</b><span>MINTED / 2,222 · LIVE</span></div>
-        <div class="stat"><b>12</b><span>PAID MINTS</span></div>
-        <div class="stat"><b>1,440,000</b><span>PNDX ACCRUED</span></div>
+        <div class="stat"><b id="p1Minted">—</b><span data-i18n="p1StatMinted">ミント済み / 2,222 · ライブ</span></div>
+        <div class="stat"><b>12</b><span data-i18n="p1StatPaid">ペイドミント</span></div>
+        <div class="stat"><b>1,440,000</b><span data-i18n="p1StatPndx">PNDX獲得総数</span></div>
       </div>
-      <p class="fine" id="p1Note">Live count from the Phase 1 contract on BNB Chain — loading…</p>
-      <p class="fine">Paid mints and PNDX accrued are the final figures from the sold-out check on 9 Nov 2026.</p>
+      <p class="fine" id="p1Note">フェーズ1コントラクト（BNBチェーン）からライブカウントを読み込み中…</p>
+      <p class="fine" data-i18n-html="p1Fine">ペイドミント数とPNDX獲得総数は、2026年11月9日の完売確認時の最終数値です。</p>
       <div class="grid" style="margin-top:14px">
-        <div class="vcard"><img src="https://panduagent.vercel.app/assets/hero-panda.jpg" alt="Street Panda"><div class="bd"><div class="nm">Street Panda</div><div class="rar">COMMON · A</div><div class="rng">IDs 1–556</div><div class="cnt">556 animals</div></div></div>
-        <div class="vcard"><img src="https://panduagent.vercel.app/assets/hero-fox.jpg" alt="Street Fox" loading="lazy"><div class="bd"><div class="nm">Street Fox</div><div class="rar">COMMON · B</div><div class="rng">IDs 557–1,111</div><div class="cnt">555 animals</div></div></div>
-        <div class="vcard"><img src="https://panduagent.vercel.app/assets/tier-uncommon-a.jpg" alt="Street Cat" loading="lazy"><div class="bd"><div class="nm">Street Cat</div><div class="rar">UNCOMMON · A</div><div class="rng">IDs 1,112–1,388</div><div class="cnt">277 animals</div></div></div>
-        <div class="vcard"><img src="https://panduagent.vercel.app/assets/tier-uncommon-b.jpg" alt="Street Dog" loading="lazy"><div class="bd"><div class="nm">Street Dog</div><div class="rar">UNCOMMON · B</div><div class="rng">IDs 1,389–1,666</div><div class="cnt">278 animals</div></div></div>
-        <div class="vcard"><img src="https://panduagent.vercel.app/assets/tier-rare-a.jpg" alt="Street Rabbit" loading="lazy"><div class="bd"><div class="nm">Street Rabbit</div><div class="rar">RARE · A</div><div class="rng">IDs 1,667–1,832</div><div class="cnt">166 animals</div></div></div>
-        <div class="vcard"><img src="https://panduagent.vercel.app/assets/tier-rare-b.jpg" alt="Street Koala" loading="lazy"><div class="bd"><div class="nm">Street Koala</div><div class="rar">RARE · B</div><div class="rng">IDs 1,833–1,999</div><div class="cnt">167 animals</div></div></div>
-        <div class="vcard"><img src="https://panduagent.vercel.app/assets/tier-epic-a.jpg" alt="Cyber Panda" loading="lazy"><div class="bd"><div class="nm">Cyber Panda</div><div class="rar">EPIC · A</div><div class="rng">IDs 2,000–2,076</div><div class="cnt">77 animals</div></div></div>
-        <div class="vcard"><img src="https://panduagent.vercel.app/assets/tier-epic-b.jpg" alt="Sakura Fox" loading="lazy"><div class="bd"><div class="nm">Sakura Fox</div><div class="rar">EPIC · B</div><div class="rng">IDs 2,077–2,154</div><div class="cnt">78 animals</div></div></div>
-        <div class="vcard"><img src="https://panduagent.vercel.app/assets/tier-legendary-a.jpg" alt="Golden Panda" loading="lazy"><div class="bd"><div class="nm">Golden Panda</div><div class="rar rar-legendary">LEGENDARY · A</div><div class="rng">IDs 2,155–2,188</div><div class="cnt">34 animals</div></div></div>
-        <div class="vcard"><img src="https://panduagent.vercel.app/assets/tier-legendary-b.jpg" alt="Shadow Fox" loading="lazy"><div class="bd"><div class="nm">Shadow Fox</div><div class="rar rar-legendary">LEGENDARY · B</div><div class="rng">IDs 2,189–2,222</div><div class="cnt">34 animals</div></div></div>
+        <div class="vcard"><img src="https://panduagent.vercel.app/assets/hero-panda.jpg" alt="Street Panda"><div class="bd"><div class="nm">Street Panda</div><div class="rar" data-i18n="rarCommonA">コモン · A</div><div class="rng" data-i18n="rng1">ID 1–556</div><div class="cnt" data-i18n="cnt556">556体</div></div></div>
+        <div class="vcard"><img src="https://panduagent.vercel.app/assets/hero-fox.jpg" alt="Street Fox" loading="lazy"><div class="bd"><div class="nm">Street Fox</div><div class="rar" data-i18n="rarCommonB">コモン · B</div><div class="rng" data-i18n="rng2">ID 557–1,111</div><div class="cnt" data-i18n="cnt555">555体</div></div></div>
+        <div class="vcard"><img src="https://panduagent.vercel.app/assets/tier-uncommon-a.jpg" alt="Street Cat" loading="lazy"><div class="bd"><div class="nm">Street Cat</div><div class="rar" data-i18n="rarUncommonA">アンコモン · A</div><div class="rng" data-i18n="rng3">ID 1,112–1,388</div><div class="cnt" data-i18n="cnt277">277体</div></div></div>
+        <div class="vcard"><img src="https://panduagent.vercel.app/assets/tier-uncommon-b.jpg" alt="Street Dog" loading="lazy"><div class="bd"><div class="nm">Street Dog</div><div class="rar" data-i18n="rarUncommonB">アンコモン · B</div><div class="rng" data-i18n="rng4">ID 1,389–1,666</div><div class="cnt" data-i18n="cnt278">278体</div></div></div>
+        <div class="vcard"><img src="https://panduagent.vercel.app/assets/tier-rare-a.jpg" alt="Street Rabbit" loading="lazy"><div class="bd"><div class="nm">Street Rabbit</div><div class="rar" data-i18n="rarRareA">レア · A</div><div class="rng" data-i18n="rng5">ID 1,667–1,832</div><div class="cnt" data-i18n="cnt166">166体</div></div></div>
+        <div class="vcard"><img src="https://panduagent.vercel.app/assets/tier-rare-b.jpg" alt="Street Koala" loading="lazy"><div class="bd"><div class="nm">Street Koala</div><div class="rar" data-i18n="rarRareB">レア · B</div><div class="rng" data-i18n="rng6">ID 1,833–1,999</div><div class="cnt" data-i18n="cnt167">167体</div></div></div>
+        <div class="vcard"><img src="https://panduagent.vercel.app/assets/tier-epic-a.jpg" alt="Cyber Panda" loading="lazy"><div class="bd"><div class="nm">Cyber Panda</div><div class="rar" data-i18n="rarEpicA">エピック · A</div><div class="rng" data-i18n="rng7">ID 2,000–2,076</div><div class="cnt" data-i18n="cnt77">77体</div></div></div>
+        <div class="vcard"><img src="https://panduagent.vercel.app/assets/tier-epic-b.jpg" alt="Sakura Fox" loading="lazy"><div class="bd"><div class="nm">Sakura Fox</div><div class="rar" data-i18n="rarEpicB">エピック · B</div><div class="rng" data-i18n="rng8">ID 2,077–2,154</div><div class="cnt" data-i18n="cnt78">78体</div></div></div>
+        <div class="vcard"><img src="https://panduagent.vercel.app/assets/tier-legendary-a.jpg" alt="Golden Panda" loading="lazy"><div class="bd"><div class="nm">Golden Panda</div><div class="rar rar-legendary" data-i18n="rarLegendaryA">レジェンダリー · A</div><div class="rng" data-i18n="rng9">ID 2,155–2,188</div><div class="cnt" data-i18n="cnt34">34体</div></div></div>
+        <div class="vcard"><img src="https://panduagent.vercel.app/assets/tier-legendary-b.jpg" alt="Shadow Fox" loading="lazy"><div class="bd"><div class="nm">Shadow Fox</div><div class="rar rar-legendary" data-i18n="rarLegendaryB">レジェンダリー · B</div><div class="rng" data-i18n="rng10">ID 2,189–2,222</div><div class="cnt" data-i18n="cnt34">34体</div></div></div>
       </div>
       <div class="row" style="margin-top:14px">
-        <a class="btn gold" href="https://panduagent.vercel.app/" target="_blank" rel="noopener" style="text-align:center">View Phase 1 collection →</a>
-        <a class="btn ghost" href="https://element.market/collections/panduagent" target="_blank" rel="noopener" style="text-align:center">Trade on Element →</a>
+        <a class="btn gold" href="https://panduagent.vercel.app/" target="_blank" rel="noopener" style="text-align:center" data-i18n="viewP1">フェーズ1コレクションを見る →</a>
+        <a class="btn ghost" href="https://element.market/collections/panduagent" target="_blank" rel="noopener" style="text-align:center" data-i18n="tradeElement">Elementで取引 →</a>
       </div>
     </div>
   </article>
 
   <article id="art-pndx">
-    <div class="art-kicker">ARTICLE III — THE BONUS TOKEN</div>
+    <div class="art-kicker" data-i18n="art3Kicker">第3章 — ボーナス トークン</div>
     <h2>$PNDX</h2>
-    <p class="lede">Every <b>paid</b> mint earns <b>120,000 PNDX</b> — the PanduAGENT bonus token, claimable from the token contract. Free mints earn 0. PNDX is a bonus for minters, not a promise: <b>it has no price, no liquidity pool, and no guaranteed value</b>. If a pool ever exists, it will be announced — never assumed.</p>
+    <p class="lede" data-i18n-html="art3Lede"><b>ペイド</b>ミント1回につき<b>120,000 PNDX</b>を獲得 — PanduAGENTのボーナストークンで、トークンコントラクトから受け取れます。無料ミントでは0 PNDXです。PNDXはミンターへのボーナスであり、約束ではありません。<b>価格も流動性プールもなく、価値は保証されません</b>。プールができた場合は発表します — 決して想定しないでください。</p>
     <div class="tokgrid">
-      <div class="tok"><b>1,000,000,000</b><span>TOTAL SUPPLY</span></div>
-      <div class="tok"><b>540,000,000</b><span>BONUS POOL</span></div>
-      <div class="tok"><b>460,000,000</b><span>TREASURY</span></div>
-      <div class="tok"><b>120,000</b><span>PNDX PER PAID MINT</span></div>
+      <div class="tok"><b>1,000,000,000</b><span data-i18n="tokTotal">総供給量</span></div>
+      <div class="tok"><b>540,000,000</b><span data-i18n="tokPool">ボーナスプール</span></div>
+      <div class="tok"><b>460,000,000</b><span data-i18n="tokTreasury">トレジャリー</span></div>
+      <div class="tok"><b>120,000</b><span data-i18n="tokPerMint">ペイドミントあたりのPNDX</span></div>
     </div>
-    <p class="fine">Max 480,000 PNDX per wallet (4 paid mints × 120,000). A 5-pack accrues 480,000 PNDX too — the PNDX token enforces a 480,000/wallet cap, so a public pack's 5th paid mint accrues 0. Worst case the pool needs ~213M PNDX if every paid mint is claimed — well inside the 540M pool. PNDX is the SAME token as Phase 1 (already deployed) — no new token.</p>
+    <p class="fine" data-i18n-html="art3Fine">ウォレットあたり最大480,000 PNDX（ペイド4回 × 120,000）。5パックでも480,000 PNDXを獲得します — PNDXトークンには480,000/ウォレットの上限があり、パブリックパックの5回目のペイドミントは0 PNDXになります。最悪の場合でも、すべてのペイドミントの請求には約213M PNDXが必要で、540Mのプールに十分収まります。PNDXはフェーズ1と同じトークンです（デプロイ済み）— 新しいトークンはありません。</p>
   </article>
 
   <article id="art-exchange">
-    <div class="art-kicker">ARTICLE IV — EXCHANGE</div>
-    <h2>Exchange</h2>
-    <p class="lede">Buy or sell Phase 2 animals on the <b>own marketplace</b> — fixed-price escrow, <b>0% platform fee</b>, 5% creator royalty on every sale — or trade on <b>Element Market</b>, the BNB Chain marketplace. Same collection, second venue, no extra contract.</p>
+    <div class="art-kicker" data-i18n="art4Kicker">第4章 — 取引所</div>
+    <h2 data-i18n="art4H2">取引所</h2>
+    <p class="lede" data-i18n-html="art4Lede">フェーズ2の仲間を<b>独自マーケット</b>で売買 — 固定価格エスクロー、<b>プラットフォーム手数料0%</b>、売却ごとにクリエイターロイヤリティ5% — またはBNBチェーンのマーケットプレイス<b>Element Market</b>で取引。同じコレクション、もう一つの会場、追加のコントラクトはありません。</p>
     <div class="route">
-      <h3>The market <span>— 0% fee</span></h3>
-      <p>List an animal, a buyer pays the exact price, 5% royalty goes to the creator and the rest to you. Cancel any time before a sale and the animal comes back. The market contract is <b>live</b> — listings, buying and cancelling work here now.</p>
+      <h3 data-i18n-html="marketH3">マーケット <span>— 手数料0%</span></h3>
+      <p data-i18n-html="marketP">仲間を出品すると、買い手が正確な価格を支払い、クリエイターロイヤリティ5%がクリエイターに、残りがあなたに届きます。売却前ならいつでもキャンセルでき、仲間が戻ってきます。マーケットコントラクトは<b>稼働中</b>です — 出品、購入、キャンセルがここで使えます。</p>
       <div class="row">
-        <a class="btn gold" href="market.html" style="text-align:center">Visit the Market →</a>
-        <a class="btn ghost" href="https://element.market" target="_blank" rel="noopener" style="text-align:center">Trade on Element →</a>
+        <a class="btn gold" href="market.html" style="text-align:center" data-i18n="visitMarket">マーケットへ →</a>
+        <a class="btn ghost" href="https://element.market" target="_blank" rel="noopener" style="text-align:center" data-i18n="tradeElement">Elementで取引 →</a>
       </div>
-      <p class="fine">Element Market collection link activates once Element indexes the collection — check back soon.</p>
+      <p class="fine" data-i18n-html="elementFine">Element Marketのコレクションリンクは、Elementがコレクションをインデックスしてから有効になります — また後でご確認ください。</p>
     </div>
   </article>
 
   <article id="faq">
-    <div class="art-kicker">QUESTIONS</div>
+    <div class="art-kicker" data-i18n="faqKicker">よくある質問</div>
     <h2>FAQ</h2>
     <details>
-      <summary>Who gets the free mint?</summary>
-      <p>Only wallets holding a Binance <b>.ai Agent ID</b>, minted through their agent. Public wallets <b>cannot</b> claim the free mint — the contract enforces it on-chain. One free mint per wallet.</p>
+      <summary data-i18n="faq1Q">無料ミントは誰が受けられますか？</summary>
+      <p data-i18n-html="faq1A">Binanceの<b>.ai Agent ID</b>を保有するウォレットのみで、エージェント経由でミントします。パブリックウォレットは無料ミントを<b>請求できません</b> — コントラクトがチェーン上で強制します。無料ミントはウォレットあたり1回です。</p>
     </details>
     <details>
-      <summary>Who can mint the paid animals?</summary>
-      <p><b>Anyone.</b> Connect any wallet on this page and pay flat BNB — paid mints cost <b>0.00126</b>, <b>0.00316</b>, <b>0.0041</b>, then <b>0.005 BNB</b> in order. Max 4 paid per wallet. No Agent ID needed, no oracle, no price surprises: the page reads your exact price from the contract before you confirm.</p>
+      <summary data-i18n="faq2Q">ペイドミントは誰ができますか？</summary>
+      <p data-i18n-html="faq2A"><b>誰でもできます。</b>このページで任意のウォレットを接続し、BNB固定価格でお支払いください — ペイドミントは順に<b>0.00126</b>、<b>0.00316</b>、<b>0.0041</b>、そして<b>0.005 BNB</b>です。ウォレットあたりペイド最大4体。Agent IDは不要、オラクルなし、価格のサプライズなし：確認前にコントラクトから正確な価格を読み取ります。</p>
     </details>
     <details>
-      <summary>What is the most one wallet pays?</summary>
-      <p>Max 5 animals per wallet — 1 free + 4 paid — so the most one wallet ever pays is <b>0.01352 BNB</b> plus gas (or <b>0.0108 BNB</b> with the 5-pack). Paid mints earn <b>120,000 PNDX</b> each (max 480,000 per wallet).</p>
+      <summary data-i18n="faq3Q">1つのウォレットが支払う最大額は？</summary>
+      <p data-i18n-html="faq3A">ウォレットあたり最大5体 — 無料1体 + ペイド4体 — そのため1つのウォレットが支払う最大額はガス代を除いて<b>0.01352 BNB</b>です（<b>5パックなら0.0108 BNB</b>）。ペイドミント1回につき<b>120,000 PNDX</b>を獲得します（ウォレットあたり最大480,000）。</p>
     </details>
     <details>
-      <summary>What is $PNDX?</summary>
-      <p>PNDX is the bonus token for paid minters: <b>120,000 PNDX per paid mint</b> (max 480,000 per wallet). Total supply 1B — 540M in the bonus pool, 460M treasury. It has <b>no price and no liquidity pool yet</b>, and nothing here promises it will ever have one.</p>
+      <summary data-i18n="faq4Q">$PNDXとは何ですか？</summary>
+      <p data-i18n-html="faq4A">PNDXはペイドミンターへのボーナストークンです：<b>ペイドミント1回につき120,000 PNDX</b>（ウォレットあたり最大480,000）。総供給量10億 — ボーナスプール5.4億、トレジャリー4.6億。<b>価格も流動性プールもまだありません</b>。そして、ここでは将来できることを約束していません。</p>
     </details>
     <details>
-      <summary>When does mint open?</summary>
-      <p><b>Mint is open.</b> It opened 10 Nov 2026 at 05:23 UTC. The bamboo above grows with every mint.</p>
+      <summary data-i18n="faq5Q">ミントはいつ始まりますか？</summary>
+      <p data-i18n-html="faq5A"><b>ミントは実施中です。</b>2026年11月10日 05:23 UTCに開始しました。上の竹はミントごとに育ちます。</p>
     </details>
     <details>
-      <summary>What is the 5-pack?</summary>
-      <p>Buy all <b>5 animals in one transaction for 0.0108 BNB</b> — 20% off the 0.01352 BNB singles total (save 0.00272 BNB). It needs <b>0 mints so far</b> and uses your full 5/wallet allowance. Agent ID holders get their free mint as the first of the 5 (4 paid); everyone else pays for all 5. Either way it accrues <b>480,000 PNDX</b> (the token's wallet cap).</p>
+      <summary data-i18n="faq6Q">5パックとは何ですか？</summary>
+      <p data-i18n-html="faq6A"><b>5体を1回のトランザクションで0.0108 BNB</b>で購入 — 単体合計0.01352 BNBから20%オフ（0.00272 BNBお得）。<b>ミント0体</b>のウォレットが対象で、ウォレットあたり5体の上限をすべて使います。Agent ID保有者は5体のうち1体目が無料ミント（ペイド4体）になります。それ以外の方は5体すべてペイドです。どちらの場合も<b>480,000 PNDX</b>を獲得します（トークンのウォレット上限）。</p>
     </details>
     <details>
-      <summary>Is PNDX the same token as Phase 1?</summary>
-      <p><b>Yes.</b> Phase 2 reuses the existing PNDX token — no new token is deployed. PNDX earned in Phase 1 and Phase 2 shares the same 540M bonus pool and the same 480,000/wallet cap.</p>
+      <summary data-i18n="faq7Q">PNDXはフェーズ1と同じトークンですか？</summary>
+      <p data-i18n-html="faq7A"><b>はい。</b>フェーズ2は既存のPNDXトークンを再利用します — 新しいトークンはデプロイされません。フェーズ1とフェーズ2で獲得したPNDXは、同じ5.4億のボーナスプールと、同じ480,000/ウォレットの上限を共有します。</p>
     </details>
   </article>
 
   <article id="support">
-    <div class="art-kicker">SPREAD THE WORD</div>
-    <h2>Support <span>PanduAGENT</span></h2>
-    <p class="lede">Follow the pack on X — <a href="https://x.com/PanduAGENT" target="_blank" rel="noopener">@PanduAGENT</a> — and post about them. Every share helps the bamboo grow. (Phase 2 uses the same X account as Phase 1.)</p>
-    <p class="lede"><b>MINT LIVE.</b> Phase 1 sold out 2,222/2,222; Phase 2 is minting now. Buy or sell here on the <a href="market.html">PanduAGENT Phase 2 Market</a> or on <a href="https://element.market" target="_blank" rel="noopener">Element Market</a> (collection link activates once Element indexes it).</p>
+    <div class="art-kicker" data-i18n="supportKicker">広めよう</div>
+    <h2 data-i18n-html="supportH2">PanduAGENTを応援</h2>
+    <p class="lede" data-i18n-html="supportLede1">Xで仲間をフォロー — <a href="https://x.com/PanduAGENT" target="_blank" rel="noopener">@PanduAGENT</a> — そして投稿してください。シェアするたびに竹が育ちます。（フェーズ2はフェーズ1と同じXアカウントを使います。）</p>
+    <p class="lede" data-i18n-html="supportLede2"><b>ミント実施中。</b>フェーズ1は2,222/2,222で完売。フェーズ2は現在ミント中です。こちらの<a href="market.html">PanduAGENT Phase 2 マーケット</a>、または<a href="https://element.market" target="_blank" rel="noopener">Element Market</a>で売買できます（コレクションリンクはElementがインデックスしてから有効になります）。</p>
     <div class="support">
-      <a class="btn gold" href="https://x.com/PanduAGENT" target="_blank" rel="noopener" style="text-align:center">Follow @PanduAGENT on X →</a>
-      <button class="btn" id="shareBtn" type="button">Post on X</button>
-      <a class="btn ghost" href="market.html" style="text-align:center">Visit the Market →</a>
-      <a class="btn ghost" href="https://element.market" target="_blank" rel="noopener" style="text-align:center">Trade on Element →</a>
+      <a class="btn gold" href="https://x.com/PanduAGENT" target="_blank" rel="noopener" style="text-align:center" data-i18n="followX">Xで@PanduAGENTをフォロー →</a>
+      <button class="btn" id="shareBtn" type="button" data-i18n="shareBtn">Xに投稿</button>
+      <a class="btn ghost" href="market.html" style="text-align:center" data-i18n="visitMarket">マーケットへ →</a>
+      <a class="btn ghost" href="https://element.market" target="_blank" rel="noopener" style="text-align:center" data-i18n="tradeElement">Elementで取引 →</a>
     </div>
   </article>
 
   <footer>
-    <div>PanduAGENT Phase 2 (PANDU2) — NFT contract: <span style="color:var(--ink);font-weight:700">LIVE</span><br><a href="https://bscscan.com/address/0x9e5Dd59b5Df1d36de02454A1fD6d77ee5B07778B" target="_blank" rel="noopener"><code>0x9e5Dd59b5Df1d36de02454A1fD6d77ee5B07778B</code></a></div>
-    <div>PNDX token (reused from Phase 1): <span style="color:var(--ink);font-weight:700">LIVE</span><br><a href="https://bscscan.com/address/0xeDd0cf58A052Ac073a4F14BE25e5be6a203cB8aE" target="_blank" rel="noopener"><code>0xeDd0cf58A052Ac073a4F14BE25e5be6a203cB8aE</code></a></div>
-    <div>Market contract: <span style="color:var(--ink);font-weight:700">LIVE</span><br><a href="https://bscscan.com/address/0x92099c1142864b9d27258f2383C315789a66997C" target="_blank" rel="noopener"><code>0x92099c1142864b9d27258f2383C315789a66997C</code></a></div>
-    <div style="margin-top:10px">Deployed 10 Nov 2026, mint opened 05:23 UTC. Deploy txs: <a href="https://bscscan.com/tx/0xead8b91b2692bd1063714969bba0b1d2e25d356faacd7bbb970d400e4033e4f7" target="_blank" rel="noopener">NFT</a> · <a href="https://bscscan.com/tx/0xb78facc9dde178bd2949f45a26651227b3048a37338862738723926af12ebf7c" target="_blank" rel="noopener">Market</a> · <a href="https://bscscan.com/tx/0xbf2573300626c08684e641feb7e1ea8f2b6f550b32cd23d77b607de478df5d24" target="_blank" rel="noopener">setMinter</a> · <a href="https://bscscan.com/tx/0x2b4586ae5427a4de2c0fc62d733e491b0f2b607e0c97ef0cade920ebbd1be0ac" target="_blank" rel="noopener">mint-open</a>.</div>
-    <div style="margin-top:10px">Chain: BNB Smart Chain (56) · Royalty 5% · Max 5 per wallet · Free mint: Agent ID only. Paid mints: public, wallet, flat BNB. 5-pack: 0.0108 BNB.</div>
-    <div>Honest rules: no promise of financial return. Mint prices, supply, and rarity ranges are published above. PNDX has no price or liquidity yet.</div>
-    <div>© 2026 PanduAGENT Phase 2. Street animals, raised by bamboo. Mint live since 10 Nov 2026, 05:23 UTC.</div>
+    <div data-i18n-html="footNft">PanduAGENT Phase 2 (PANDU2) — NFTコントラクト： <span style="color:var(--ink);font-weight:700">LIVE</span><br><a href="https://bscscan.com/address/0x9e5Dd59b5Df1d36de02454A1fD6d77ee5B07778B" target="_blank" rel="noopener"><code>0x9e5Dd59b5Df1d36de02454A1fD6d77ee5B07778B</code></a></div>
+    <div data-i18n-html="footPndx">PNDXトークン（フェーズ1から再利用）： <span style="color:var(--ink);font-weight:700">LIVE</span><br><a href="https://bscscan.com/address/0xeDd0cf58A052Ac073a4F14BE25e5be6a203cB8aE" target="_blank" rel="noopener"><code>0xeDd0cf58A052Ac073a4F14BE25e5be6a203cB8aE</code></a></div>
+    <div data-i18n-html="footMarket">マーケットコントラクト： <span style="color:var(--ink);font-weight:700">LIVE</span><br><a href="https://bscscan.com/address/0x92099c1142864b9d27258f2383C315789a66997C" target="_blank" rel="noopener"><code>0x92099c1142864b9d27258f2383C315789a66997C</code></a></div>
+    <div style="margin-top:10px" data-i18n-html="footDeploy">2026年11月10日デプロイ、ミント開始 05:23 UTC。デプロイトランザクション： <a href="https://bscscan.com/tx/0xead8b91b2692bd1063714969bba0b1d2e25d356faacd7bbb970d400e4033e4f7" target="_blank" rel="noopener">NFT</a> · <a href="https://bscscan.com/tx/0xb78facc9dde178bd2949f45a26651227b3048a37338862738723926af12ebf7c" target="_blank" rel="noopener">Market</a> · <a href="https://bscscan.com/tx/0xbf2573300626c08684e641feb7e1ea8f2b6f550b32cd23d77b607de478df5d24" target="_blank" rel="noopener">setMinter</a> · <a href="https://bscscan.com/tx/0x2b4586ae5427a4de2c0fc62d733e491b0f2b607e0c97ef0cade920ebbd1be0ac" target="_blank" rel="noopener">mint-open</a>。</div>
+    <div style="margin-top:10px" data-i18n-html="footChain">チェーン：BNBスマートチェーン（56）· ロイヤリティ5% · ウォレットあたり最大5体 · 無料ミント：Agent IDのみ。ペイドミント：パブリック、ウォレット、BNB固定価格。5パック：0.0108 BNB。</div>
+    <div data-i18n-html="footHonest">正直なルール：金銭的リターンの約束はありません。ミント価格、供給量、レアリティ範囲は上に公開されています。PNDXにはまだ価格も流動性もありません。</div>
+    <div data-i18n-html="footCopy">© 2026 PanduAGENT Phase 2。竹に育てられたストリートアニマル。2026年11月10日 05:23 UTCからミント実施中。</div>
   </footer>
 </div>
 <script>
@@ -514,6 +518,74 @@ function fmtWei(wei) {
   } catch (e) { return "?"; }
 }
 
+/* ---- language: Japanese default, English toggle ----
+   Toggle buttons in the header (日本語 / EN), choice persisted in
+   localStorage ("p2lang"). Static copy uses data-i18n (text) /
+   data-i18n-html (innerHTML) attributes; dynamic lines use t(). */
+var I18N = {"ja": {"metaTitle": "PanduAGENT Phase 2 — BNBチェーンの新しいストリートアニマル 2,222体", "metaDesc": "PanduAGENT Phase 2 — BNBチェーンの新しいストリートアニマル2,222体。初回ミントはAgent ID保有者なら無料。ペイドミントは誰でも参加可能、0.00126 / 0.00316 / 0.0041 / 0.005 BNB。5パック 0.0108 BNB。ウォレットあたり最大5体。", "ogDesc": "初回ミントはAgent ID保有者なら無料。ペイドミントは誰でも参加可能、0.00126 / 0.00316 / 0.0041 / 0.005 BNB。5パック 0.0108 BNB、BNBチェーン。", "navCollection": "コレクション", "navMint": "ミント", "navExchange": "取引所", "navMarket": "マーケット", "navMintBtn": "ミント", "announce": "<b>🔥 ミント実施中 — PanduAGENT Phase 2 は現在ミントできます。</b> 初回ミントはAgent ID保有者なら無料。ペイドミントは0.00126〜0.005 BNB、5体まとめて0.0108 BNB。", "eyebrow": "BNBスマートチェーン · 5ティア · 初回ミント無料 · 5パック 0.0108 BNB", "heroSub": "<b>2,222体の新しいストリートアニマル</b>、<b>全10バリエーション</b> — Panduの新しい衣装と新しい仲間たち：Hoodie Panda、Cap Fox、Bomber Cat、Tracksuit Dog、Raincoat Frog、Puffer Penguin、そしてレアな4つの衣装。<b>初回ミントは無料</b>（Agent ID保有者）— <b>ペイドミントは誰でも参加可能</b>、<b>0.00126 BNB</b>から<b>0.005 BNB</b>まで、ウォレットあたり最大<b>5体</b> — または<b>5体まとめて0.0108 BNB</b>（0.00272 BNBお得）。", "tierCommon": "コモン", "tierUncommon": "アンコモン", "tierRare": "レア", "tierEpic": "エピック", "tierLegendary": "レジェンダリー", "statTotal": "総数", "statVariants": "バリエーション", "statMax": "ウォレットあたり最大", "art1Kicker": "第1章 — コレクション", "art1H2": "バリエーション", "art1Lede": "レアリティごとにアートワークが異なり、同じティアの中にも<b>追加バリエーション</b>があります。あなたの仲間はトークンIDで決まります。レアな範囲ほど数が少なくなります。", "rarCommonA": "コモン · A", "rarCommonB": "コモン · B", "rarUncommonA": "アンコモン · A", "rarUncommonB": "アンコモン · B", "rarRareA": "レア · A", "rarRareB": "レア · B", "rarEpicA": "エピック · A", "rarEpicB": "エピック · B", "rarLegendaryA": "レジェンダリー · A", "rarLegendaryB": "レジェンダリー · B", "rng1": "ID 1–556", "rng2": "ID 557–1,111", "rng3": "ID 1,112–1,388", "rng4": "ID 1,389–1,666", "rng5": "ID 1,667–1,832", "rng6": "ID 1,833–1,999", "rng7": "ID 2,000–2,076", "rng8": "ID 2,077–2,154", "rng9": "ID 2,155–2,188", "rng10": "ID 2,189–2,222", "cnt556": "556体", "cnt555": "555体", "cnt277": "277体", "cnt278": "278体", "cnt166": "166体", "cnt167": "167体", "cnt77": "77体", "cnt78": "78体", "cnt34": "34体", "art2Kicker": "第2章 — ミント", "art2H2": "ミント", "art2Lede": "2つのルートがあります。<b>ルート1</b>はフェーズ2 — 新しいコレクション、現在ミント中。<b>ルート2</b>はフェーズ1 — 最初のコレクション、完売済みでセカンダリーマーケットで取引されています。", "route1Kicker": "ルート1 — フェーズ2 · ミント実施中", "route1H3": "フェーズ2 <span>— 新しい仲間たち</span>", "route1P": "2つのレーンがあります。<b>無料ミントはエージェント専用</b> — <b>ペイドミントは誰でも参加可能</b>で、このページからウォレットとBNBで直接ミントできます。", "bambooH3": "ライブステータス — 育つ竹", "bambooPer": "/ 2,222 ミント済み", "lane1H4": "🤖 優先レーン — <span>エージェント・ファーストクラス</span>", "lane1P": "Binanceの<b>.ai Agent ID</b>保有者向け。下のエージェントスキルを使ってBinance Agentic Walletからミント — <b>初回ミントは無料</b>です。", "lane1Li1": "ミント1回目 — 無料（Agent IDが必要）", "lane1Li2": "無料ミントのみ — ペイドミントはパブリック", "lane1Li3": "ウォレットあたり最大5体 — 無料1体 + ペイド4体", "laneLiPndx": "ペイドミント1回につき120,000 PNDX", "readSkill": "エージェントスキルを読む →", "lane2H4": "🐾 パブリックレーン — <span>誰でも参加可能</span>", "lane2P": "Agent IDは不要です。このページでウォレットを使ってペイドミントができます — <b>BNB固定価格、オラクルなし</b>。", "lane2Li1": "ミント2回目 — 0.00126 BNB", "lane2Li2": "ミント3回目 — 0.00316 BNB", "lane2Li3": "ミント4回目 — 0.0041 BNB", "lane2Li4": "ミント5回目 — 0.005 BNB", "lane2Li5": "ペイドはウォレットあたり最大4体 — 無料ミントと合わせて合計5体", "lane2Li6": "🎁 5パック — 5体まとめて1回のトランザクションで0.0108 BNB（0.00272 BNBお得）", "mintWalletDown": "ウォレットでミント ↓", "mintboxLede": "<b>ミント実施中。</b> 初回ミントはAgent ID保有者なら無料、その後は0.00126 / 0.00316 / 0.0041 / 0.005 BNB、または5体まとめて<b>0.0108 BNB</b>。", "thMint": "ミント回数", "thWho": "対象", "thPrice": "価格", "row1": "ウォレットあたり1回目", "row2": "ウォレットあたり2回目", "row3": "ウォレットあたり3回目", "row4": "ウォレットあたり4回目", "row5": "ウォレットあたり5回目", "whoAgent": "Agent IDのみ", "whoPublic": "誰でも", "priceFree": "無料", "mintFine1": "ウォレットあたり最大5体（無料1体 + ペイド4体）。ペイドミント1回につき120,000 PNDXを獲得。無料ミントにはAgent IDが必要で、チェーン上で確認されます。", "packH3": "🎁 5パック — 5体を1回のトランザクションで", "packFine": "1回のトランザクションで5体、<b>0.0108 BNB固定</b> — 単体合計0.01352 BNBから20%オフ（0.00272 BNBお得）。ミント0体のウォレットが対象で、ウォレットあたり5体の上限をすべて使います。Agent ID保有者の場合、5体のうち1体目が無料ミント（ペイド4体）になります。Agent IDがない場合は5体すべてペイドです。どちらの場合も<b>480,000 PNDX</b>を獲得します（PNDXトークンのウォレット上限）。", "packBtn": "5パックをミント — 0.0108 BNB", "packStatusConnect": "ウォレットを接続してください — 5パックにはミント0体が必要です（0.0108 BNB）。", "publicH3": "🐾 パブリックレーン — ウォレットでペイドミント", "publicFine": "誰でもペイドミントができます — Agent IDは不要です。ウォレットを接続し、ペイドミントを1〜4体選択してください（ウォレットのミント2〜5回目）。BNB固定価格でお支払い。ウォレットあたり合計<b>最大5体</b> — 無料1体 + ペイド4体。価格はコントラクトから読み取るため、常に正確です。", "connectWallet": "ウォレットを接続", "mintNow": "今すぐミント", "paidMintsLbl": "ペイドミント数：", "statusConnectFirst": "ウォレットを接続すると、正確な価格が表示されます。", "myMintsNotConnected": "ウォレット：未接続", "priorityH3": "🤖 優先レーン — Agent ID保有者の無料ミント", "priorityFine": "あなたのエージェントが無料の仲間をミントします。プロンプトをコピーして、Binance Agentic Walletに貼り付けてください。", "showPrompt": "🤖 エージェントでミント", "copyPrompt": "エージェントプロンプトをコピー", "promptFine": "このプロンプトをBinance Agentic Walletに貼り付けてください。まずシミュレーションを行い、ミントが実施中のため、確認後に実行されます。", "checkAgentH3": "Agent IDを確認", "checkFine": "Agentic Walletのアドレスを貼り付けてください。ページがチェーンを読み取り、Agent IDを保有しているか確認します — ウォレット接続は不要です。", "checkAgentBtn": "Agent IDを確認", "rulesH3": "ルール — 仕組み", "rule1H4": "レーンを選ぶ", "rule1P": "Agent ID保有者はBinance Agentic Walletから<b>無料</b>でミントします。それ以外の方は、このページでウォレットを使って<b>ペイド</b>ミント — 0.00126、0.00316、0.0041、そして0.005 BNB。ウォレットあたり最大5体。または<b>5パック（0.0108 BNB）</b>で5体まとめて購入できます。", "rule2H4": "トークンIDが仲間を決める", "rule2P": "ミントは1から2,222まで順番に行われます。受け取るIDがバリエーションを決めます — コモン、アンコモン、レア、エピック、または68体のレジェンダリー。選ぶことも、引き直すこともできません。", "rule3H4": "ミント時に仲間が判明", "rule3P": "公開の遅延はありません — トークンIDのアートワークは、ミントされた瞬間から確認できます。ミントしたものが、そのままあなたのものです。", "rule4H4": "保有も取引も自由", "rule4P": "見せても、保有しても、<a href=\"market.html\">PanduAGENT Phase 2 マーケット</a>に出品しても — マーケット手数料0%、売却ごとにクリエイターロイヤリティ5% — または<a href=\"https://element.market\" target=\"_blank\" rel=\"noopener\">Element Market</a>で取引できます（コレクションリンクはElementがインデックスしてから有効になります）。", "route2Kicker": "ルート2 — フェーズ1 · 2026年11月9日完売", "route2H3": "フェーズ1 <span>— 完売</span>", "route2P": "フェーズ2の前に<b>フェーズ1</b>がありました — 最初の2,222体のストリートアニマルです。<b>2026年11月9日に完売</b>し、二度とミントできません。コレクションは下に残り、その仲間たちはセカンダリーマーケットで取引されています。", "p1StatMinted": "ミント済み / 2,222 · ライブ", "p1StatPaid": "ペイドミント", "p1StatPndx": "PNDX獲得総数", "p1Fine": "ペイドミント数とPNDX獲得総数は、2026年11月9日の完売確認時の最終数値です。", "viewP1": "フェーズ1コレクションを見る →", "tradeElement": "Elementで取引 →", "art3Kicker": "第3章 — ボーナス トークン", "art3Lede": "<b>ペイド</b>ミント1回につき<b>120,000 PNDX</b>を獲得 — PanduAGENTのボーナストークンで、トークンコントラクトから受け取れます。無料ミントでは0 PNDXです。PNDXはミンターへのボーナスであり、約束ではありません。<b>価格も流動性プールもなく、価値は保証されません</b>。プールができた場合は発表します — 決して想定しないでください。", "tokTotal": "総供給量", "tokPool": "ボーナスプール", "tokTreasury": "トレジャリー", "tokPerMint": "ペイドミントあたりのPNDX", "art3Fine": "ウォレットあたり最大480,000 PNDX（ペイド4回 × 120,000）。5パックでも480,000 PNDXを獲得します — PNDXトークンには480,000/ウォレットの上限があり、パブリックパックの5回目のペイドミントは0 PNDXになります。最悪の場合でも、すべてのペイドミントの請求には約213M PNDXが必要で、540Mのプールに十分収まります。PNDXはフェーズ1と同じトークンです（デプロイ済み）— 新しいトークンはありません。", "art4Kicker": "第4章 — 取引所", "art4H2": "取引所", "art4Lede": "フェーズ2の仲間を<b>独自マーケット</b>で売買 — 固定価格エスクロー、<b>プラットフォーム手数料0%</b>、売却ごとにクリエイターロイヤリティ5% — またはBNBチェーンのマーケットプレイス<b>Element Market</b>で取引。同じコレクション、もう一つの会場、追加のコントラクトはありません。", "marketH3": "マーケット <span>— 手数料0%</span>", "marketP": "仲間を出品すると、買い手が正確な価格を支払い、クリエイターロイヤリティ5%がクリエイターに、残りがあなたに届きます。売却前ならいつでもキャンセルでき、仲間が戻ってきます。マーケットコントラクトは<b>稼働中</b>です — 出品、購入、キャンセルがここで使えます。", "visitMarket": "マーケットへ →", "elementFine": "Element Marketのコレクションリンクは、Elementがコレクションをインデックスしてから有効になります — また後でご確認ください。", "faqKicker": "よくある質問", "faq1Q": "無料ミントは誰が受けられますか？", "faq1A": "Binanceの<b>.ai Agent ID</b>を保有するウォレットのみで、エージェント経由でミントします。パブリックウォレットは無料ミントを<b>請求できません</b> — コントラクトがチェーン上で強制します。無料ミントはウォレットあたり1回です。", "faq2Q": "ペイドミントは誰ができますか？", "faq2A": "<b>誰でもできます。</b>このページで任意のウォレットを接続し、BNB固定価格でお支払いください — ペイドミントは順に<b>0.00126</b>、<b>0.00316</b>、<b>0.0041</b>、そして<b>0.005 BNB</b>です。ウォレットあたりペイド最大4体。Agent IDは不要、オラクルなし、価格のサプライズなし：確認前にコントラクトから正確な価格を読み取ります。", "faq3Q": "1つのウォレットが支払う最大額は？", "faq3A": "ウォレットあたり最大5体 — 無料1体 + ペイド4体 — そのため1つのウォレットが支払う最大額はガス代を除いて<b>0.01352 BNB</b>です（<b>5パックなら0.0108 BNB</b>）。ペイドミント1回につき<b>120,000 PNDX</b>を獲得します（ウォレットあたり最大480,000）。", "faq4Q": "$PNDXとは何ですか？", "faq4A": "PNDXはペイドミンターへのボーナストークンです：<b>ペイドミント1回につき120,000 PNDX</b>（ウォレットあたり最大480,000）。総供給量10億 — ボーナスプール5.4億、トレジャリー4.6億。<b>価格も流動性プールもまだありません</b>。そして、ここでは将来できることを約束していません。", "faq5Q": "ミントはいつ始まりますか？", "faq5A": "<b>ミントは実施中です。</b>2026年11月10日 05:23 UTCに開始しました。上の竹はミントごとに育ちます。", "faq6Q": "5パックとは何ですか？", "faq6A": "<b>5体を1回のトランザクションで0.0108 BNB</b>で購入 — 単体合計0.01352 BNBから20%オフ（0.00272 BNBお得）。<b>ミント0体</b>のウォレットが対象で、ウォレットあたり5体の上限をすべて使います。Agent ID保有者は5体のうち1体目が無料ミント（ペイド4体）になります。それ以外の方は5体すべてペイドです。どちらの場合も<b>480,000 PNDX</b>を獲得します（トークンのウォレット上限）。", "faq7Q": "PNDXはフェーズ1と同じトークンですか？", "faq7A": "<b>はい。</b>フェーズ2は既存のPNDXトークンを再利用します — 新しいトークンはデプロイされません。フェーズ1とフェーズ2で獲得したPNDXは、同じ5.4億のボーナスプールと、同じ480,000/ウォレットの上限を共有します。", "supportKicker": "広めよう", "supportH2": "PanduAGENTを応援", "supportLede1": "Xで仲間をフォロー — <a href=\"https://x.com/PanduAGENT\" target=\"_blank\" rel=\"noopener\">@PanduAGENT</a> — そして投稿してください。シェアするたびに竹が育ちます。（フェーズ2はフェーズ1と同じXアカウントを使います。）", "supportLede2": "<b>ミント実施中。</b>フェーズ1は2,222/2,222で完売。フェーズ2は現在ミント中です。こちらの<a href=\"market.html\">PanduAGENT Phase 2 マーケット</a>、または<a href=\"https://element.market\" target=\"_blank\" rel=\"noopener\">Element Market</a>で売買できます（コレクションリンクはElementがインデックスしてから有効になります）。", "followX": "Xで@PanduAGENTをフォロー →", "shareBtn": "Xに投稿", "footNft": "PanduAGENT Phase 2 (PANDU2) — NFTコントラクト： <span style=\"color:var(--ink);font-weight:700\">LIVE</span><br><a href=\"https://bscscan.com/address/0x9e5Dd59b5Df1d36de02454A1fD6d77ee5B07778B\" target=\"_blank\" rel=\"noopener\"><code>0x9e5Dd59b5Df1d36de02454A1fD6d77ee5B07778B</code></a>", "footPndx": "PNDXトークン（フェーズ1から再利用）： <span style=\"color:var(--ink);font-weight:700\">LIVE</span><br><a href=\"https://bscscan.com/address/0xeDd0cf58A052Ac073a4F14BE25e5be6a203cB8aE\" target=\"_blank\" rel=\"noopener\"><code>0xeDd0cf58A052Ac073a4F14BE25e5be6a203cB8aE</code></a>", "footMarket": "マーケットコントラクト： <span style=\"color:var(--ink);font-weight:700\">LIVE</span><br><a href=\"https://bscscan.com/address/0x92099c1142864b9d27258f2383C315789a66997C\" target=\"_blank\" rel=\"noopener\"><code>0x92099c1142864b9d27258f2383C315789a66997C</code></a>", "footDeploy": "2026年11月10日デプロイ、ミント開始 05:23 UTC。デプロイトランザクション： <a href=\"https://bscscan.com/tx/0xead8b91b2692bd1063714969bba0b1d2e25d356faacd7bbb970d400e4033e4f7\" target=\"_blank\" rel=\"noopener\">NFT</a> · <a href=\"https://bscscan.com/tx/0xb78facc9dde178bd2949f45a26651227b3048a37338862738723926af12ebf7c\" target=\"_blank\" rel=\"noopener\">Market</a> · <a href=\"https://bscscan.com/tx/0xbf2573300626c08684e641feb7e1ea8f2b6f550b32cd23d77b607de478df5d24\" target=\"_blank\" rel=\"noopener\">setMinter</a> · <a href=\"https://bscscan.com/tx/0x2b4586ae5427a4de2c0fc62d733e491b0f2b607e0c97ef0cade920ebbd1be0ac\" target=\"_blank\" rel=\"noopener\">mint-open</a>。", "footChain": "チェーン：BNBスマートチェーン（56）· ロイヤリティ5% · ウォレットあたり最大5体 · 無料ミント：Agent IDのみ。ペイドミント：パブリック、ウォレット、BNB固定価格。5パック：0.0108 BNB。", "footHonest": "正直なルール：金銭的リターンの約束はありません。ミント価格、供給量、レアリティ範囲は上に公開されています。PNDXにはまだ価格も流動性もありません。", "footCopy": "© 2026 PanduAGENT Phase 2。竹に育てられたストリートアニマル。2026年11月10日 05:23 UTCからミント実施中。", "bambooUnavailable": "ライブデータが現在利用できません。最初の仲間がミントされると竹が目覚めます。", "bambooLive": "BNBチェーンでライブ · {n} / 2,222 ミント済み · ミントごとに竹が育ちます。", "bambooSoldOut": "完売 — フェーズ2の2,222体すべてミントされました。竹は高くそびえています。", "p1Loading": "フェーズ1コントラクト（BNBチェーン）からライブカウントを読み込み中…", "p1Live": "BNBチェーンでライブ · {n} / 2,222 ミント済み。", "p1SoldOut": "BNBチェーンでライブ · 完売 — フェーズ1の2,222体すべてミントされました（2026年11月9日）。", "p1Unavailable": "ライブカウントが現在利用できません — 完売総数は2,222 / 2,222です。", "paidMaxed": "このウォレットはすでにペイド4体すべてミント済みです（4/4）。無料ミントが未請求の場合、エージェント経由でAgent ID保有者が利用できます。", "packAlready": "このウォレットはすでに{n}体ミント済みです — 5パックにはミント0体が必要です。", "packReady": "準備完了 — 5体で0.0108 BNB（0.00272 BNBお得）。", "myMintsUnknown": "ウォレット：{addr} — ミント数が不明です。予定価格はペイド0体として計算しています。", "myMints": "ウォレット：{addr} — {total} / 5 ミント済み（無料{free}体 + ペイド{paid}体）。ペイドミント残り{left}回。", "noWallet": "ウォレットが見つかりません。MetaMaskをインストールするか、Binance Walletアプリでこのページを開いてください。", "connectedReading": "接続しました。コントラクトからミント数を読み取っています…", "connectedOpen": "接続しました — ミントは実施中です。数量を選んで「今すぐミント」を押してください。", "connectedClosed": "接続しました — ミントはまだ始まっていません。発表された時間にまたお越しください。", "connectedNoContract": "接続しました — コントラクトを読み取れませんでした。しばらくしてからもう一度お試しください。", "connectFailed": "ウォレット接続に失敗しました：{e}", "noContract": "コントラクトを読み取れませんでした。しばらくしてからもう一度お試しください。", "mintNotOpen": "ミントはまだ始まっていません。", "alreadyPaid": "すでにペイド{n}体ミント済みです — ウォレットあたりペイド最大4体です。", "readingPrice": "コントラクトから正確な価格を読み取っています…", "confirmPrice": "ウォレットで{price}を確認してください…", "mintSent": "ミントを送信しました！Tx {tx}… — カウントを更新しています。", "mintFailed": "ミントに失敗しました：{e}", "confirmPack": "ウォレットで0.0108 BNBを確認してください…", "packSent": "5パックを送信しました！Tx {tx}… — カウントを更新しています。", "packFailed": "5パックに失敗しました：{e}", "copied": "コピーしました ✓", "copyFailed": "コピーできませんでした — テキストを手動で選択してください", "badAddress": "有効な0xアドレスを入力してください（40文字の16進数）。", "checkingChain": "チェーン上で確認中…", "agentYes": "✓ このウォレットはAgent ID（.ai）を保有しています — フェーズ2をミントできます（初回無料、その後0.00126 / 0.00316 / 0.0041 / 0.005 BNB、または5パック0.0108 BNB、ウォレットあたり最大5体）。", "agentNo": "✗ このアドレスにAgent IDが見つかりません — ミントできません。まずBinanceアプリで無料の.ai Agent IDを取得してください。", "chainFailed": "チェーンを現在読み取れません — もう一度お試しください。", "shareUnknown": "PanduAGENT Phase 2 — ミント実施中！BNBチェーンの新しいストリートアニマル2,222体：新しい衣装、新しい仲間。初回ミント無料、その後0.00126 / 0.00316 / 0.0041 / 0.005 BNB、または5体まとめて0.0108 BNB。@PanduAGENT #PanduAGENT #BNBAgents", "shareDraft": "PanduAGENT Phase 2 — {n} / 2,222体のストリートアニマルがBNBチェーンでミントされました。初回ミント無料、その後0.00126 / 0.00316 / 0.0041 / 0.005 BNB、または5体まとめて0.0108 BNB。#PanduAGENT #BNBAgents"}, "en": {"metaTitle": "PanduAGENT Phase 2 — 2,222 New Street Animals on BNB Chain", "metaDesc": "PanduAGENT Phase 2 — 2,222 new street animals on BNB Chain: new outfits, new friends. First mint FREE for Agent ID holders; paid mints open to everyone, 0.00126 / 0.00316 / 0.0041 / 0.005 BNB; 5-pack 0.0108 BNB. Max 5 per wallet.", "ogDesc": "First mint FREE for Agent ID holders; paid mints open to everyone, 0.00126 / 0.00316 / 0.0041 / 0.005 BNB; 5-pack 0.0108 BNB, on BNB Chain.", "navCollection": "Collection", "navMint": "Mint", "navExchange": "Exchange", "navMarket": "Market", "navMintBtn": "Mint", "announce": "<b>🔥 MINT LIVE — PanduAGENT Phase 2 is minting now.</b> First mint FREE for Agent ID holders; paid mints 0.00126–0.005 BNB, or all 5 for 0.0108 BNB.", "eyebrow": "BNB SMART CHAIN · 5 TIERS · FIRST MINT FREE · 5-PACK 0.0108 BNB", "heroSub": "<b>2,222 new street animals</b> across <b>ten variants</b> — new outfits and new friends of Pandu: Hoodie Panda, Cap Fox, Bomber Cat, Tracksuit Dog, Raincoat Frog, Puffer Penguin and four rare outfits. <b>First mint FREE</b> for Agent ID holders — <b>paid mints open to everyone</b>, from <b>0.00126 BNB</b> up to <b>0.005 BNB</b>, max <b>5 per wallet</b> — or <b>all 5 at once for 0.0108 BNB</b> (save 0.00272 BNB).", "tierCommon": "COMMON", "tierUncommon": "UNCOMMON", "tierRare": "RARE", "tierEpic": "EPIC", "tierLegendary": "LEGENDARY", "statTotal": "TOTAL ANIMALS", "statVariants": "VARIANTS", "statMax": "MAX PER WALLET", "art1Kicker": "ARTICLE I — THE COLLECTION", "art1H2": "The variants", "art1Lede": "Every rarity has its own artwork — and most rarities have <b>extra variants</b> inside the same tier. Your animal is decided by its token ID; the rarer the range, the fewer exist.", "rarCommonA": "COMMON · A", "rarCommonB": "COMMON · B", "rarUncommonA": "UNCOMMON · A", "rarUncommonB": "UNCOMMON · B", "rarRareA": "RARE · A", "rarRareB": "RARE · B", "rarEpicA": "EPIC · A", "rarEpicB": "EPIC · B", "rarLegendaryA": "LEGENDARY · A", "rarLegendaryB": "LEGENDARY · B", "rng1": "IDs 1–556", "rng2": "IDs 557–1,111", "rng3": "IDs 1,112–1,388", "rng4": "IDs 1,389–1,666", "rng5": "IDs 1,667–1,832", "rng6": "IDs 1,833–1,999", "rng7": "IDs 2,000–2,076", "rng8": "IDs 2,077–2,154", "rng9": "IDs 2,155–2,188", "rng10": "IDs 2,189–2,222", "cnt556": "556 animals", "cnt555": "555 animals", "cnt277": "277 animals", "cnt278": "278 animals", "cnt166": "166 animals", "cnt167": "167 animals", "cnt77": "77 animals", "cnt78": "78 animals", "cnt34": "34 animals", "art2Kicker": "ARTICLE II — MINT", "art2H2": "Mint", "art2Lede": "Two routes in. <b>Route 1</b> is Phase 2 — the new collection, minting now. <b>Route 2</b> is Phase 1 — the first collection, sold out, trading on the secondary market.", "route1Kicker": "ROUTE 1 — PHASE 2 · MINT LIVE", "route1H3": "Phase 2 <span>— the new animals</span>", "route1P": "Two lanes. The <b>free mint belongs to agents</b> — the <b>paid mints are open to everyone</b>, straight from this page with a wallet and BNB.", "bambooH3": "LIVE STATUS — THE GROWING BAMBOO", "bambooPer": "/ 2,222 minted", "lane1H4": "🤖 Priority Lane — <span>Agents First Class</span>", "lane1P": "For holders of a Binance <b>.ai Agent ID</b>. Mint through your Binance Agentic Wallet with the agent skill below — <b>your first mint is FREE</b>.", "lane1Li1": "Mint #1 — FREE (Agent ID required)", "lane1Li2": "Free mint only — paid mints are public", "lane1Li3": "Max 5 per wallet total — 1 free + 4 paid", "laneLiPndx": "120,000 PNDX per paid mint", "readSkill": "Read the agent skill →", "lane2H4": "🐾 Public Lane — <span>Open to Everyone</span>", "lane2P": "No Agent ID needed. Mint the paid animals with any wallet, right here on this page — <b>flat BNB, no oracle</b>.", "lane2Li1": "Mint #2 — 0.00126 BNB", "lane2Li2": "Mint #3 — 0.00316 BNB", "lane2Li3": "Mint #4 — 0.0041 BNB", "lane2Li4": "Mint #5 — 0.005 BNB", "lane2Li5": "Max 4 paid per wallet — 5 total with your free mint", "lane2Li6": "🎁 5-pack — all 5 in one tx for 0.0108 BNB (save 0.00272)", "mintWalletDown": "Mint with your wallet ↓", "mintboxLede": "<b>MINT IS LIVE.</b> Mint #1 FREE for Agent ID holders, then 0.00126 / 0.00316 / 0.0041 / 0.005 BNB, or all 5 at once for <b>0.0108 BNB</b>.", "thMint": "MINT #", "thWho": "WHO", "thPrice": "PRICE", "row1": "#1 per wallet", "row2": "#2 per wallet", "row3": "#3 per wallet", "row4": "#4 per wallet", "row5": "#5 per wallet", "whoAgent": "Agent ID only", "whoPublic": "Public", "priceFree": "FREE", "mintFine1": "Max 5 per wallet (1 free + 4 paid). Paid mints earn 120,000 PNDX each. The free mint needs an Agent ID — checked on-chain.", "packH3": "🎁 5-Pack — all 5 animals in one transaction", "packFine": "One transaction, five animals, <b>0.0108 BNB flat</b> — 20% off the 0.01352 BNB singles total (save 0.00272 BNB). Requires 0 mints so far; uses the full 5/wallet allowance. If your wallet holds an Agent ID, the first of the 5 is your free mint (4 paid); otherwise all 5 count as paid. Either way the pack accrues <b>480,000 PNDX</b> (the PNDX token's wallet cap).", "packBtn": "Mint 5-pack — 0.0108 BNB", "packStatusConnect": "Connect your wallet — the 5-pack needs 0 mints so far (0.0108 BNB).", "publicH3": "🐾 Public Lane — mint paid animals with your wallet", "publicFine": "Anyone can mint the paid animals — no Agent ID needed. Connect your wallet, pick 1 to 4 paid mints (wallet mints #2–#5), and pay flat BNB. Max <b>5 per wallet</b> total — 1 free + 4 paid. The price is read from the contract for your wallet, so it is always exact.", "connectWallet": "Connect wallet", "mintNow": "Mint now", "paidMintsLbl": "Paid mints:", "statusConnectFirst": "Connect your wallet to see your exact price.", "myMintsNotConnected": "Your wallet: not connected.", "priorityH3": "🤖 Priority Lane — free mint for Agent ID holders", "priorityFine": "Your agent mints your FREE animal. Copy the prompt and paste it to your Binance Agentic Wallet.", "showPrompt": "🤖 Mint with your agent", "copyPrompt": "Copy agent prompt", "promptFine": "Paste this prompt to your Binance Agentic Wallet. It simulates first — mint is open, so it executes after you confirm.", "checkAgentH3": "Check your Agent ID", "checkFine": "Paste your Agentic Wallet address. The page reads the chain to see if it holds an Agent ID — no wallet connection needed.", "checkAgentBtn": "Check Agent ID", "rulesH3": "The rules — how it works", "rule1H4": "Pick your lane", "rule1P": "Agent ID holders mint <b>free</b> through their Binance Agentic Wallet. Everyone else mints the <b>paid</b> animals with any wallet on this page — 0.00126, 0.00316, 0.0041, then 0.005 BNB. Max 5 per wallet total. Or buy all 5 at once with the <b>5-pack (0.0108 BNB)</b>.", "rule2H4": "The token ID decides your animal", "rule2P": "Mints are sequential, 1 to 2,222. The ID you receive fixes the variant — Common, Uncommon, Rare, Epic, or the 68 Legendary animals. No choosing, no re-rolls.", "rule3H4": "Your animal is revealed at mint", "rule3P": "There is no delayed reveal — the artwork for your token ID is visible as soon as it is minted. What you mint is what you get.", "rule4H4": "Yours to keep or trade", "rule4P": "Show it, hold it, or list it on the <a href=\"market.html\">PanduAGENT Phase 2 Market</a> — 0% marketplace fee, 5% creator royalty on every sale — or trade it on <a href=\"https://element.market\" target=\"_blank\" rel=\"noopener\">Element Market</a> (collection link activates once Element indexes it).", "route2Kicker": "ROUTE 2 — PHASE 1 · SOLD OUT 9 NOV 2026", "route2H3": "Phase 1 <span>— sold out</span>", "route2P": "Before Phase 2, there was <b>Phase 1</b> — the original 2,222 street animals. It <b>sold out on 9 Nov 2026</b> and no more can ever be minted. The collection lives on below, and its animals trade on the secondary market.", "p1StatMinted": "MINTED / 2,222 · LIVE", "p1StatPaid": "PAID MINTS", "p1StatPndx": "PNDX ACCRUED", "p1Fine": "Paid mints and PNDX accrued are the final figures from the sold-out check on 9 Nov 2026.", "viewP1": "View Phase 1 collection →", "tradeElement": "Trade on Element →", "art3Kicker": "ARTICLE III — THE BONUS TOKEN", "art3Lede": "Every <b>paid</b> mint earns <b>120,000 PNDX</b> — the PanduAGENT bonus token, claimable from the token contract. Free mints earn 0. PNDX is a bonus for minters, not a promise: <b>it has no price, no liquidity pool, and no guaranteed value</b>. If a pool ever exists, it will be announced — never assumed.", "tokTotal": "TOTAL SUPPLY", "tokPool": "BONUS POOL", "tokTreasury": "TREASURY", "tokPerMint": "PNDX PER PAID MINT", "art3Fine": "Max 480,000 PNDX per wallet (4 paid mints × 120,000). A 5-pack accrues 480,000 PNDX too — the PNDX token enforces a 480,000/wallet cap, so a public pack's 5th paid mint accrues 0. Worst case the pool needs ~213M PNDX if every paid mint is claimed — well inside the 540M pool. PNDX is the SAME token as Phase 1 (already deployed) — no new token.", "art4Kicker": "ARTICLE IV — EXCHANGE", "art4H2": "Exchange", "art4Lede": "Buy or sell Phase 2 animals on the <b>own marketplace</b> — fixed-price escrow, <b>0% platform fee</b>, 5% creator royalty on every sale — or trade on <b>Element Market</b>, the BNB Chain marketplace. Same collection, second venue, no extra contract.", "marketH3": "The market <span>— 0% fee</span>", "marketP": "List an animal, a buyer pays the exact price, 5% royalty goes to the creator and the rest to you. Cancel any time before a sale and the animal comes back. The market contract is <b>live</b> — listings, buying and cancelling work here now.", "visitMarket": "Visit the Market →", "elementFine": "Element Market collection link activates once Element indexes the collection — check back soon.", "faqKicker": "QUESTIONS", "faq1Q": "Who gets the free mint?", "faq1A": "Only wallets holding a Binance <b>.ai Agent ID</b>, minted through their agent. Public wallets <b>cannot</b> claim the free mint — the contract enforces it on-chain. One free mint per wallet.", "faq2Q": "Who can mint the paid animals?", "faq2A": "<b>Anyone.</b> Connect any wallet on this page and pay flat BNB — paid mints cost <b>0.00126</b>, <b>0.00316</b>, <b>0.0041</b>, then <b>0.005 BNB</b> in order. Max 4 paid per wallet. No Agent ID needed, no oracle, no price surprises: the page reads your exact price from the contract before you confirm.", "faq3Q": "What is the most one wallet pays?", "faq3A": "Max 5 animals per wallet — 1 free + 4 paid — so the most one wallet ever pays is <b>0.01352 BNB</b> plus gas (or <b>0.0108 BNB</b> with the 5-pack). Paid mints earn <b>120,000 PNDX</b> each (max 480,000 per wallet).", "faq4Q": "What is $PNDX?", "faq4A": "PNDX is the bonus token for paid minters: <b>120,000 PNDX per paid mint</b> (max 480,000 per wallet). Total supply 1B — 540M in the bonus pool, 460M treasury. It has <b>no price and no liquidity pool yet</b>, and nothing here promises it will ever have one.", "faq5Q": "When does mint open?", "faq5A": "<b>Mint is open.</b> It opened 10 Nov 2026 at 05:23 UTC. The bamboo above grows with every mint.", "faq6Q": "What is the 5-pack?", "faq6A": "Buy all <b>5 animals in one transaction for 0.0108 BNB</b> — 20% off the 0.01352 BNB singles total (save 0.00272 BNB). It needs <b>0 mints so far</b> and uses your full 5/wallet allowance. Agent ID holders get their free mint as the first of the 5 (4 paid); everyone else pays for all 5. Either way it accrues <b>480,000 PNDX</b> (the token's wallet cap).", "faq7Q": "Is PNDX the same token as Phase 1?", "faq7A": "<b>Yes.</b> Phase 2 reuses the existing PNDX token — no new token is deployed. PNDX earned in Phase 1 and Phase 2 shares the same 540M bonus pool and the same 480,000/wallet cap.", "supportKicker": "SPREAD THE WORD", "supportH2": "Support <span>PanduAGENT</span>", "supportLede1": "Follow the pack on X — <a href=\"https://x.com/PanduAGENT\" target=\"_blank\" rel=\"noopener\">@PanduAGENT</a> — and post about them. Every share helps the bamboo grow. (Phase 2 uses the same X account as Phase 1.)", "supportLede2": "<b>MINT LIVE.</b> Phase 1 sold out 2,222/2,222; Phase 2 is minting now. Buy or sell here on the <a href=\"market.html\">PanduAGENT Phase 2 Market</a> or on <a href=\"https://element.market\" target=\"_blank\" rel=\"noopener\">Element Market</a> (collection link activates once Element indexes it).", "followX": "Follow @PanduAGENT on X →", "shareBtn": "Post on X", "footNft": "PanduAGENT Phase 2 (PANDU2) — NFT contract: <span style=\"color:var(--ink);font-weight:700\">LIVE</span><br><a href=\"https://bscscan.com/address/0x9e5Dd59b5Df1d36de02454A1fD6d77ee5B07778B\" target=\"_blank\" rel=\"noopener\"><code>0x9e5Dd59b5Df1d36de02454A1fD6d77ee5B07778B</code></a>", "footPndx": "PNDX token (reused from Phase 1): <span style=\"color:var(--ink);font-weight:700\">LIVE</span><br><a href=\"https://bscscan.com/address/0xeDd0cf58A052Ac073a4F14BE25e5be6a203cB8aE\" target=\"_blank\" rel=\"noopener\"><code>0xeDd0cf58A052Ac073a4F14BE25e5be6a203cB8aE</code></a>", "footMarket": "Market contract: <span style=\"color:var(--ink);font-weight:700\">LIVE</span><br><a href=\"https://bscscan.com/address/0x92099c1142864b9d27258f2383C315789a66997C\" target=\"_blank\" rel=\"noopener\"><code>0x92099c1142864b9d27258f2383C315789a66997C</code></a>", "footDeploy": "Deployed 10 Nov 2026, mint opened 05:23 UTC. Deploy txs: <a href=\"https://bscscan.com/tx/0xead8b91b2692bd1063714969bba0b1d2e25d356faacd7bbb970d400e4033e4f7\" target=\"_blank\" rel=\"noopener\">NFT</a> · <a href=\"https://bscscan.com/tx/0xb78facc9dde178bd2949f45a26651227b3048a37338862738723926af12ebf7c\" target=\"_blank\" rel=\"noopener\">Market</a> · <a href=\"https://bscscan.com/tx/0xbf2573300626c08684e641feb7e1ea8f2b6f550b32cd23d77b607de478df5d24\" target=\"_blank\" rel=\"noopener\">setMinter</a> · <a href=\"https://bscscan.com/tx/0x2b4586ae5427a4de2c0fc62d733e491b0f2b607e0c97ef0cade920ebbd1be0ac\" target=\"_blank\" rel=\"noopener\">mint-open</a>.", "footChain": "Chain: BNB Smart Chain (56) · Royalty 5% · Max 5 per wallet · Free mint: Agent ID only. Paid mints: public, wallet, flat BNB. 5-pack: 0.0108 BNB.", "footHonest": "Honest rules: no promise of financial return. Mint prices, supply, and rarity ranges are published above. PNDX has no price or liquidity yet.", "footCopy": "© 2026 PanduAGENT Phase 2. Street animals, raised by bamboo. Mint live since 10 Nov 2026, 05:23 UTC.", "bambooUnavailable": "Live data unavailable right now. The bamboo wakes when the first animal is minted.", "bambooLive": "Live on BNB Chain · {n} / 2,222 minted · the bamboo grows with every mint.", "bambooSoldOut": "Sold out — all 2,222 Phase 2 animals minted. The bamboo stands tall.", "p1Loading": "Live count from the Phase 1 contract on BNB Chain — loading…", "p1Live": "Live on BNB Chain · {n} / 2,222 minted.", "p1SoldOut": "Live on BNB Chain · SOLD OUT — all 2,222 Phase 1 animals minted (9 Nov 2026).", "p1Unavailable": "Live count unavailable right now — the sold-out total is 2,222 / 2,222.", "paidMaxed": "Your wallet already minted all 4 paid animals (4/4). The free mint, if unclaimed, is for Agent ID holders via their agent.", "packAlready": "Your wallet already minted {n} animal(s) — the 5-pack needs 0 mints so far.", "packReady": "Ready — 5 animals for 0.0108 BNB (save 0.00272 BNB).", "myMintsUnknown": "Your wallet: {addr} — minted count unknown. Planned price assumes 0 paid so far.", "myMints": "Your wallet: {addr} — minted {total} / 5 ({free} free + {paid} paid). {left} paid mint(s) left.", "noWallet": "No wallet found. Install MetaMask or open this page in the Binance Wallet app.", "connectedReading": "Connected. Reading your minted count from the contract…", "connectedOpen": "Connected — mint is open. Pick your quantity and press Mint now.", "connectedClosed": "Connected — mint is not open yet. Come back at the announced time.", "connectedNoContract": "Connected — could not read the contract. Try again in a moment.", "connectFailed": "Wallet connection failed: {e}", "noContract": "Could not read the contract. Try again in a moment.", "mintNotOpen": "Mint is not open yet.", "alreadyPaid": "You already minted {n} paid animal(s) — max 4 paid per wallet.", "readingPrice": "Reading your exact price from the contract…", "confirmPrice": "Confirm {price} in your wallet…", "mintSent": "Mint sent! Tx {tx}… — refreshing your count.", "mintFailed": "Mint failed: {e}", "confirmPack": "Confirm 0.0108 BNB in your wallet…", "packSent": "5-pack sent! Tx {tx}… — refreshing your count.", "packFailed": "5-pack failed: {e}", "copied": "Copied ✓", "copyFailed": "Copy failed — select the text manually", "badAddress": "Enter a valid 0x address (40 hex characters).", "checkingChain": "Checking on-chain…", "agentYes": "✓ This wallet holds an Agent ID (.ai) — it can mint Phase 2 (first mint free, then 0.00126 / 0.00316 / 0.0041 / 0.005 BNB, or the 5-pack at 0.0108 BNB, max 5 per wallet).", "agentNo": "✗ No Agent ID found for this address — it cannot mint. Claim a free .ai Agent ID in the Binance app first.", "chainFailed": "Could not read the chain right now — please try again.", "shareUnknown": "PanduAGENT Phase 2 — MINT LIVE! 2,222 new street animals on BNB Chain: new outfits, new friends. First mint FREE, then 0.00126 / 0.00316 / 0.0041 / 0.005 BNB, or 5 at once for 0.0108 BNB. @PanduAGENT #PanduAGENT #BNBAgents", "shareDraft": "PanduAGENT Phase 2 — {n} / 2,222 street animals minted on BNB Chain. First mint FREE, then 0.00126 / 0.00316 / 0.0041 / 0.005 BNB, or 5 at once for 0.0108 BNB. #PanduAGENT #BNBAgents"}};
+var LANG = "ja";
+function t(key, vars) {
+  var d = I18N[LANG] || I18N.en;
+  var s = (d && d[key] !== undefined) ? d[key] : (I18N.en[key] !== undefined ? I18N.en[key] : key);
+  if (vars) { for (var k in vars) { s = s.split("{" + k + "}").join(String(vars[k])); } }
+  return s;
+}
+function applyI18n() {
+  var i, els, k;
+  if (typeof document.querySelectorAll === "function") {
+    els = document.querySelectorAll("[data-i18n]");
+    for (i = 0; i < els.length; i++) {
+      k = els[i].getAttribute("data-i18n");
+      if (!k) continue;
+      if (els[i].id === "connectWalletBtn" && connected) continue;
+      els[i].textContent = t(k);
+    }
+    els = document.querySelectorAll("[data-i18n-html]");
+    for (i = 0; i < els.length; i++) {
+      k = els[i].getAttribute("data-i18n-html");
+      if (k) els[i].innerHTML = t(k);
+    }
+  }
+  if (document.documentElement) document.documentElement.lang = LANG;
+  document.title = t("metaTitle");
+  if (typeof document.querySelector === "function") {
+    var md = document.querySelector('meta[name="description"]');
+    if (md) md.setAttribute("content", t("metaDesc"));
+    var ogt = document.querySelector('meta[property="og:title"]');
+    if (ogt) ogt.setAttribute("content", t("metaTitle"));
+    var ogd = document.querySelector('meta[property="og:description"]');
+    if (ogd) ogd.setAttribute("content", t("ogDesc"));
+  }
+  var bj = $("langJa"), be = $("langEn");
+  if (bj) bj.classList.toggle("on", LANG === "ja");
+  if (be) be.classList.toggle("on", LANG === "en");
+  /* re-render live/dynamic lines in the new language */
+  if (bambooTried) setBamboo(lastMinted);
+  if (lastP1.tried) renderP1Note();
+  setMyMintsLine();
+  var ps = $("publicStatus");
+  if (ps) {
+    if (!connected) ps.textContent = t("statusConnectFirst");
+    else if (!contractLive) ps.textContent = t("connectedNoContract");
+    else ps.textContent = mintOpen ? t("connectedOpen") : t("connectedClosed");
+  }
+  updatePaid();
+}
+function setLang(l) {
+  LANG = (l === "en") ? "en" : "ja";
+  try { localStorage.setItem("p2lang", LANG); } catch (e) {}
+  applyI18n();
+}
+function initLang() {
+  var saved = null;
+  try { saved = localStorage.getItem("p2lang"); } catch (e) {}
+  LANG = (saved === "en") ? "en" : "ja";
+  var bj = $("langJa"), be = $("langEn");
+  if (bj) bj.addEventListener("click", function () { setLang("ja"); });
+  if (be) be.addEventListener("click", function () { setLang("en"); });
+  applyI18n();
+}
+
 async function ethCall(to, data) {
   var body = JSON.stringify({ jsonrpc: "2.0", id: 1, method: "eth_call", params: [{ to: to, data: data }, "latest"] });
   for (var i = 0; i < RPCS.length; i++) {
@@ -534,7 +606,10 @@ async function ethCall(to, data) {
    The stalk grows taller as totalMinted/2222 rises; leaves sprout at
    15% / 35% / 55% / 80%. Failed reads keep the short shoot — never 0. */
 var LEAF_THRESHOLDS = [0.15, 0.35, 0.55, 0.8];
+var lastMinted = null;
+var bambooTried = false;
 function setBamboo(minted) {
+  lastMinted = minted;
   var stalk = $("bambooStalk"), bar = $("bambooBar");
   function setLeaves(frac) {
     for (var i = 0; i < LEAF_THRESHOLDS.length; i++) {
@@ -547,7 +622,7 @@ function setBamboo(minted) {
   }
   if (minted === null) {
     setText("bambooMinted", "—");
-    setText("bambooNote", "Live data unavailable right now. The bamboo wakes when the first animal is minted.");
+    setText("bambooNote", t("bambooUnavailable"));
     if (bar) bar.style.width = "0%";
     if (stalk) stalk.style.height = "24px";
     setLeaves(0);
@@ -559,13 +634,14 @@ function setBamboo(minted) {
   if (stalk) stalk.style.height = Math.round(24 + frac * 180) + "px";
   setLeaves(frac);
   setText("bambooNote", minted >= MAX_SUPPLY
-    ? "Sold out — all 2,222 Phase 2 animals minted. The bamboo stands tall."
-    : "Live on BNB Chain · " + minted + " / 2,222 minted · the bamboo grows with every mint.");
+    ? t("bambooSoldOut")
+    : t("bambooLive", { n: minted }));
 }
 
 var contractLive = false; /* true once a totalSupply read succeeds */
 var mintOpen = false;
 async function readLive() {
+  bambooTried = true;
   try {
     var raw = await ethCall(NFT, SEL_TOTAL_SUPPLY);
     var minted = parseInt(raw, 16);
@@ -592,19 +668,29 @@ async function readLive() {
    verification, not live reads. */
 var P1_NFT = "0x4AB41152EdB3E2853b19828e51927db36508cd64";
 var P1_MAX = 2222;
-async function readPhase1() {
+var lastP1 = { tried: false, ok: false, minted: null };
+function renderP1Note() {
   var note = $("p1Note");
+  if (!note || !lastP1.tried) return;
+  if (!lastP1.ok) { note.textContent = t("p1Unavailable"); return; }
+  note.textContent = lastP1.minted >= P1_MAX
+    ? t("p1SoldOut")
+    : t("p1Live", { n: lastP1.minted.toLocaleString("en-US") });
+}
+async function readPhase1() {
+  lastP1.tried = true;
   try {
     var raw = await ethCall(P1_NFT, SEL_TOTAL_SUPPLY);
     var minted = parseInt(raw, 16);
     if (isNaN(minted)) throw new Error("bad Phase 1 read");
+    lastP1.ok = true;
+    lastP1.minted = minted;
     setText("p1Minted", minted.toLocaleString("en-US"));
-    if (note) note.textContent = minted >= P1_MAX
-      ? "Live on BNB Chain · SOLD OUT — all 2,222 Phase 1 animals minted (9 Nov 2026)."
-      : "Live on BNB Chain · " + minted.toLocaleString("en-US") + " / 2,222 minted.";
+    renderP1Note();
   } catch (e) {
+    lastP1.ok = false;
     setText("p1Minted", "—");
-    if (note) note.textContent = "Live count unavailable right now — the sold-out total is 2,222 / 2,222.";
+    renderP1Note();
   }
 }
 
@@ -637,7 +723,7 @@ function updatePaid() {
   if (maxQ <= 0) {
     setText("paidQtyVal", "0");
     setText("paidTotal", "—");
-    setText("publicStatus", "Your wallet already minted all 4 paid animals (4/4). The free mint, if unclaimed, is for Agent ID holders via their agent.");
+    setText("publicStatus", t("paidMaxed"));
     updateMintButton();
     return;
   }
@@ -666,17 +752,17 @@ function updatePackButton() {
   if (total === 0) b.disabled = false;
   var st = $("packStatus");
   if (st) {
-    if (total > 0) st.textContent = "Your wallet already minted " + total + " animal(s) — the 5-pack needs 0 mints so far.";
-    else st.textContent = "Ready — 5 animals for 0.0108 BNB (save 0.00272 BNB).";
+    if (total > 0) st.textContent = t("packAlready", { n: total });
+    else st.textContent = t("packReady");
   }
 }
 function setMyMintsLine() {
   var el = $("myMintsLine");
   if (!el) return;
-  if (!connected) { el.textContent = "Your wallet: not connected."; return; }
+  if (!connected) { el.textContent = t("myMintsNotConnected"); return; }
   var total = myMinted();
-  if (total === null) { el.textContent = "Your wallet: " + connected.slice(0, 6) + "…" + connected.slice(-4) + " — minted count unknown. Planned price assumes 0 paid so far."; return; }
-  el.textContent = "Your wallet: " + connected.slice(0, 6) + "…" + connected.slice(-4) + " — minted " + total + " / 5 (" + myFree() + " free + " + myPaid() + " paid). " + (MAX_PAID_PER_WALLET - myPaid()) + " paid mint(s) left.";
+  if (total === null) { el.textContent = t("myMintsUnknown", { addr: connected.slice(0, 6) + "…" + connected.slice(-4) }); return; }
+  el.textContent = t("myMints", { addr: connected.slice(0, 6) + "…" + connected.slice(-4), total: total, free: myFree(), paid: myPaid(), left: MAX_PAID_PER_WALLET - myPaid() });
 }
 async function readMyMints() {
   if (!connected) return;
@@ -701,21 +787,21 @@ bindPaid("paidPlus", function () { var cap = MAX_PAID_PER_WALLET - myPaid(); if 
 async function connectWallet() {
   var btn = $("connectWalletBtn");
   var out = $("publicStatus");
-  if (!window.ethereum) { out.textContent = "No wallet found. Install MetaMask or open this page in the Binance Wallet app."; return; }
+  if (!window.ethereum) { out.textContent = t("noWallet"); return; }
   try {
     var accs = await window.ethereum.request({ method: "eth_requestAccounts" });
     connected = accs[0];
     btn.textContent = connected.slice(0, 6) + "…" + connected.slice(-4);
     await ensureBsc();
-    out.textContent = "Connected. Reading your minted count from the contract…";
+    out.textContent = t("connectedReading");
     await readLive();
     await readMyMints();
     out.textContent = contractLive
-      ? (mintOpen ? "Connected — mint is open. Pick your quantity and press Mint now." : "Connected — mint is not open yet. Come back at the announced time.")
-      : "Connected — could not read the contract. Try again in a moment.";
+      ? (mintOpen ? t("connectedOpen") : t("connectedClosed"))
+      : t("connectedNoContract");
     updatePaid();
   } catch (e) {
-    out.textContent = "Wallet connection failed: " + (e && e.message ? e.message : e);
+    out.textContent = t("connectFailed", { e: (e && e.message ? e.message : e) });
   }
 }
 async function ensureBsc() {
@@ -732,12 +818,12 @@ async function ensureBsc() {
 }
 async function doMintPaid() {
   var out = $("publicStatus");
-  if (!contractLive) { out.textContent = "Could not read the contract. Try again in a moment."; return; }
-  if (!mintOpen) { out.textContent = "Mint is not open yet."; return; }
+  if (!contractLive) { out.textContent = t("noContract"); return; }
+  if (!mintOpen) { out.textContent = t("mintNotOpen"); return; }
   if (!connected) { await connectWallet(); if (!connected) return; }
-  if (MAX_PAID_PER_WALLET - myPaid() < paidQty) { out.textContent = "You already minted " + myPaid() + " paid animal(s) — max 4 paid per wallet."; return; }
+  if (MAX_PAID_PER_WALLET - myPaid() < paidQty) { out.textContent = t("alreadyPaid", { n: myPaid() }); return; }
   try {
-    out.textContent = "Reading your exact price from the contract…";
+    out.textContent = t("readingPrice");
     var valueWei = null;
     try {
       var qdata = SEL_QUOTE_PAID_FOR + "000000000000000000000000" + connected.slice(2).toLowerCase() + hexPad32(paidQty);
@@ -745,33 +831,33 @@ async function doMintPaid() {
       valueWei = BigInt(qraw);
     } catch (e) { valueWei = null; }
     if (valueWei === null) valueWei = BigInt(plannedPaidMicro(myPaid(), paidQty)) * 1000000000000n;
-    out.textContent = "Confirm " + fmtWei(valueWei.toString()) + " in your wallet…";
+    out.textContent = t("confirmPrice", { price: fmtWei(valueWei.toString()) });
     await ensureBsc();
     var tx = { from: connected, to: NFT, data: SEL_MINT_PAID + hexPad32(paidQty), value: "0x" + valueWei.toString(16) };
     var hash = await window.ethereum.request({ method: "eth_sendTransaction", params: [tx] });
-    out.textContent = "Mint sent! Tx " + hash.slice(0, 18) + "… — refreshing your count.";
+    out.textContent = t("mintSent", { tx: hash.slice(0, 18) });
     setTimeout(function () { readLive(); readMyMints(); }, 4000);
   } catch (e) {
-    out.textContent = "Mint failed: " + (e && e.message ? e.message : e);
+    out.textContent = t("mintFailed", { e: (e && e.message ? e.message : e) });
   }
 }
 /* ---- 5-pack: mint 5 in one tx for a flat 0.0108 BNB ---- */
 async function doMintPack() {
   var out = $("packStatus");
-  if (!contractLive) { out.textContent = "Could not read the contract. Try again in a moment."; return; }
-  if (!mintOpen) { out.textContent = "Mint is not open yet."; return; }
+  if (!contractLive) { out.textContent = t("noContract"); return; }
+  if (!mintOpen) { out.textContent = t("mintNotOpen"); return; }
   if (!connected) { await connectWallet(); if (!connected) return; }
   if (myMinted() === null) { await readMyMints(); }
-  if (myMinted() !== 0) { out.textContent = "Your wallet already minted " + myMinted() + " animal(s) — the 5-pack needs 0 mints so far."; return; }
+  if (myMinted() !== 0) { out.textContent = t("packAlready", { n: myMinted() }); return; }
   try {
-    out.textContent = "Confirm 0.0108 BNB in your wallet…";
+    out.textContent = t("confirmPack");
     await ensureBsc();
     var tx = { from: connected, to: NFT, data: SEL_MINT_PACK5, value: "0x" + PACK_PRICE_WEI.toString(16) };
     var hash = await window.ethereum.request({ method: "eth_sendTransaction", params: [tx] });
-    out.textContent = "5-pack sent! Tx " + hash.slice(0, 18) + "… — refreshing your count.";
+    out.textContent = t("packSent", { tx: hash.slice(0, 18) });
     setTimeout(function () { readLive(); readMyMints(); }, 4000);
   } catch (e) {
-    out.textContent = "5-pack failed: " + (e && e.message ? e.message : e);
+    out.textContent = t("packFailed", { e: (e && e.message ? e.message : e) });
   }
 }
 var packMintBtn = $("packMintBtn");
@@ -822,7 +908,7 @@ var copyPromptBtn = $("copyPromptBtn");
 if (copyPromptBtn) copyPromptBtn.addEventListener("click", function () {
   if ($("agentPromptBox").style.display !== "block") openAgentPrompt();
   var text = $("agentPrompt").textContent;
-  function done(ok) { copyPromptBtn.textContent = ok ? "Copied ✓" : "Copy failed — select the text manually"; }
+  function done(ok) { copyPromptBtn.textContent = ok ? t("copied") : t("copyFailed"); }
   if (navigator.clipboard && navigator.clipboard.writeText) {
     navigator.clipboard.writeText(text).then(function () { done(true); }, function () { done(false); });
   } else {
@@ -838,17 +924,15 @@ var agentCheckBtn = $("agentCheckBtn");
 if (agentCheckBtn) agentCheckBtn.addEventListener("click", function () {
   var addr = ($("agentAddr").value || "").trim();
   var out = $("agentCheckOut");
-  if (!/^0x[0-9a-fA-F]{40}$/.test(addr)) { out.textContent = "Enter a valid 0x address (40 hex characters)."; return; }
-  out.textContent = "Checking on-chain…";
+  if (!/^0x[0-9a-fA-F]{40}$/.test(addr)) { out.textContent = t("badAddress"); return; }
+  out.textContent = t("checkingChain");
   var data = SEL_BALANCE + "000000000000000000000000" + addr.slice(2).toLowerCase();
   ethCall(REGISTRY, data).then(function (bal) {
     var n = parseInt(bal, 16);
-    out.textContent = n > 0
-      ? "✓ This wallet holds an Agent ID (.ai) — it can mint Phase 2 (first mint free, then 0.00126 / 0.00316 / 0.0041 / 0.005 BNB, or the 5-pack at 0.0108 BNB, max 5 per wallet)."
-      : "✗ No Agent ID found for this address — it cannot mint. Claim a free .ai Agent ID in the Binance app first.";
+    out.textContent = n > 0 ? t("agentYes") : t("agentNo");
     out.className = "status " + (n > 0 ? "ok" : "err");
   }).catch(function () {
-    out.textContent = "Could not read the chain right now — please try again.";
+    out.textContent = t("chainFailed");
     out.className = "status err";
   });
 });
@@ -859,13 +943,14 @@ if (shareBtn) {
   shareBtn.addEventListener("click", function () {
     var minted = $("bambooMinted") ? $("bambooMinted").textContent : "—";
     var text = (minted === "—")
-      ? "PanduAGENT Phase 2 — MINT LIVE! 2,222 new street animals on BNB Chain: new outfits, new friends. First mint FREE, then 0.00126 / 0.00316 / 0.0041 / 0.005 BNB, or 5 at once for 0.0108 BNB. @PanduAGENT #PanduAGENT #BNBAgents"
-      : "PanduAGENT Phase 2 — " + minted + " / 2,222 street animals minted on BNB Chain. First mint FREE, then 0.00126 / 0.00316 / 0.0041 / 0.005 BNB, or 5 at once for 0.0108 BNB. #PanduAGENT #BNBAgents";
+      ? t("shareUnknown")
+      : t("shareDraft", { n: minted });
     var url = "https://twitter.com/intent/tweet?text=" + encodeURIComponent(text) + "&url=" + encodeURIComponent("https://panduagent-phase2.vercel.app/");
     window.open(url, "_blank", "noopener");
   });
 }
 
+initLang();
 updatePaid();
 readLive();
 readPhase1();

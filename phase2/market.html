@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ja">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>PanduAGENT Phase 2 Market — Buy &amp; Sell PanduAGENT Phase 2 Animals</title>
-<meta name="description" content="PanduAGENT Phase 2 secondary market on BNB Chain. Fixed-price listings, 0% platform fee, 5% creator royalty.">
+<title>PanduAGENT Phase 2 マーケット — PanduAGENT Phase 2 の仲間を売買</title>
+<meta name="description" content="PanduAGENT Phase 2 のセカンダリーマーケット（BNBチェーン）。固定価格出品、手数料0%、クリエイターロイヤリティ5%。">
 <style>
 :root{--paper:#F3EFE6;--paper2:#ECE6DB;--ink:#1C1B1E;--ink2:#1D1C20;--txt:#33312D;--mut:#958E84;--line:#D9D2C3;--line2:#EBE5DA;--accent:#D74830}
 *{box-sizing:border-box;margin:0;padding:0}
@@ -21,6 +21,9 @@ header .logo span{color:var(--accent)}
 header nav{margin-left:auto;display:flex;gap:8px;align-items:center;flex-wrap:wrap}
 .pill{display:inline-block;border:1px solid var(--ink);border-radius:999px;padding:6px 12px;font-size:12px;letter-spacing:.4px;color:var(--ink);background:var(--paper)}
 .pill:hover{text-decoration:none;background:var(--ink);color:var(--paper)}
+.langsw{display:inline-flex;border:1px solid var(--ink);border-radius:999px;overflow:hidden;vertical-align:middle}
+.langbtn{background:var(--paper);border:0;padding:6px 10px;font-size:12px;font-weight:700;color:var(--ink);cursor:pointer;font-family:inherit}
+.langbtn.on{background:var(--ink);color:var(--paper)}
 button,.btn{cursor:pointer;border:1px solid var(--ink);border-radius:10px;padding:10px 16px;font-size:14px;font-weight:700;background:var(--ink);color:var(--paper)}
 button:hover{text-decoration:none}
 button.gold{background:var(--accent);border-color:var(--accent);color:#F3EFE6}
@@ -74,53 +77,54 @@ code{font-family:ui-monospace,Menlo,Consolas,monospace;font-size:12px;color:var(
   <div class="in">
     <div class="logo">🎋 PanduAGENT Phase 2 <span>Market</span></div>
     <nav>
-      <a class="pill" href="index.html">← Mint page</a>
+      <a class="pill" href="index.html" data-i18n="navMintPage">← ミントページ</a>
       <a class="pill" href="https://element.market" target="_blank" rel="noopener">Element</a>
-      <button id="connectBtn" class="sm">Connect wallet</button>
+      <span class="langsw"><button type="button" id="langJa" class="langbtn on" lang="ja">日本語</button><button type="button" id="langEn" class="langbtn" lang="en">EN</button></span>
+      <button id="connectBtn" class="sm" data-i18n="connectWallet">ウォレットを接続</button>
     </nav>
   </div>
 </header>
-<div class="announce"><b>🔥 MARKET LIVE — list, buy and cancel now.</b> 0% platform fee, 5% creator royalty on every sale.</div>
+<div class="announce" data-i18n-html="announce"><b>🔥 マーケット稼働中 — 今すぐ出品・購入・キャンセルできます。</b> プラットフォーム手数料0%、売却ごとにクリエイターロイヤリティ5%。</div>
 <div class="wrap">
   <section class="hero">
-    <h1>Buy &amp; sell <span>PanduAGENT Phase 2</span> animals</h1>
-    <p>Fixed-price secondary market on BNB Chain. 0% platform fee — only the 5% creator royalty applies on every sale.</p>
-    <p>Also trading on <a href="https://element.market" target="_blank" rel="noopener">Element Market</a> — the BNB Chain marketplace where anyone can list and buy PanduAGENT Phase 2. Same collection, second venue, no extra contract. The exact Element collection link activates once Element indexes the collection.</p>
+    <h1 data-i18n-html="mHeroH1"><span>PanduAGENT Phase 2</span> の仲間を売買</h1>
+    <p data-i18n-html="mHeroP1">BNBチェーンの固定価格セカンダリーマーケット。プラットフォーム手数料0% — 売却ごとにクリエイターロイヤリティ5%のみ適用されます。</p>
+    <p data-i18n-html="mHeroP2">こちらも取引中：<a href="https://element.market" target="_blank" rel="noopener">Element Market</a> — PanduAGENT Phase 2 を誰でも出品・購入できるBNBチェーンのマーケットプレイス。同じコレクション、もう一つの会場、追加のコントラクトはありません。Elementのコレクションリンクは、Elementがコレクションをインデックスしてから有効になります。</p>
   </section>
 
-  <div id="deployBanner" class="banner" style="display:none">⏳ The market contract is <b>not deployed yet</b>. Listings, buying and cancelling will unlock here as soon as the contract is live. Nothing on this page trades until then.</div>
+  <div id="deployBanner" class="banner" style="display:none" data-i18n-html="deployBanner">⏳ マーケットコントラクトは<b>まだデプロイされていません</b>。出品、購入、キャンセルは、コントラクトが稼働してからここで使えるようになります。それまではこのページでは何も取引できません。</div>
 
   <div class="stats" id="liveStats">
-    <div class="stat"><b id="statListed">–</b><span>animals listed</span></div>
-    <div class="stat"><b id="statFloor">–</b><span>floor price (BNB)</span></div>
-    <div class="stat"><b id="statMinted">–</b><span>minted / 2,222</span></div>
+    <div class="stat"><b id="statListed">–</b><span data-i18n="statListed">出品中の仲間</span></div>
+    <div class="stat"><b id="statFloor">–</b><span data-i18n="statFloor">最低価格（BNB）</span></div>
+    <div class="stat"><b id="statMinted">–</b><span data-i18n="statMinted">ミント済み / 2,222</span></div>
   </div>
-  <p class="note" id="statNote">Loading live data…</p>
+  <p class="note" id="statNote">ライブデータを読み込み中…</p>
 
-  <h2>🔥 <span>Listed</span> animals</h2>
-  <div class="grid" id="listingsGrid"><div class="empty">Loading listings…</div></div>
+  <h2 data-i18n-html="h2Listed">🔥 <span>出品中の</span>仲間</h2>
+  <div class="grid" id="listingsGrid"><div class="empty">出品を読み込み中…</div></div>
 
-  <h2>📝 <span>List</span> your animal</h2>
+  <h2 data-i18n-html="h2List">📝 仲間を<span>出品</span></h2>
   <form class="card2" id="listForm">
     <div class="row">
-      <div><label>Token ID</label><input id="listTokenId" type="number" min="1" max="2222" placeholder="e.g. 131"></div>
-      <div><label>Price (BNB)</label><input id="listPrice" type="text" inputmode="decimal" placeholder="e.g. 0.005"></div>
+      <div><label data-i18n="lblTokenId">トークンID</label><input id="listTokenId" type="number" min="1" max="2222" placeholder="e.g. 131"></div>
+      <div><label data-i18n="lblPrice">価格（BNB）</label><input id="listPrice" type="text" inputmode="decimal" placeholder="e.g. 0.005"></div>
     </div>
     <div class="row">
-      <button type="button" id="approveBtn">1 · Approve market</button>
-      <button type="button" id="doListBtn" class="gold">2 · List animal</button>
+      <button type="button" id="approveBtn" data-i18n="approveBtn">1 · マーケットを承認</button>
+      <button type="button" id="doListBtn" class="gold" data-i18n="listBtn">2 · 仲間を出品</button>
     </div>
-    <div class="status" id="listStatus">Approve first (one-time per wallet), then list. Listing moves your animal into market escrow — cancel any time to get it back.</div>
+    <div class="status" id="listStatus">まず承認してください（ウォレットあたり1回のみ）。その後出品します。出品すると仲間はマーケットエスクローに移動します — いつでもキャンセルして取り戻せます。</div>
   </form>
 
-  <h2>🗂️ <span>My</span> listings</h2>
-  <div class="mine" id="myListings"><div class="empty">Connect your wallet to see your listings.</div></div>
+  <h2 data-i18n-html="h2Mine">🗂️ 自分の<span>出品</span></h2>
+  <div class="mine" id="myListings"><div class="empty">ウォレットを接続すると、自分の出品が表示されます。</div></div>
 
   <footer>
-    <div>Market contract: <span style="color:var(--ink);font-weight:700">LIVE</span><br><a href="https://bscscan.com/address/0x92099c1142864b9d27258f2383C315789a66997C" target="_blank" rel="noopener"><code>0x92099c1142864b9d27258f2383C315789a66997C</code></a></div>
-    <div>NFT contract: <span style="color:var(--ink);font-weight:700">LIVE</span><br><a href="https://bscscan.com/address/0x9e5Dd59b5Df1d36de02454A1fD6d77ee5B07778B" target="_blank" rel="noopener"><code>0x9e5Dd59b5Df1d36de02454A1fD6d77ee5B07778B</code></a></div>
-    <div>How it works: list → your animal sits in market escrow → a buyer pays the exact price → 5% royalty goes to the creator, the rest to you, and the animal goes to the buyer. Cancel any time before a sale. No platform fee, ever — the contract has no fee logic at all.</div>
-    <div>⚠️ This is a new, unaudited contract. Trade only what you understand; the market never holds your BNB except during a sale, and escrowed animals can always be reclaimed by cancelling.</div>
+    <div data-i18n-html="footMarket">マーケットコントラクト： <span style="color:var(--ink);font-weight:700">LIVE</span><br><a href="https://bscscan.com/address/0x92099c1142864b9d27258f2383C315789a66997C" target="_blank" rel="noopener"><code>0x92099c1142864b9d27258f2383C315789a66997C</code></a></div>
+    <div data-i18n-html="footNft">NFTコントラクト： <span style="color:var(--ink);font-weight:700">LIVE</span><br><a href="https://bscscan.com/address/0x9e5Dd59b5Df1d36de02454A1fD6d77ee5B07778B" target="_blank" rel="noopener"><code>0x9e5Dd59b5Df1d36de02454A1fD6d77ee5B07778B</code></a></div>
+    <div data-i18n-html="footHow">仕組み：出品 → 仲間がマーケットエスクローに置かれる → 買い手が正確な価格を支払う → クリエイターロイヤリティ5%がクリエイターに、残りがあなたに届き、仲間は買い手に渡ります。売却前ならいつでもキャンセルできます。プラットフォーム手数料は一切ありません — コントラクトに手数料の仕組みはありません。</div>
+    <div data-i18n-html="footWarn">⚠️ これは新しく、監査を受けていないコントラクトです。理解した範囲でのみ取引してください。マーケットがBNBを保有することは売却時以外ありません。エスクロー中の仲間は、キャンセルすればいつでも取り戻せます。</div>
   </footer>
 </div>
 <script>
@@ -175,6 +179,65 @@ function parseBnb(str) {
   return whole + frac;
 }
 
+/* ---- language: Japanese default, English toggle ----
+   Toggle buttons in the header (日本語 / EN), choice persisted in
+   localStorage ("p2lang"). Static copy uses data-i18n (text) /
+   data-i18n-html (innerHTML) attributes; dynamic lines use t(). */
+var I18N = {"ja": {"metaTitle": "PanduAGENT Phase 2 マーケット — PanduAGENT Phase 2 の仲間を売買", "metaDesc": "PanduAGENT Phase 2 のセカンダリーマーケット（BNBチェーン）。固定価格出品、手数料0%、クリエイターロイヤリティ5%。", "ogDesc": "PanduAGENT Phase 2 のセカンダリーマーケット（BNBチェーン）。固定価格出品、手数料0%、クリエイターロイヤリティ5%。", "navMintPage": "← ミントページ", "connectWallet": "ウォレットを接続", "announce": "<b>🔥 マーケット稼働中 — 今すぐ出品・購入・キャンセルできます。</b> プラットフォーム手数料0%、売却ごとにクリエイターロイヤリティ5%。", "mHeroH1": "<span>PanduAGENT Phase 2</span> の仲間を売買", "mHeroP1": "BNBチェーンの固定価格セカンダリーマーケット。プラットフォーム手数料0% — 売却ごとにクリエイターロイヤリティ5%のみ適用されます。", "mHeroP2": "こちらも取引中：<a href=\"https://element.market\" target=\"_blank\" rel=\"noopener\">Element Market</a> — PanduAGENT Phase 2 を誰でも出品・購入できるBNBチェーンのマーケットプレイス。同じコレクション、もう一つの会場、追加のコントラクトはありません。Elementのコレクションリンクは、Elementがコレクションをインデックスしてから有効になります。", "deployBanner": "⏳ マーケットコントラクトは<b>まだデプロイされていません</b>。出品、購入、キャンセルは、コントラクトが稼働してからここで使えるようになります。それまではこのページでは何も取引できません。", "statListed": "出品中の仲間", "statFloor": "最低価格（BNB）", "statMinted": "ミント済み / 2,222", "h2Listed": "🔥 <span>出品中の</span>仲間", "h2List": "📝 仲間を<span>出品</span>", "lblTokenId": "トークンID", "lblPrice": "価格（BNB）", "approveBtn": "1 · マーケットを承認", "listBtn": "2 · 仲間を出品", "h2Mine": "🗂️ 自分の<span>出品</span>", "footMarket": "マーケットコントラクト： <span style=\"color:var(--ink);font-weight:700\">LIVE</span><br><a href=\"https://bscscan.com/address/0x92099c1142864b9d27258f2383C315789a66997C\" target=\"_blank\" rel=\"noopener\"><code>0x92099c1142864b9d27258f2383C315789a66997C</code></a>", "footNft": "NFTコントラクト： <span style=\"color:var(--ink);font-weight:700\">LIVE</span><br><a href=\"https://bscscan.com/address/0x9e5Dd59b5Df1d36de02454A1fD6d77ee5B07778B\" target=\"_blank\" rel=\"noopener\"><code>0x9e5Dd59b5Df1d36de02454A1fD6d77ee5B07778B</code></a>", "footHow": "仕組み：出品 → 仲間がマーケットエスクローに置かれる → 買い手が正確な価格を支払う → クリエイターロイヤリティ5%がクリエイターに、残りがあなたに届き、仲間は買い手に渡ります。売却前ならいつでもキャンセルできます。プラットフォーム手数料は一切ありません — コントラクトに手数料の仕組みはありません。", "footWarn": "⚠️ これは新しく、監査を受けていないコントラクトです。理解した範囲でのみ取引してください。マーケットがBNBを保有することは売却時以外ありません。エスクロー中の仲間は、キャンセルすればいつでも取り戻せます。", "mStatNoteLive": "BNBチェーンでライブ · プラットフォーム手数料0% · 売却ごとにクリエイターロイヤリティ5%。", "mStatNoteNotDeployed": "マーケットコントラクトはまだデプロイされていません — デプロイ後にライブ出品がここに表示されます。", "mStatNoteUnavailable": "ライブデータが現在利用できません（RPCエラー）— 更新してください。表示される数字は推測ではありません。", "mNotDeployedEmpty": "マーケットはまだデプロイされていません。ローンチ後にまたお越しください。", "mNoListings": "現在出品中の仲間はありません。以下から最初に出品しましょう。", "mLoadingListings": "{n}件の出品を読み込み中…", "mSeller": "出品者", "mBuy": "購入", "mYourListing": "自分の出品", "mNoMine": "アクティブな出品はありません。", "mNewPricePh": "新しい価格 BNB", "mUpdatePrice": "価格を更新", "mCancel": "キャンセル", "mNoWallet": "ウォレットが見つかりません。MetaMaskをインストールするか、Binance Walletアプリでこのページを開いてください。", "mConnectFailed": "ウォレット接続に失敗しました：{e}", "mNotDeployed": "マーケットコントラクトはまだデプロイされていません。", "mWaitingApproval": "ウォレットで承認を待っています…", "mApproved": "承認しました！Tx {tx}… — 「仲間を出品」を押してください。", "mApprovalFailed": "承認に失敗しました：{e}", "mBadTokenId": "有効なトークンIDを入力してください（1–2222）。", "mBadPrice": "有効な価格をBNBで入力してください（0より大きい値）。", "mListing": "仲間#{id}を{price} BNBで出品しています… ウォレットで確認してください。", "mListed": "出品しました！Tx {tx}… — 更新しています。", "mListFailed": "出品に失敗しました：{e}", "mBought": "仲間#{id}を購入しました！Tx {tx}…", "mBuyFailed": "購入に失敗しました：{e}", "mCancelled": "出品#{id}をキャンセルしました。Tx {tx}…", "mCancelFailed": "キャンセルに失敗しました：{e}", "mBadNewPrice": "有効な新しい価格をBNBで入力してください（0より大きい値）。", "mPriceUpdated": "#{id}の価格を更新しました。Tx {tx}…", "mUpdateFailed": "更新に失敗しました：{e}", "mListHint": "まず承認してください（ウォレットあたり1回のみ）。その後出品します。出品すると仲間はマーケットエスクローに移動します — いつでもキャンセルして取り戻せます。"}, "en": {"metaTitle": "PanduAGENT Phase 2 Market — Buy & Sell PanduAGENT Phase 2 Animals", "metaDesc": "PanduAGENT Phase 2 secondary market on BNB Chain. Fixed-price listings, 0% platform fee, 5% creator royalty.", "ogDesc": "PanduAGENT Phase 2 secondary market on BNB Chain. Fixed-price listings, 0% platform fee, 5% creator royalty.", "navMintPage": "← Mint page", "connectWallet": "Connect wallet", "announce": "<b>🔥 MARKET LIVE — list, buy and cancel now.</b> 0% platform fee, 5% creator royalty on every sale.", "mHeroH1": "Buy &amp; sell <span>PanduAGENT Phase 2</span> animals", "mHeroP1": "Fixed-price secondary market on BNB Chain. 0% platform fee — only the 5% creator royalty applies on every sale.", "mHeroP2": "Also trading on <a href=\"https://element.market\" target=\"_blank\" rel=\"noopener\">Element Market</a> — the BNB Chain marketplace where anyone can list and buy PanduAGENT Phase 2. Same collection, second venue, no extra contract. The exact Element collection link activates once Element indexes the collection.", "deployBanner": "⏳ The market contract is <b>not deployed yet</b>. Listings, buying and cancelling will unlock here as soon as the contract is live. Nothing on this page trades until then.", "statListed": "animals listed", "statFloor": "floor price (BNB)", "statMinted": "minted / 2,222", "h2Listed": "🔥 <span>Listed</span> animals", "h2List": "📝 <span>List</span> your animal", "lblTokenId": "Token ID", "lblPrice": "Price (BNB)", "approveBtn": "1 · Approve market", "listBtn": "2 · List animal", "h2Mine": "🗂️ <span>My</span> listings", "footMarket": "Market contract: <span style=\"color:var(--ink);font-weight:700\">LIVE</span><br><a href=\"https://bscscan.com/address/0x92099c1142864b9d27258f2383C315789a66997C\" target=\"_blank\" rel=\"noopener\"><code>0x92099c1142864b9d27258f2383C315789a66997C</code></a>", "footNft": "NFT contract: <span style=\"color:var(--ink);font-weight:700\">LIVE</span><br><a href=\"https://bscscan.com/address/0x9e5Dd59b5Df1d36de02454A1fD6d77ee5B07778B\" target=\"_blank\" rel=\"noopener\"><code>0x9e5Dd59b5Df1d36de02454A1fD6d77ee5B07778B</code></a>", "footHow": "How it works: list → your animal sits in market escrow → a buyer pays the exact price → 5% royalty goes to the creator, the rest to you, and the animal goes to the buyer. Cancel any time before a sale. No platform fee, ever — the contract has no fee logic at all.", "footWarn": "⚠️ This is a new, unaudited contract. Trade only what you understand; the market never holds your BNB except during a sale, and escrowed animals can always be reclaimed by cancelling.", "mStatNoteLive": "Live on BNB Chain · 0% platform fee · 5% creator royalty on every sale.", "mStatNoteNotDeployed": "Market contract not deployed yet — deploy first, then live listings appear here.", "mStatNoteUnavailable": "Live data unavailable right now (RPC error) — please refresh. No numbers shown are guesses.", "mNotDeployedEmpty": "Market not deployed yet. Come back after launch.", "mNoListings": "No animals listed right now. Be the first to list one below.", "mLoadingListings": "Loading {n} listing(s)…", "mSeller": "Seller", "mBuy": "Buy", "mYourListing": "Your listing", "mNoMine": "You have no active listings.", "mNewPricePh": "New price BNB", "mUpdatePrice": "Update price", "mCancel": "Cancel", "mNoWallet": "No wallet found. Install MetaMask or open this page in the Binance Wallet app.", "mConnectFailed": "Wallet connection failed: {e}", "mNotDeployed": "Market contract not deployed yet.", "mWaitingApproval": "Waiting for approval in your wallet…", "mApproved": "Approved! Tx {tx}… — now press “List animal”.", "mApprovalFailed": "Approval failed: {e}", "mBadTokenId": "Enter a valid Token ID (1–2222).", "mBadPrice": "Enter a valid price in BNB (> 0).", "mListing": "Listing animal #{id} for {price} BNB… confirm in your wallet.", "mListed": "Listed! Tx {tx}… — refreshing.", "mListFailed": "List failed: {e}", "mBought": "Bought animal #{id}! Tx {tx}…", "mBuyFailed": "Buy failed: {e}", "mCancelled": "Cancelled listing #{id}. Tx {tx}…", "mCancelFailed": "Cancel failed: {e}", "mBadNewPrice": "Enter a valid new price in BNB (> 0).", "mPriceUpdated": "Price updated for #{id}. Tx {tx}…", "mUpdateFailed": "Update failed: {e}", "mListHint": "Approve first (one-time per wallet), then list. Listing moves your animal into market escrow — cancel any time to get it back."}};
+var LANG = "ja";
+function t(key, vars) {
+  var d = I18N[LANG] || I18N.en;
+  var s = (d && d[key] !== undefined) ? d[key] : (I18N.en[key] !== undefined ? I18N.en[key] : key);
+  if (vars) { for (var k in vars) { s = s.split("{" + k + "}").join(String(vars[k])); } }
+  return s;
+}
+function applyI18n() {
+  var i, els, k;
+  if (typeof document.querySelectorAll === "function") {
+    els = document.querySelectorAll("[data-i18n]");
+    for (i = 0; i < els.length; i++) {
+      k = els[i].getAttribute("data-i18n");
+      if (!k) continue;
+      if (els[i].id === "connectBtn" && connected) continue;
+      els[i].textContent = t(k);
+    }
+    els = document.querySelectorAll("[data-i18n-html]");
+    for (i = 0; i < els.length; i++) {
+      k = els[i].getAttribute("data-i18n-html");
+      if (k) els[i].innerHTML = t(k);
+    }
+  }
+  if (document.documentElement) document.documentElement.lang = LANG;
+  document.title = t("metaTitle");
+  if (typeof document.querySelector === "function") {
+    var md = document.querySelector('meta[name="description"]');
+    if (md) md.setAttribute("content", t("metaDesc"));
+    var ogt = document.querySelector('meta[property="og:title"]');
+    if (ogt) ogt.setAttribute("content", t("metaTitle"));
+    var ogd = document.querySelector('meta[property="og:description"]');
+    if (ogd) ogd.setAttribute("content", t("ogDesc"));
+  }
+  var bj = $("langJa"), be = $("langEn");
+  if (bj) bj.classList.toggle("on", LANG === "ja");
+  if (be) be.classList.toggle("on", LANG === "en");
+  /* re-render live listings in the new language */
+  readLive();
+}
+function setLang(l) {
+  LANG = (l === "en") ? "en" : "ja";
+  try { localStorage.setItem("p2lang", LANG); } catch (e) {}
+  applyI18n();
+}
+function initLang() {
+  var saved = null;
+  try { saved = localStorage.getItem("p2lang"); } catch (e) {}
+  LANG = (saved === "en") ? "en" : "ja";
+  var bj = $("langJa"), be = $("langEn");
+  if (bj) bj.addEventListener("click", function () { setLang("ja"); });
+  if (be) be.addEventListener("click", function () { setLang("en"); });
+  applyI18n();
+}
+
 async function rpcCall(to, data) {
   var body = JSON.stringify({ jsonrpc: "2.0", id: 1, method: "eth_call", params: [{ to: to, data: data }, "latest"] });
   for (var i = 0; i < RPCS.length; i++) {
@@ -223,13 +286,15 @@ function tierOf(meta) {
   }
   return "";
 }
+var TIER_JA = { Common: "コモン", Uncommon: "アンコモン", Rare: "レア", Epic: "エピック", Legendary: "レジェンダリー" };
+function tierLabel(tier) { return LANG === "ja" ? (TIER_JA[tier] || tier) : tier; }
 
 async function readLive() {
   var note = $("statNote");
   if (!isDeployed) {
     $("deployBanner").style.display = "block";
-    note.textContent = "Market contract not deployed yet — deploy first, then live listings appear here.";
-    $("listingsGrid").innerHTML = '<div class="empty">Market not deployed yet. Come back after launch.</div>';
+    note.textContent = t("mStatNoteNotDeployed");
+    $("listingsGrid").innerHTML = '<div class="empty">' + t("mNotDeployedEmpty") + '</div>';
     // minted count is still readable from the NFT contract
     try {
       var m = await getTotalMinted();
@@ -251,11 +316,11 @@ async function readLive() {
       if (floor === null || l.price < floor) floor = l.price;
     }
     $("statFloor").textContent = floor === null ? "—" : fmtBnb(floor.toString());
-    note.textContent = "Live on BNB Chain · 0% platform fee · 5% creator royalty on every sale.";
+    note.textContent = t("mStatNoteLive");
     renderListings(rows);
     if (connected) renderMine(rows);
   } catch (e) {
-    note.textContent = "Live data unavailable right now (RPC error) — please refresh. No numbers shown are guesses.";
+    note.textContent = t("mStatNoteUnavailable");
   }
 }
 
@@ -267,16 +332,16 @@ function cardHtml(row, meta) {
   return '<div class="card">' +
     (img ? '<img src="' + img + '" alt="' + name + '" loading="lazy">' : '<div style="aspect-ratio:1;background:#FFF3D6"></div>') +
     '<div class="bd"><div class="tid">' + name + '</div>' +
-    '<div class="tier">' + (tier ? tier + " · " : "") + 'Seller ' + shortAddr(row.seller) + '</div>' +
+    '<div class="tier">' + (tier ? tierLabel(tier) + " · " : "") + t("mSeller") + ' ' + shortAddr(row.seller) + '</div>' +
     '<div class="price">' + fmtBnb(row.price.toString()) + ' BNB</div>' +
-    '<button data-buy="' + row.id + '" data-price="' + row.price.toString() + '"' + (isDeployed ? "" : " disabled") + '>' + (isMine ? "Your listing" : "Buy") + '</button>' +
+    '<button data-buy="' + row.id + '" data-price="' + row.price.toString() + '"' + (isDeployed ? "" : " disabled") + '>' + (isMine ? t("mYourListing") : t("mBuy")) + '</button>' +
     '</div></div>';
 }
 
 async function renderListings(rows) {
   var grid = $("listingsGrid");
-  if (!rows.length) { grid.innerHTML = '<div class="empty">No animals listed right now. Be the first to list one below.</div>'; return; }
-  grid.innerHTML = '<div class="empty">Loading ' + rows.length + ' listing(s)…</div>';
+  if (!rows.length) { grid.innerHTML = '<div class="empty">' + t("mNoListings") + '</div>'; return; }
+  grid.innerHTML = '<div class="empty">' + t("mLoadingListings", { n: rows.length }) + '</div>';
   var html = "";
   for (var i = 0; i < rows.length; i++) {
     var meta = await getMeta(rows[i].id);
@@ -291,13 +356,13 @@ async function renderListings(rows) {
 async function renderMine(rows) {
   var box = $("myListings");
   var mine = rows.filter(function (r) { return r.seller.toLowerCase() === connected.toLowerCase(); });
-  if (!mine.length) { box.innerHTML = '<div class="empty">You have no active listings.</div>'; return; }
+  if (!mine.length) { box.innerHTML = '<div class="empty">' + t("mNoMine") + '</div>'; return; }
   var html = "";
   mine.forEach(function (r) {
     html += '<div class="item"><b>#' + r.id + '</b><span class="p">' + fmtBnb(r.price.toString()) + ' BNB</span>' +
-      '<input type="text" inputmode="decimal" placeholder="New price BNB" data-newprice="' + r.id + '">' +
-      '<button class="sm" data-update="' + r.id + '">Update price</button>' +
-      '<button class="sm ghost" data-cancel="' + r.id + '">Cancel</button></div>';
+      '<input type="text" inputmode="decimal" placeholder="' + t("mNewPricePh") + '" data-newprice="' + r.id + '">' +
+      '<button class="sm" data-update="' + r.id + '">' + t("mUpdatePrice") + '</button>' +
+      '<button class="sm ghost" data-cancel="' + r.id + '">' + t("mCancel") + '</button></div>';
   });
   box.innerHTML = html;
   box.querySelectorAll("[data-cancel]").forEach(function (b) {
@@ -313,14 +378,14 @@ async function renderMine(rows) {
 
 // ---- wallet ----
 async function connectWallet() {
-  if (!window.ethereum) { alert("No wallet found. Install MetaMask or open this page in the Binance Wallet app."); return; }
+  if (!window.ethereum) { alert(t("mNoWallet")); return; }
   try {
     var accs = await window.ethereum.request({ method: "eth_requestAccounts" });
     connected = accs[0];
     $("connectBtn").textContent = shortAddr(connected);
     await ensureBsc();
     readLive();
-  } catch (e) { alert("Wallet connection failed: " + (e && e.message ? e.message : e)); }
+  } catch (e) { alert(t("mConnectFailed", { e: (e && e.message ? e.message : e) })); }
 }
 async function ensureBsc() {
   try {
@@ -349,47 +414,47 @@ function setStatus(msg, cls) {
 }
 
 async function doApprove() {
-  if (!isDeployed) { setStatus("Market contract not deployed yet.", "err"); return; }
+  if (!isDeployed) { setStatus(t("mNotDeployed"), "err"); return; }
   try {
-    setStatus("Waiting for approval in your wallet…");
+    setStatus(t("mWaitingApproval"));
     var data = SEL_APPROVE_ALL + hexPad32(BigInt(MARKETPLACE)) + hexPad32(1);
     var h = await sendTx(NFT, data, null);
-    if (h) setStatus("Approved! Tx " + h.slice(0, 18) + "… — now press “List animal”.", "ok");
-  } catch (e) { setStatus("Approval failed: " + (e && e.message ? e.message : e), "err"); }
+    if (h) setStatus(t("mApproved", { tx: h.slice(0, 18) }), "ok");
+  } catch (e) { setStatus(t("mApprovalFailed", { e: (e && e.message ? e.message : e) }), "err"); }
 }
 async function doList() {
-  if (!isDeployed) { setStatus("Market contract not deployed yet.", "err"); return; }
+  if (!isDeployed) { setStatus(t("mNotDeployed"), "err"); return; }
   var id = parseInt($("listTokenId").value, 10);
   var price = parseBnb($("listPrice").value);
-  if (!id || id < 1 || id > MAX_SUPPLY) { setStatus("Enter a valid Token ID (1–2222).", "err"); return; }
-  if (price === null || price <= 0n) { setStatus("Enter a valid price in BNB (> 0).", "err"); return; }
+  if (!id || id < 1 || id > MAX_SUPPLY) { setStatus(t("mBadTokenId"), "err"); return; }
+  if (price === null || price <= 0n) { setStatus(t("mBadPrice"), "err"); return; }
   try {
-    setStatus("Listing animal #" + id + " for " + fmtBnb(price.toString()) + " BNB… confirm in your wallet.");
+    setStatus(t("mListing", { id: id, price: fmtBnb(price.toString()) }));
     var data = SEL_LIST + hexPad32(id) + hexPad32(price);
     var h = await sendTx(MARKETPLACE, data, null);
-    if (h) { setStatus("Listed! Tx " + h.slice(0, 18) + "… — refreshing.", "ok"); setTimeout(readLive, 3000); }
-  } catch (e) { setStatus("List failed: " + (e && e.message ? e.message : e), "err"); }
+    if (h) { setStatus(t("mListed", { tx: h.slice(0, 18) }), "ok"); setTimeout(readLive, 3000); }
+  } catch (e) { setStatus(t("mListFailed", { e: (e && e.message ? e.message : e) }), "err"); }
 }
 async function doBuy(id, priceWei) {
-  if (!isDeployed) { alert("Market contract not deployed yet."); return; }
+  if (!isDeployed) { alert(t("mNotDeployed")); return; }
   try {
     var h = await sendTx(MARKETPLACE, SEL_BUY + hexPad32(parseInt(id, 10)), priceWei);
-    if (h) { alert("Bought animal #" + id + "! Tx " + h.slice(0, 18) + "…"); setTimeout(readLive, 3000); }
-  } catch (e) { alert("Buy failed: " + (e && e.message ? e.message : e)); }
+    if (h) { alert(t("mBought", { id: id, tx: h.slice(0, 18) })); setTimeout(readLive, 3000); }
+  } catch (e) { alert(t("mBuyFailed", { e: (e && e.message ? e.message : e) })); }
 }
 async function doCancel(id) {
   try {
     var h = await sendTx(MARKETPLACE, SEL_CANCEL + hexPad32(parseInt(id, 10)), null);
-    if (h) { alert("Cancelled listing #" + id + ". Tx " + h.slice(0, 18) + "…"); setTimeout(readLive, 3000); }
-  } catch (e) { alert("Cancel failed: " + (e && e.message ? e.message : e)); }
+    if (h) { alert(t("mCancelled", { id: id, tx: h.slice(0, 18) })); setTimeout(readLive, 3000); }
+  } catch (e) { alert(t("mCancelFailed", { e: (e && e.message ? e.message : e) })); }
 }
 async function doUpdatePrice(id, priceStr) {
   var price = parseBnb(priceStr);
-  if (price === null || price <= 0n) { alert("Enter a valid new price in BNB (> 0)."); return; }
+  if (price === null || price <= 0n) { alert(t("mBadNewPrice")); return; }
   try {
     var h = await sendTx(MARKETPLACE, SEL_UPDATE + hexPad32(parseInt(id, 10)) + hexPad32(price), null);
-    if (h) { alert("Price updated for #" + id + ". Tx " + h.slice(0, 18) + "…"); setTimeout(readLive, 3000); }
-  } catch (e) { alert("Update failed: " + (e && e.message ? e.message : e)); }
+    if (h) { alert(t("mPriceUpdated", { id: id, tx: h.slice(0, 18) })); setTimeout(readLive, 3000); }
+  } catch (e) { alert(t("mUpdateFailed", { e: (e && e.message ? e.message : e) })); }
 }
 
 $("connectBtn").addEventListener("click", connectWallet);
@@ -403,6 +468,7 @@ if (window.ethereum && window.ethereum.selectedAddress) {
   connected = window.ethereum.selectedAddress;
   $("connectBtn").textContent = shortAddr(connected);
 }
+initLang();
 readLive();
 setInterval(readLive, 30000);
 </script></body>
