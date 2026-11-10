@@ -6,59 +6,66 @@
 <title>PanduAGENT Phase 2 Market — Buy &amp; Sell PanduAGENT Phase 2 Animals</title>
 <meta name="description" content="PanduAGENT Phase 2 secondary market on BNB Chain. Fixed-price listings, 0% platform fee, 5% creator royalty.">
 <style>
-:root{--bg:#FFF6E3;--bg2:#FFF9EA;--card:#FFFFFF;--card2:#FFF3D6;--line:#123F2E;--orange:#FF5C00;--oranged:#D9480F;--amber:#F5A623;--yellow:#FFC53D;--green:#123F2E;--txt:#123F2E;--mut:#4a6b57;--mut2:#6b8a76}
+:root{--paper:#F3EFE6;--paper2:#ECE6DB;--ink:#1C1B1E;--ink2:#1D1C20;--txt:#33312D;--mut:#958E84;--line:#D9D2C3;--line2:#EBE5DA;--accent:#D74830}
 *{box-sizing:border-box;margin:0;padding:0}
 html{overflow-x:hidden}
-body{background:var(--bg);color:var(--txt);font-family:system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;min-height:100vh;padding-bottom:env(safe-area-inset-bottom)}
-a{color:var(--oranged);text-decoration:none}
-.wrap{max-width:960px;margin:0 auto;padding:0 14px 48px}
-header{position:sticky;top:0;z-index:10;background:rgba(255,246,227,.95);backdrop-filter:blur(6px);border-bottom:2px solid var(--line)}
-header .in{max-width:960px;margin:0 auto;padding:12px 14px;display:flex;align-items:center;gap:10px;flex-wrap:wrap}
-header .logo{font-weight:900;font-size:18px}
-header .logo span{color:var(--orange)}
+body{background:var(--paper2);color:var(--txt);font-family:system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;min-height:100vh;padding-bottom:env(safe-area-inset-bottom)}
+h1,h2,h3{font-family:Georgia,'Times New Roman',serif;color:var(--ink)}
+a{color:var(--accent);text-decoration:none}
+a:hover{text-decoration:underline}
+.wrap{max-width:760px;margin:0 auto;padding:0 16px 48px}
+header{position:sticky;top:0;z-index:10;background:rgba(236,230,219,.96);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+header .in{max-width:760px;margin:0 auto;padding:12px 16px;display:flex;align-items:center;gap:10px;flex-wrap:wrap}
+header .logo{font-family:Georgia,'Times New Roman',serif;font-weight:700;font-size:18px;color:var(--ink)}
+header .logo span{color:var(--accent)}
 header nav{margin-left:auto;display:flex;gap:8px;align-items:center;flex-wrap:wrap}
-.pill{display:inline-block;border:2px solid var(--line);border-radius:999px;padding:6px 12px;font-size:13px;color:var(--txt);background:#fff}
-button,.btn{cursor:pointer;border:2px solid var(--line);border-radius:10px;padding:10px 16px;font-size:14px;font-weight:800;background:var(--orange);color:#fff;box-shadow:3px 3px 0 var(--line)}
-button.gold{background:var(--amber);color:var(--green)}
-button.ghost{background:#fff;border:2px solid var(--line);color:var(--txt);box-shadow:3px 3px 0 var(--line)}
+.pill{display:inline-block;border:1px solid var(--ink);border-radius:999px;padding:6px 12px;font-size:12px;letter-spacing:.4px;color:var(--ink);background:var(--paper)}
+.pill:hover{text-decoration:none;background:var(--ink);color:var(--paper)}
+button,.btn{cursor:pointer;border:1px solid var(--ink);border-radius:10px;padding:10px 16px;font-size:14px;font-weight:700;background:var(--ink);color:var(--paper)}
+button:hover{text-decoration:none}
+button.gold{background:var(--accent);border-color:var(--accent);color:#F3EFE6}
+button.ghost{background:var(--paper);border:1px solid var(--ink);color:var(--ink)}
 button:disabled{opacity:.45;cursor:not-allowed}
 button.sm{padding:7px 12px;font-size:13px}
-.hero{padding:28px 0 8px;text-align:center}
+.announce{background:var(--ink);color:var(--line2);text-align:center;font-size:13px;line-height:1.55;padding:10px 16px}
+.announce b{color:#F3EFE6}
+.hero{padding:32px 0 8px;text-align:center}
 .hero h1{font-size:clamp(30px,9vw,46px);line-height:1.1}
-.hero h1 span{color:var(--orange)}
-.hero p{color:var(--mut);margin-top:10px;font-size:15px}
-.banner{margin:16px 0;border:2px solid var(--line);background:var(--yellow);color:var(--green);border-radius:12px;padding:12px 14px;font-size:14px;line-height:1.5;box-shadow:3px 3px 0 var(--line)}
+.hero h1 span{color:var(--accent)}
+.hero p{color:var(--txt);margin-top:10px;font-size:15px;line-height:1.65}
+.banner{margin:16px 0;border:1px solid var(--line);background:var(--paper);color:var(--txt);border-radius:12px;padding:12px 14px;font-size:14px;line-height:1.55}
+.banner b{color:var(--ink)}
 .stats{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin:18px 0}
-.stat{background:#fff;border:2px solid var(--line);border-radius:14px;padding:14px;text-align:center;box-shadow:4px 4px 0 var(--line)}
-.stat b{display:block;font-size:22px;color:var(--orange)}
-.stat span{font-size:12px;color:var(--mut)}
+.stat{background:var(--paper);border:1px solid var(--line);border-radius:14px;padding:14px;text-align:center}
+.stat b{display:block;font-size:22px;font-family:Georgia,'Times New Roman',serif;color:var(--accent)}
+.stat span{font-size:11px;letter-spacing:1px;color:var(--mut)}
 .note{font-size:13px;color:var(--mut);margin:4px 0 18px;text-align:center}
-h2{font-size:20px;margin:26px 0 12px}
-h2 span{color:var(--orange)}
+h2{font-size:22px;margin:28px 0 12px}
+h2 span{color:var(--accent)}
 .grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:12px}
-.card{background:#fff;border:2px solid var(--line);border-radius:14px;overflow:hidden;box-shadow:4px 4px 0 var(--line)}
-.card img{width:100%;aspect-ratio:1;display:block;object-fit:cover;background:var(--card2)}
+.card{background:var(--paper);border:1px solid var(--line);border-radius:14px;overflow:hidden}
+.card img{width:100%;aspect-ratio:1;display:block;object-fit:cover;background:var(--paper2)}
 .card .bd{padding:10px 12px 12px}
-.card .tid{font-weight:800;font-size:15px}
-.card .tier{font-size:12px;color:var(--mut2)}
-.card .price{color:var(--oranged);font-weight:800;margin:8px 0}
+.card .tid{font-weight:700;font-family:Georgia,'Times New Roman',serif;font-size:15px;color:var(--ink)}
+.card .tier{font-size:12px;color:var(--mut)}
+.card .price{color:var(--accent);font-weight:700;margin:8px 0}
 .card .price small{color:var(--mut);font-weight:400}
 .card button{width:100%}
-.empty{color:var(--mut);text-align:center;padding:28px 10px;border:2px dashed var(--line);border-radius:14px;font-size:14px}
-form.card2{background:#fff;border:2px solid var(--line);border-radius:14px;padding:16px;display:grid;gap:10px;box-shadow:4px 4px 0 var(--line)}
+.empty{color:var(--mut);text-align:center;padding:28px 10px;border:1px dashed var(--line);border-radius:14px;font-size:14px}
+form.card2{background:var(--paper);border:1px solid var(--line);border-radius:14px;padding:16px;display:grid;gap:10px}
 label{font-size:13px;color:var(--mut)}
-input{width:100%;padding:11px 12px;border-radius:10px;border:2px solid var(--line);background:#fff;color:var(--txt);font-size:15px}
+input{width:100%;padding:11px 12px;border-radius:10px;border:1px solid var(--ink);background:var(--paper);color:var(--ink);font-size:15px}
 .row{display:flex;gap:10px;flex-wrap:wrap}
 .row>*{flex:1;min-width:140px}
 .status{font-size:13px;color:var(--mut);line-height:1.5;min-height:20px}
-.status.ok{color:#15803d}.status.err{color:#dc2626}
+.status.ok{color:#2e7d32}.status.err{color:var(--accent)}
 .mine{display:grid;gap:10px}
-.mine .item{background:#fff;border:2px solid var(--line);border-radius:12px;padding:12px;display:flex;gap:10px;align-items:center;flex-wrap:wrap;box-shadow:3px 3px 0 var(--line)}
-.mine .item b{font-size:15px}
-.mine .item .p{color:var(--oranged);font-weight:700}
+.mine .item{background:var(--paper);border:1px solid var(--line);border-radius:12px;padding:12px;display:flex;gap:10px;align-items:center;flex-wrap:wrap}
+.mine .item b{font-size:15px;color:var(--ink)}
+.mine .item .p{color:var(--accent);font-weight:700}
 .mine .item input{max-width:130px}
-footer{margin-top:36px;border-top:2px solid var(--line);padding-top:18px;font-size:13px;color:var(--mut);line-height:1.7}
-code{font-family:ui-monospace,Menlo,Consolas,monospace;font-size:12px;color:var(--green);word-break:break-all}
+footer{margin-top:36px;border-top:1px solid var(--line);padding-top:18px;font-size:13px;color:var(--mut);line-height:1.7}
+code{font-family:ui-monospace,Menlo,Consolas,monospace;font-size:12px;color:var(--ink);word-break:break-all}
 @media(max-width:560px){.stats{grid-template-columns:repeat(3,1fr);gap:8px}.stat b{font-size:18px}}
 </style>
 </head>
@@ -73,6 +80,7 @@ code{font-family:ui-monospace,Menlo,Consolas,monospace;font-size:12px;color:var(
     </nav>
   </div>
 </header>
+<div class="announce"><b>PREVIEW — the market contract is not deployed yet.</b> Listings, buying and cancelling unlock here as soon as the contract is live.</div>
 <div class="wrap">
   <section class="hero">
     <h1>Buy &amp; sell <span>PanduAGENT Phase 2</span> animals</h1>
@@ -109,8 +117,8 @@ code{font-family:ui-monospace,Menlo,Consolas,monospace;font-size:12px;color:var(
   <div class="mine" id="myListings"><div class="empty">Connect your wallet to see your listings.</div></div>
 
   <footer>
-    <div>Market contract: <span class="pred" style="color:var(--oranged);font-weight:700">PREDICTED — NOT DEPLOYED</span><br><code>0x92099c1142864b9d27258f2383C315789a66997C</code></div>
-    <div>NFT contract: <span class="pred" style="color:var(--oranged);font-weight:700">PREDICTED — NOT DEPLOYED</span><br><code>0x9e5Dd59b5Df1d36de02454A1fD6d77ee5B07778B</code></div>
+    <div>Market contract: <span style="color:var(--accent);font-weight:700">PREDICTED — NOT DEPLOYED</span><br><code>0x92099c1142864b9d27258f2383C315789a66997C</code></div>
+    <div>NFT contract: <span style="color:var(--accent);font-weight:700">PREDICTED — NOT DEPLOYED</span><br><code>0x9e5Dd59b5Df1d36de02454A1fD6d77ee5B07778B</code></div>
     <div>How it works: list → your animal sits in market escrow → a buyer pays the exact price → 5% royalty goes to the creator, the rest to you, and the animal goes to the buyer. Cancel any time before a sale. No platform fee, ever — the contract has no fee logic at all.</div>
     <div>⚠️ This is a new, unaudited contract. Trade only what you understand; the market never holds your BNB except during a sale, and escrowed animals can always be reclaimed by cancelling.</div>
   </footer>
@@ -399,6 +407,5 @@ if (window.ethereum && window.ethereum.selectedAddress) {
 }
 readLive();
 setInterval(readLive, 30000);
-</script>
-</body>
+</script></body>
 </html>
