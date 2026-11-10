@@ -1,0 +1,809 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>PanduAGENT Phase 2 — 2,222 New Street Animals on BNB Chain</title>
+<meta name="description" content="PanduAGENT Phase 2 — 2,222 new street animals on BNB Chain: new outfits, new friends. First mint FREE for Agent ID holders; paid mints open to everyone, 0.00126 / 0.00316 / 0.0041 / 0.005 BNB; 5-pack 0.0108 BNB. Max 5 per wallet.">
+<meta property="og:title" content="PanduAGENT Phase 2 — 2,222 New Street Animals on BNB Chain">
+<meta property="og:description" content="First mint FREE for Agent ID holders; paid mints open to everyone, 0.00126 / 0.00316 / 0.0041 / 0.005 BNB; 5-pack 0.0108 BNB, on BNB Chain.">
+<meta property="og:image" content="https://panduagent-phase2.vercel.app/assets/hero-panda.png">
+<meta property="og:url" content="https://panduagent-phase2.vercel.app/">
+<style>
+:root{--bg:#FFF6E3;--bg2:#FFF9EA;--card:#FFFFFF;--card2:#FFF3D6;--line:#123F2E;--orange:#FF5C00;--oranged:#D9480F;--amber:#F5A623;--yellow:#FFC53D;--green:#123F2E;--txt:#123F2E;--mut:#4a6b57;--mut2:#6b8a76}
+*{box-sizing:border-box;margin:0;padding:0}
+html{overflow-x:hidden;scroll-behavior:smooth}
+body{background:var(--bg);color:var(--txt);font-family:system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;min-height:100vh;padding-bottom:env(safe-area-inset-bottom)}
+body::before{content:"";position:fixed;inset:0;pointer-events:none;z-index:0;
+  background:radial-gradient(600px 300px at 15% -5%,rgba(245,166,35,.25),transparent 60%),
+  radial-gradient(500px 260px at 90% 10%,rgba(255,92,0,.14),transparent 60%),
+  radial-gradient(700px 400px at 50% 110%,rgba(255,197,61,.20),transparent 60%)}
+a{color:var(--oranged);text-decoration:none}
+.wrap{max-width:960px;margin:0 auto;padding:0 14px 48px;position:relative;z-index:1}
+/* header */
+header{position:sticky;top:0;z-index:20;background:rgba(255,246,227,.95);backdrop-filter:blur(8px);border-bottom:2px solid var(--line)}
+header .in{max-width:960px;margin:0 auto;padding:12px 14px;display:flex;align-items:center;gap:10px;flex-wrap:wrap}
+.logo{font-weight:900;font-size:19px;letter-spacing:.5px}
+.logo span{color:var(--orange)}
+.logo small{color:var(--oranged);font-size:11px;letter-spacing:2px}
+header nav{margin-left:auto;display:flex;gap:8px;align-items:center;flex-wrap:wrap}
+.burger{display:none;cursor:pointer;background:#fff;border:2px solid var(--line);border-radius:10px;width:42px;height:38px;margin-left:auto;padding:9px 10px;flex-direction:column;justify-content:space-between;align-items:stretch}
+.burger span{display:block;height:2px;background:var(--green);border-radius:2px;transition:transform .2s ease,opacity .2s ease}
+.burger.open span:nth-child(1){transform:translateY(7px) rotate(45deg)}
+.burger.open span:nth-child(2){opacity:0}
+.burger.open span:nth-child(3){transform:translateY(-7px) rotate(-45deg)}
+.pill{display:inline-block;border:2px solid var(--line);border-radius:999px;padding:6px 12px;font-size:13px;color:var(--txt);background:#fff}
+.btn{cursor:pointer;border:2px solid var(--line);border-radius:10px;padding:10px 16px;font-size:14px;font-weight:800;background:var(--orange);color:#fff;box-shadow:3px 3px 0 var(--line)}
+.btn.gold{background:var(--amber);color:var(--green)}
+.btn.ghost{background:#fff;border:2px solid var(--line);color:var(--txt);box-shadow:3px 3px 0 var(--line)}
+.btn:disabled{opacity:.45;cursor:not-allowed}
+.btn.sm{padding:7px 12px;font-size:13px}
+/* ticker */
+.ticker{overflow:hidden;white-space:nowrap;background:var(--green);color:#FFF6E3;font-weight:800;font-size:13px;letter-spacing:1.5px;padding:9px 0}
+.ticker span{display:inline-block;padding-left:100%;animation:tick 22s linear infinite}
+@keyframes tick{from{transform:translateX(0)}to{transform:translateX(-100%)}}
+/* hero */
+.hero{padding:30px 0 8px;text-align:center}
+.eyebrow{font-family:ui-monospace,Menlo,Consolas,monospace;font-size:12px;letter-spacing:2px;color:var(--oranged)}
+.hero h1{font-size:clamp(48px,14vw,96px);line-height:.95;font-weight:900;letter-spacing:-2px;color:var(--green);margin:10px 0 12px}
+.hero h1 span{color:var(--orange)}
+.hero .sub{color:var(--mut);font-size:16px;line-height:1.6;max-width:640px;margin:0 auto}
+.hero .sub b{color:var(--txt)}
+.hero-cards{display:grid;grid-template-columns:repeat(5,1fr);gap:10px;margin:22px 0 14px}
+.hcard{background:#fff;border:2px solid var(--line);border-radius:16px;overflow:hidden;box-shadow:4px 4px 0 var(--line)}
+.hcard img{width:100%;aspect-ratio:1;display:block;object-fit:cover}
+.hcard .nm{font-size:12px;font-weight:800;padding:8px 6px;color:var(--green)}
+.hcard .tg{font-size:11px;color:var(--oranged);padding:0 6px 8px}
+.stats{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin:16px 0}
+.stat{background:#fff;border:2px solid var(--line);border-radius:14px;padding:14px;text-align:center;box-shadow:4px 4px 0 var(--line)}
+.stat b{display:block;font-size:22px;color:var(--orange)}
+.stat span{font-size:12px;color:var(--mut)}
+/* bamboo widget */
+.bamboocard{background:#fff;border:2px solid var(--line);border-radius:18px;box-shadow:4px 4px 0 var(--line);padding:20px 16px;text-align:center;margin:16px 0}
+.bamboocard h3{font-size:15px;letter-spacing:2px;color:var(--oranged);margin-bottom:10px}
+.bamboowrap{position:relative;width:220px;height:230px;margin:0 auto}
+.ground{position:absolute;left:8px;right:8px;bottom:0;height:12px;background:#8a6d3b;border:2px solid var(--line);border-radius:8px}
+.stalk{position:absolute;bottom:10px;left:50%;transform:translateX(-50%);width:26px;height:24px;border-radius:12px 12px 4px 4px;
+  background-image:repeating-linear-gradient(180deg,transparent 0,transparent 33px,rgba(18,63,46,.35) 33px,rgba(18,63,46,.35) 36px),linear-gradient(90deg,#2e7d32,#66bb6a 45%,#2e7d32);
+  transition:height .8s ease}
+.shoot{position:absolute;bottom:10px;left:calc(50% - 64px);width:14px;height:44px;background:linear-gradient(90deg,#2e7d32,#66bb6a);border-radius:7px 7px 2px 2px}
+.leaf{position:absolute;width:36px;height:14px;background:#43a047;opacity:0;transition:opacity .6s ease}
+.leaf.on{opacity:1}
+.leaf.l{border-radius:100% 4px 100% 4px;transform:rotate(-32deg)}
+.leaf.r{border-radius:4px 100% 4px 100%;transform:rotate(32deg)}
+.panda{position:absolute;bottom:12px;left:calc(50% + 36px);font-size:30px;line-height:1}
+.bamboonum{font-size:26px;font-weight:900;color:var(--txt);margin-top:12px}
+.bamboonum small{font-size:14px;color:var(--mut);font-weight:600}
+.bar{height:12px;border-radius:999px;background:#FFE9A8;border:2px solid var(--line);overflow:hidden;margin:10px auto 6px;max-width:420px}
+.bar i{display:block;height:100%;width:0%;background:linear-gradient(90deg,var(--amber),var(--orange));transition:width .6s ease}
+.bamboonote{font-size:13px;color:var(--mut)}
+/* banner */
+.banner{margin:16px 0;border:2px solid var(--line);background:var(--yellow);color:var(--green);border-radius:12px;padding:12px 14px;font-size:14px;line-height:1.5;text-align:center;box-shadow:3px 3px 0 var(--line)}
+/* sections */
+section{margin-top:34px}
+h2{font-size:clamp(24px,6vw,32px);line-height:1.15;margin-bottom:6px}
+h2 span{color:var(--orange)}
+.eyebrow2{font-family:ui-monospace,Menlo,Consolas,monospace;font-size:11px;letter-spacing:2px;color:var(--oranged);margin-bottom:6px}
+.lede{color:var(--mut);font-size:15px;line-height:1.6;margin-bottom:14px}
+.lede b{color:var(--txt)}
+/* lanes */
+.lanes{display:grid;gap:12px}
+.lane{background:#fff;border:2px solid var(--line);border-radius:16px;padding:18px;box-shadow:4px 4px 0 var(--line)}
+.lane.gold{border-color:var(--line);background:var(--card2)}
+.lane h3{font-size:18px;margin-bottom:8px}
+.lane h3 span{color:var(--orange)}
+.lane p{color:var(--mut);font-size:14px;line-height:1.6;margin-bottom:10px}
+.lane p b{color:var(--txt)}
+.lane ul{list-style:none;color:var(--mut);font-size:14px;line-height:1.9}
+.lane ul li::before{content:"✦ ";color:var(--orange)}
+/* marquee strip */
+.strip{overflow:hidden;white-space:nowrap;background:var(--yellow);color:var(--green);font-weight:900;font-size:15px;letter-spacing:1.5px;padding:10px 0;margin:34px -14px 0;border-top:2px solid var(--line);border-bottom:2px solid var(--line)}
+.strip span{display:inline-block;padding-left:100%;animation:tick 20s linear infinite}
+/* variants grid */
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(160px,1fr));gap:12px}
+.vcard{background:#fff;border:2px solid var(--line);border-radius:16px;overflow:hidden;box-shadow:4px 4px 0 var(--line)}
+.vcard img{width:100%;aspect-ratio:1;display:block;object-fit:cover;background:var(--card2)}
+.vcard .bd{padding:10px 12px 12px}
+.vcard .nm{font-weight:800;font-size:15px}
+.vcard .rar{font-size:12px;font-weight:800;letter-spacing:1px;margin:3px 0}
+.vcard .rng{font-size:12px;color:var(--mut)}
+.vcard .cnt{font-size:12px;color:var(--oranged);font-weight:700;margin-top:2px}
+.rar-common{color:#123F2E}.rar-uncommon{color:#2f7d32}.rar-rare{color:#e65100}.rar-epic{color:#8e24aa}.rar-legendary{color:#b8860b}
+/* steps */
+.steps{display:grid;gap:12px}
+.step{background:#fff;border:2px solid var(--line);border-radius:16px;padding:16px;display:flex;gap:14px;box-shadow:4px 4px 0 var(--line)}
+.step .n{font-size:26px;font-weight:900;color:var(--orange);min-width:34px}
+.step h3{font-size:16px;margin-bottom:4px}
+.step p{color:var(--mut);font-size:14px;line-height:1.6}
+/* mint */
+.mintbox{background:#fff;border:2px solid var(--line);border-radius:18px;padding:20px 16px;box-shadow:4px 4px 0 var(--line)}
+.price-table{width:100%;border-collapse:collapse;margin:12px 0;font-size:14px}
+.price-table td,.price-table th{padding:9px 8px;border-bottom:1px solid #e8dcc0;text-align:left}
+.price-table th{color:var(--mut);font-size:12px;letter-spacing:1px}
+.price-table td:last-child,.price-table th:last-child{text-align:right;color:var(--oranged);font-weight:800}
+.stepper{display:flex;align-items:center;gap:12px;flex-wrap:wrap;margin:14px 0}
+.stepper .lbl{font-size:13px;color:var(--mut)}
+.qtybtn{width:42px;height:42px;border-radius:10px;border:2px solid var(--line);background:#fff;color:var(--txt);font-size:20px;font-weight:800;cursor:pointer;box-shadow:2px 2px 0 var(--line)}
+.qtyval{font-size:22px;font-weight:900;min-width:28px;text-align:center}
+.total{font-size:15px;font-weight:800;color:var(--oranged)}
+.codebox{background:#123F2E;border:2px solid var(--line);border-radius:12px;padding:14px;font-family:ui-monospace,Menlo,Consolas,monospace;font-size:13px;line-height:1.6;white-space:pre-wrap;word-break:break-word;color:#FFF6E3}
+.fine{font-size:13px;color:var(--mut);line-height:1.6}
+input[type=text]{width:100%;padding:11px 12px;border-radius:10px;border:2px solid var(--line);background:#fff;color:var(--txt);font-size:15px}
+.row{display:flex;gap:10px;flex-wrap:wrap;margin:10px 0}
+.row>*{flex:1;min-width:140px}
+.status{font-size:13px;color:var(--mut);line-height:1.5;min-height:20px}
+.status.ok{color:#15803d}.status.err{color:#dc2626}
+/* token */
+.tokgrid{display:grid;grid-template-columns:repeat(2,1fr);gap:10px;margin:14px 0}
+.tok{background:#fff;border:2px solid var(--line);border-radius:14px;padding:14px;text-align:center;box-shadow:4px 4px 0 var(--line)}
+.tok b{display:block;font-size:20px;color:var(--orange)}
+.tok span{font-size:12px;color:var(--mut)}
+/* faq */
+details{background:#fff;border:2px solid var(--line);border-radius:12px;padding:14px 16px;margin-bottom:10px;box-shadow:3px 3px 0 var(--line)}
+summary{cursor:pointer;font-weight:700;font-size:15px}
+details p{color:var(--mut);font-size:14px;line-height:1.7;margin-top:8px}
+details p b{color:var(--txt)}
+/* support */
+.support{display:grid;gap:10px}
+.support .btn{width:100%}
+/* footer */
+footer{margin-top:36px;border-top:2px solid var(--line);padding-top:18px;font-size:13px;color:var(--mut);line-height:1.8}
+code{font-family:ui-monospace,Menlo,Consolas,monospace;font-size:12px;color:var(--green);word-break:break-all}
+.pred{color:var(--oranged);font-weight:700;font-size:12px}
+@media(min-width:640px){.lanes{grid-template-columns:1fr 1fr}}
+@media(max-width:560px){
+  .burger{display:flex}
+  header nav{display:none;width:100%;margin-left:0;flex-direction:column;align-items:stretch;gap:8px;padding:4px 0 8px}
+  header nav.open{display:flex}
+  header nav .pill,header nav .btn{text-align:center}
+  .hero-cards{grid-template-columns:repeat(5,1fr);gap:6px}
+  .hcard .nm{font-size:10px;padding:6px 4px}
+  .hcard .tg{display:none}
+  .stat b{font-size:18px}
+  .grid{grid-template-columns:repeat(2,1fr)}
+  .tokgrid{grid-template-columns:repeat(2,1fr)}
+}
+</style>
+</head>
+<body>
+<header>
+  <div class="in">
+    <div class="logo">🎋 PanduAGENT <span>· PHASE 2</span></div>
+    <button class="burger" id="burgerBtn" aria-label="Menu" aria-expanded="false" aria-controls="mainNav"><span></span><span></span><span></span></button>
+    <nav id="mainNav">
+      <a class="pill" href="#variants">Variants</a>
+      <a class="pill" href="#how">How to Mint</a>
+      <a class="pill" href="#token">$PNDX</a>
+      <a class="pill" href="#faq">FAQ</a>
+      <a class="pill" href="market.html">Market</a>
+      <a class="pill" href="https://element.market" target="_blank" rel="noopener">Element</a>
+      <a class="btn gold" href="#mint" style="padding:8px 16px">Mint</a>
+    </nav>
+  </div>
+</header>
+
+<div class="ticker"><span>2,222 STREET ANIMALS &nbsp;·&nbsp; FIRST MINT FREE &nbsp;·&nbsp; AGENTS FIRST CLASS &nbsp;·&nbsp; $PNDX &nbsp;·&nbsp; 10 VARIANTS &nbsp;·&nbsp; MAX 5 PER WALLET &nbsp;·&nbsp; 5-PACK 0.0108 BNB &nbsp;·&nbsp; 2,222 STREET ANIMALS &nbsp;·&nbsp; FIRST MINT FREE &nbsp;·&nbsp; AGENTS FIRST CLASS &nbsp;·&nbsp; $PNDX &nbsp;·&nbsp; 10 VARIANTS &nbsp;·&nbsp; MAX 5 PER WALLET &nbsp;·&nbsp; 5-PACK 0.0108 BNB &nbsp;·&nbsp;</span></div>
+
+<div class="wrap">
+
+  <div class="banner">👀 <b>PREVIEW — PanduAGENT Phase 2 is not deployed yet.</b> Mint is disabled. The contract addresses below are <b>predicted</b>, not live. Mint opens after deploy — date TBA (UTC).</div>
+
+
+  <section class="hero">
+    <div class="eyebrow">BNB SMART CHAIN · 5 TIERS · FIRST MINT FREE · 5-PACK 0.0108 BNB</div>
+    <h1>Pandu<span>AGENT</span><br><span style="font-size:.45em;letter-spacing:2px">PHASE 2</span></h1>
+    <p class="sub"><b>2,222 new street animals</b> across <b>ten variants</b> — new outfits and new friends of Pandu: Hoodie Panda, Cap Fox, Bomber Cat, Tracksuit Dog, Raincoat Frog, Puffer Penguin and four rare outfits. <b>First mint FREE</b> for Agent ID holders — <b>paid mints open to everyone</b>, from <b>0.00126 BNB</b> up to <b>0.005 BNB</b>, max <b>5 per wallet</b> — or <b>all 5 at once for 0.0108 BNB</b> (save 0.00272 BNB).</p>
+
+    <div class="hero-cards">
+      <div class="hcard"><img src="assets/hero-panda.png" alt="Hoodie Panda"><div class="nm">Hoodie Panda</div><div class="tg">COMMON</div></div>
+      <div class="hcard"><img src="assets/hero-fox.png" alt="Cap Fox" loading="lazy"><div class="nm">Cap Fox</div><div class="tg">COMMON</div></div>
+      <div class="hcard"><img src="assets/tier-uncommon-a.jpg" alt="Bomber Cat" loading="lazy"><div class="nm">Bomber Cat</div><div class="tg">UNCOMMON</div></div>
+      <div class="hcard"><img src="assets/tier-epic-a.jpg" alt="Cyber Panda v2" loading="lazy"><div class="nm">Cyber Panda v2</div><div class="tg">EPIC</div></div>
+      <div class="hcard"><img src="assets/tier-legendary-a.jpg" alt="Golden Panda" loading="lazy"><div class="nm">Golden Panda</div><div class="tg">LEGENDARY</div></div>
+    </div>
+
+    <div class="stats">
+      <div class="stat"><b>2,222</b><span>TOTAL ANIMALS</span></div>
+      <div class="stat"><b>10</b><span>VARIANTS</span></div>
+      <div class="stat"><b>5</b><span>MAX PER WALLET</span></div>
+    </div>
+
+    <div class="bamboocard">
+      <h3>🎋 LIVE STATUS — THE GROWING BAMBOO</h3>
+      <div class="bamboowrap">
+        <div class="shoot"></div>
+        <div class="stalk" id="bambooStalk"></div>
+        <div class="leaf l" id="bambooLeaf1" style="left:calc(50% - 48px);bottom:64px"></div>
+        <div class="leaf r" id="bambooLeaf2" style="left:calc(50% + 14px);bottom:104px"></div>
+        <div class="leaf l" id="bambooLeaf3" style="left:calc(50% - 48px);bottom:144px"></div>
+        <div class="leaf r" id="bambooLeaf4" style="left:calc(50% + 14px);bottom:184px"></div>
+        <div class="panda">🐼</div>
+        <div class="ground"></div>
+      </div>
+      <div class="bamboonum"><span id="bambooMinted">—</span> <small>/ 2,222 minted</small></div>
+      <div class="bar"><i id="bambooBar"></i></div>
+      <div class="bamboonote" id="bambooNote">The bamboo wakes when the first animal is minted.</div>
+    </div>
+  </section>
+
+  <section id="lanes">
+    <div class="eyebrow2">TWO LANES · FREE FOR AGENTS, PAID FOR EVERYONE</div>
+    <h2>Pick your <span>lane</span></h2>
+    <p class="lede">Two ways in. The <b>free mint belongs to agents</b> — the <b>paid mints are open to everyone</b>, straight from this page with a wallet and BNB.</p>
+    <div class="lanes">
+      <div class="lane gold">
+        <h3>🤖 Priority Lane — <span>Agents First Class</span></h3>
+        <p>For holders of a Binance <b>.ai Agent ID</b>. Mint through your Binance Agentic Wallet with the agent skill below — <b>your first mint is FREE</b>.</p>
+        <ul>
+          <li>Mint #1 — FREE (Agent ID required)</li>
+          <li>Free mint only — paid mints are public</li>
+          <li>Max 5 per wallet total — 1 free + 4 paid</li>
+          <li>120,000 PNDX per paid mint</li>
+        </ul>
+        <p style="margin-top:10px"><a href="agent-skill.md" target="_blank" rel="noopener">Read the agent skill →</a></p>
+      </div>
+      <div class="lane">
+        <h3>🐾 Public Lane — <span>Open to Everyone</span></h3>
+        <p>No Agent ID needed. Mint the paid animals with any wallet, right here on this page — <b>flat BNB, no oracle</b>.</p>
+        <ul>
+          <li>Mint #2 — 0.00126 BNB</li>
+          <li>Mint #3 — 0.00316 BNB</li>
+          <li>Mint #4 — 0.0041 BNB</li>
+          <li>Mint #5 — 0.005 BNB</li>
+          <li>Max 4 paid per wallet — 5 total with your free mint</li>
+          <li>🎁 5-pack — all 5 in one tx for 0.0108 BNB (save 0.00272)</li>
+          <li>120,000 PNDX per paid mint</li>
+        </ul>
+        <p style="margin-top:10px"><a href="#mint">Mint with your wallet ↓</a></p>
+      </div>
+    </div>
+  </section>
+
+  <div class="strip"><span>PHASE 2 IS HERE &nbsp;·&nbsp; NEW OUTFITS · NEW FRIENDS &nbsp;·&nbsp; 10 VARIANTS &nbsp;·&nbsp; FIRST MINT FREE &nbsp;·&nbsp; 5-PACK 0.0108 BNB &nbsp;·&nbsp; PHASE 2 IS HERE &nbsp;·&nbsp; NEW OUTFITS · NEW FRIENDS &nbsp;·&nbsp; 10 VARIANTS &nbsp;·&nbsp; FIRST MINT FREE &nbsp;·&nbsp; 5-PACK 0.0108 BNB &nbsp;·&nbsp;</span></div>
+
+  <section id="variants">
+    <div class="eyebrow2">TEN VARIANTS · FIVE TIERS</div>
+    <h2>The <span>variants</span></h2>
+    <p class="lede">Every rarity has its own artwork — and most rarities have <b>extra variants</b> inside the same tier. Your animal is decided by its token ID; the rarer the range, the fewer exist.</p>
+    <div class="grid">
+      <div class="vcard"><img src="assets/hero-panda.png" alt="Hoodie Panda"><div class="bd"><div class="nm">Hoodie Panda</div><div class="rar rar-common">COMMON · A</div><div class="rng">IDs 1–556</div><div class="cnt">556 animals</div></div></div>
+      <div class="vcard"><img src="assets/hero-fox.png" alt="Cap Fox" loading="lazy"><div class="bd"><div class="nm">Cap Fox</div><div class="rar rar-common">COMMON · B</div><div class="rng">IDs 557–1,111</div><div class="cnt">555 animals</div></div></div>
+      <div class="vcard"><img src="assets/tier-uncommon-a.jpg" alt="Bomber Cat" loading="lazy"><div class="bd"><div class="nm">Bomber Cat</div><div class="rar rar-uncommon">UNCOMMON · A</div><div class="rng">IDs 1,112–1,388</div><div class="cnt">277 animals</div></div></div>
+      <div class="vcard"><img src="assets/tier-uncommon-b.jpg" alt="Tracksuit Dog" loading="lazy"><div class="bd"><div class="nm">Tracksuit Dog</div><div class="rar rar-uncommon">UNCOMMON · B</div><div class="rng">IDs 1,389–1,666</div><div class="cnt">278 animals</div></div></div>
+      <div class="vcard"><img src="assets/tier-rare-a.jpg" alt="Raincoat Frog" loading="lazy"><div class="bd"><div class="nm">Raincoat Frog</div><div class="rar rar-rare">RARE · A</div><div class="rng">IDs 1,667–1,832</div><div class="cnt">166 animals</div></div></div>
+      <div class="vcard"><img src="assets/tier-rare-b.jpg" alt="Puffer Penguin" loading="lazy"><div class="bd"><div class="nm">Puffer Penguin</div><div class="rar rar-rare">RARE · B</div><div class="rng">IDs 1,833–1,999</div><div class="cnt">167 animals</div></div></div>
+      <div class="vcard"><img src="assets/tier-epic-a.jpg" alt="Cyber Panda v2" loading="lazy"><div class="bd"><div class="nm">Cyber Panda v2</div><div class="rar rar-epic">EPIC · A</div><div class="rng">IDs 2,000–2,076</div><div class="cnt">77 animals</div></div></div>
+      <div class="vcard"><img src="assets/tier-epic-b.jpg" alt="Kimono Fox" loading="lazy"><div class="bd"><div class="nm">Kimono Fox</div><div class="rar rar-epic">EPIC · B</div><div class="rng">IDs 2,077–2,154</div><div class="cnt">78 animals</div></div></div>
+      <div class="vcard"><img src="assets/tier-legendary-a.jpg" alt="Golden Panda" loading="lazy"><div class="bd"><div class="nm">Golden Panda</div><div class="rar rar-legendary">LEGENDARY · A</div><div class="rng">IDs 2,155–2,188</div><div class="cnt">34 animals</div></div></div>
+      <div class="vcard"><img src="assets/tier-legendary-b.jpg" alt="Shadow Fox" loading="lazy"><div class="bd"><div class="nm">Shadow Fox</div><div class="rar rar-legendary">LEGENDARY · B</div><div class="rng">IDs 2,189–2,222</div><div class="cnt">34 animals</div></div></div>
+    </div>
+  </section>
+
+  <section id="how">
+    <div class="eyebrow2">FOUR STEPS</div>
+    <h2>How it <span>works</span></h2>
+    <div class="steps">
+      <div class="step"><div class="n">1</div><div><h3>Pick your lane</h3><p>Agent ID holders mint <b>free</b> through their Binance Agentic Wallet. Everyone else mints the <b>paid</b> animals with any wallet on this page — 0.00126, 0.00316, 0.0041, then 0.005 BNB. Max 5 per wallet total. Or buy all 5 at once with the <b>5-pack (0.0108 BNB)</b>.</p></div></div>
+      <div class="step"><div class="n">2</div><div><h3>The token ID decides your animal</h3><p>Mints are sequential, 1 to 2,222. The ID you receive fixes the variant — Common, Uncommon, Rare, Epic, or the 68 Legendary animals. No choosing, no re-rolls.</p></div></div>
+      <div class="step"><div class="n">3</div><div><h3>Your animal is revealed at mint</h3><p>There is no delayed reveal — the artwork for your token ID is visible as soon as it is minted. What you mint is what you get.</p></div></div>
+      <div class="step"><div class="n">4</div><div><h3>Yours to keep or trade</h3><p>Show it, hold it, or list it on the <a href="market.html">PanduAGENT Phase 2 Market</a> — 0% marketplace fee, 5% creator royalty on every sale — or trade it on <a href="https://element.market" target="_blank" rel="noopener">Element Market</a> (collection link activates after deploy).</p></div></div>
+    </div>
+  </section>
+
+  <section id="mint">
+    <div class="eyebrow2">MINT · TWO LANES + 5-PACK · PREVIEW</div>
+    <h2>Mint <span>PanduAGENT Phase 2</span></h2>
+    <div class="mintbox">
+      <p class="lede" style="margin-bottom:0"><b>PREVIEW — mint is NOT open yet.</b> The price schedule below is the confirmed plan — Mint #1 FREE for Agent ID holders, then 0.00126 / 0.00316 / 0.0041 / 0.005 BNB, or all 5 at once for <b>0.0108 BNB</b>.</p>
+      <table class="price-table">
+        <tr><th>MINT #</th><th>WHO</th><th>PRICE</th></tr>
+        <tr><td>#1 per wallet</td><td>Agent ID only</td><td>FREE</td></tr>
+        <tr><td>#2 per wallet</td><td>Public</td><td>0.00126 BNB</td></tr>
+        <tr><td>#3 per wallet</td><td>Public</td><td>0.00316 BNB</td></tr>
+        <tr><td>#4 per wallet</td><td>Public</td><td>0.0041 BNB</td></tr>
+        <tr><td>#5 per wallet</td><td>Public</td><td>0.005 BNB</td></tr>
+      </table>
+      <p class="fine">Max 5 per wallet (1 free + 4 paid). Paid mints earn 120,000 PNDX each. The free mint needs an Agent ID — checked on-chain.</p>
+
+      <h3 style="font-size:16px;margin:20px 0 6px">🎁 5-Pack — all 5 animals in one transaction</h3>
+      <p class="fine" style="margin-bottom:10px">One transaction, five animals, <b>0.0108 BNB flat</b> — 20% off the 0.01352 BNB singles total (save 0.00272 BNB). Requires 0 mints so far; uses the full 5/wallet allowance. If your wallet holds an Agent ID, the first of the 5 is your free mint (4 paid); otherwise all 5 count as paid. Either way the pack accrues <b>480,000 PNDX</b> (the PNDX token's wallet cap).</p>
+      <div class="row">
+        <button class="btn gold" id="packMintBtn" type="button" disabled>Mint 5-pack — 0.0108 BNB</button>
+      </div>
+      <div class="status" id="packStatus">Preview — the 5-pack activates after deploy. Connect your wallet once mint opens.</div>
+
+      <h3 style="font-size:16px;margin:20px 0 6px">🐾 Public Lane — mint paid animals with your wallet</h3>
+      <p class="fine" style="margin-bottom:10px">Anyone can mint the paid animals — no Agent ID needed. Connect your wallet, pick 1 to 4 paid mints (wallet mints #2–#5), and pay flat BNB. Max <b>5 per wallet</b> total — 1 free + 4 paid. The price is read from the contract for your wallet, so it is always exact.</p>
+      <div class="row">
+        <button class="btn gold" id="connectWalletBtn" type="button">Connect wallet</button>
+        <button class="btn" id="mintNowBtn" type="button" disabled>Mint now</button>
+      </div>
+      <div class="stepper">
+        <span class="lbl">Paid mints:</span>
+        <button class="qtybtn" id="paidMinus" type="button">−</button>
+        <span class="qtyval" id="paidQtyVal">1</span>
+        <button class="qtybtn" id="paidPlus" type="button">+</button>
+        <span class="total" id="paidTotal">0.00126 BNB</span>
+      </div>
+      <div class="status" id="publicStatus">Connect your wallet to see your exact price.</div>
+      <div class="fine" id="myMintsLine" style="margin-top:6px">Your wallet: not connected.</div>
+
+      <h3 style="font-size:16px;margin:20px 0 6px">🤖 Priority Lane — free mint for Agent ID holders</h3>
+      <p class="fine" style="margin-bottom:10px">Your agent mints your FREE animal. Copy the prompt and paste it to your Binance Agentic Wallet.</p>
+      <div class="row">
+        <button class="btn gold" id="showPromptBtn" type="button">🤖 Mint with your agent</button>
+        <button class="btn ghost" id="copyPromptBtn" type="button">Copy agent prompt</button>
+      </div>
+      <div id="agentPromptBox" style="display:none;margin-top:6px">
+        <div class="codebox" id="agentPrompt"></div>
+        <p class="fine" style="margin-top:8px">Paste this prompt to your Binance Agentic Wallet. It simulates first — mint is open, so it executes after you confirm.</p>
+      </div>
+
+      <h3 style="font-size:16px;margin:20px 0 6px">Check your Agent ID</h3>
+      <p class="fine" style="margin-bottom:10px">Paste your Agentic Wallet address. The page reads the chain to see if it holds an Agent ID — no wallet connection needed.</p>
+      <div class="row">
+        <input type="text" id="agentAddr" placeholder="0x…" autocomplete="off" spellcheck="false">
+        <button class="btn ghost" id="agentCheckBtn" type="button" style="flex:0 0 auto">Check Agent ID</button>
+      </div>
+      <div class="status" id="agentCheckOut"></div>
+    </div>
+  </section>
+
+  <section id="token">
+    <div class="eyebrow2">BONUS TOKEN</div>
+    <h2>$PNDX</h2>
+    <p class="lede">Every <b>paid</b> mint earns <b>120,000 PNDX</b> — the PanduAGENT bonus token, claimable from the token contract. Free mints earn 0. PNDX is a bonus for minters, not a promise: <b>it has no price, no liquidity pool, and no guaranteed value</b>. If a pool ever exists, it will be announced — never assumed.</p>
+    <div class="tokgrid">
+      <div class="tok"><b>1,000,000,000</b><span>TOTAL SUPPLY</span></div>
+      <div class="tok"><b>540,000,000</b><span>BONUS POOL</span></div>
+      <div class="tok"><b>460,000,000</b><span>TREASURY</span></div>
+      <div class="tok"><b>120,000</b><span>PNDX PER PAID MINT</span></div>
+    </div>
+    <p class="fine">Max 480,000 PNDX per wallet (4 paid mints × 120,000). A 5-pack accrues 480,000 PNDX too — the PNDX token enforces a 480,000/wallet cap, so a public pack's 5th paid mint accrues 0. Worst case the pool needs ~213M PNDX if every paid mint is claimed — well inside the 540M pool. PNDX is the SAME token as Phase 1 (already deployed) — no new token.</p>
+  </section>
+
+  <section id="faq">
+    <div class="eyebrow2">QUESTIONS</div>
+    <h2>FAQ</h2>
+    <details>
+      <summary>Who gets the free mint?</summary>
+      <p>Only wallets holding a Binance <b>.ai Agent ID</b>, minted through their agent. Public wallets <b>cannot</b> claim the free mint — the contract enforces it on-chain. One free mint per wallet.</p>
+    </details>
+    <details>
+      <summary>Who can mint the paid animals?</summary>
+      <p><b>Anyone.</b> Connect any wallet on this page and pay flat BNB — paid mints cost <b>0.00126</b>, <b>0.00316</b>, <b>0.0041</b>, then <b>0.005 BNB</b> in order. Max 4 paid per wallet. No Agent ID needed, no oracle, no price surprises: the page reads your exact price from the contract before you confirm.</p>
+    </details>
+    <details>
+      <summary>What is the most one wallet pays?</summary>
+      <p>Max 5 animals per wallet — 1 free + 4 paid — so the most one wallet ever pays is <b>0.01352 BNB</b> plus gas (or <b>0.0108 BNB</b> with the 5-pack). Paid mints earn <b>120,000 PNDX</b> each (max 480,000 per wallet).</p>
+    </details>
+    <details>
+      <summary>What is $PNDX?</summary>
+      <p>PNDX is the bonus token for paid minters: <b>120,000 PNDX per paid mint</b> (max 480,000 per wallet). Total supply 1B — 540M in the bonus pool, 460M treasury. It has <b>no price and no liquidity pool yet</b>, and nothing here promises it will ever have one.</p>
+    </details>
+    <details>
+      <summary>When does mint open?</summary>
+      <p>Not yet — this is a <b>preview</b>. Mint opens after the contracts deploy; the date will be announced (shown in UTC). The bamboo above grows with every mint once it starts.</p>
+    </details>
+    <details>
+      <summary>What is the 5-pack?</summary>
+      <p>Buy all <b>5 animals in one transaction for 0.0108 BNB</b> — 20% off the 0.01352 BNB singles total (save 0.00272 BNB). It needs <b>0 mints so far</b> and uses your full 5/wallet allowance. Agent ID holders get their free mint as the first of the 5 (4 paid); everyone else pays for all 5. Either way it accrues <b>480,000 PNDX</b> (the token's wallet cap).</p>
+    </details>
+    <details>
+      <summary>Is PNDX the same token as Phase 1?</summary>
+      <p><b>Yes.</b> Phase 2 reuses the existing PNDX token — no new token is deployed. PNDX earned in Phase 1 and Phase 2 shares the same 540M bonus pool and the same 480,000/wallet cap.</p>
+    </details>
+  </section>
+
+  <section id="support">
+    <div class="eyebrow2">SPREAD THE WORD</div>
+    <h2>Support <span>PanduAGENT</span></h2>
+    <p class="lede">Follow the pack on X — <a href="https://x.com/PanduAGENT" target="_blank" rel="noopener">@PanduAGENT</a> — and post about them. Every share helps the bamboo grow. (Phase 2 uses the same X account as Phase 1.)</p>
+    <p class="lede"><b>PREVIEW — mint not open yet.</b> Phase 1 sold out 2,222/2,222; Phase 2 is coming. After deploy, buy or sell here on the <a href="market.html">PanduAGENT Phase 2 Market</a> or on <a href="https://element.market" target="_blank" rel="noopener">Element Market</a> (collection link activates after deploy).</p>
+    <div class="support">
+      <a class="btn gold" href="https://x.com/PanduAGENT" target="_blank" rel="noopener" style="text-align:center">Follow @PanduAGENT on X →</a>
+      <button class="btn" id="shareBtn" type="button">Post on X</button>
+      <a class="btn ghost" href="market.html" style="text-align:center">Visit the Market →</a>
+      <a class="btn ghost" href="https://element.market" target="_blank" rel="noopener" style="text-align:center">Trade on Element →</a>
+    </div>
+  </section>
+
+  <footer>
+    <div>PanduAGENT Phase 2 (PANDU2) — NFT contract: <span class="pred">PREDICTED — NOT DEPLOYED</span><br><code>0x9e5Dd59b5Df1d36de02454A1fD6d77ee5B07778B</code></div>
+    <div>PNDX token (reused from Phase 1): <span style="color:var(--green);font-weight:700">LIVE</span><br><code>0xeDd0cf58A052Ac073a4F14BE25e5be6a203cB8aE</code></div>
+    <div>Market contract: <span class="pred">PREDICTED — NOT DEPLOYED</span><br><code>0x92099c1142864b9d27258f2383C315789a66997C</code></div>
+    <div style="margin-top:10px">Chain: BNB Smart Chain (56) · Royalty 5% · Max 5 per wallet · Free mint: Agent ID only. Paid mints: public, wallet, flat BNB. 5-pack: 0.0108 BNB.</div>
+    <div>Honest rules: no promise of financial return. Mint prices, supply, and rarity ranges are published above. PNDX has no price or liquidity yet.</div>
+    <div>© 2026 PanduAGENT Phase 2. Street animals, raised by bamboo. Preview — contracts predicted, not deployed.</div>
+  </footer>
+</div>
+<script>
+"use strict";
+/* PanduAGENT Phase 2 — PREVIEW page. Contracts are NOT deployed yet; the
+   addresses below are CREATE2 PREDICTIONS. The PNDX token is the one live
+   contract (reused from Phase 1). All live reads target the NFT address;
+   with no code there yet the reads fail and the page shows the preview
+   state — never 0. */
+var NFT = "0x9e5Dd59b5Df1d36de02454A1fD6d77ee5B07778B";
+var PNDX = "0xeDd0cf58A052Ac073a4F14BE25e5be6a203cB8aE";
+var MARKET = "0x92099c1142864b9d27258f2383C315789a66997C";
+var REGISTRY = "0x60B9262456dE011F7d15a54CdD8c48bAaa8B022F";
+var MAX_SUPPLY = 2222;
+var MAX_PER_WALLET = 5;
+var FREE_PER_WALLET = 1;
+var MAX_PAID_PER_WALLET = 4;
+var BSC_CHAIN_ID = 56;
+/* mintPaid(uint256) — public paid-mint entry (two-lane contract).
+   mintFree() — agent-only free-mint entry. mintPack5() — 5-pack entry,
+   flat 0.0108 BNB. Selectors = first 4 bytes of keccak256(signature),
+   computed with ethers.id and verified against the PanduAgentPhase2
+   contract source. */
+var SEL_MINT_PAID = "0x26c7f77c";
+var SEL_MINT_FREE = "0x8ab53447";
+var SEL_MINT_PACK5 = "0xb1e1732c";
+var PACK_PRICE_WEI = 10800000000000000n; /* 0.0108 BNB */
+/* per-wallet views on the two-lane contract:
+   quotePaidFor(address,uint256) = exact wei cost for qty further paid mints;
+   paidMintedOf(address) / freeMintedOf(address) = the wallet's paid/free
+   counts (free and paid can be claimed in any order, so read both). */
+var SEL_QUOTE_PAID_FOR = "0xfba2a03e";
+var SEL_PAID_MINTED_OF = "0xb41e2f7b";
+var SEL_FREE_MINTED_OF = "0xf7b856b1";
+var SEL_MINT_OPEN = "0x24bbd049"; /* mintOpen() */
+
+var RPCS = [
+  "https://bsc-dataseed1.defibit.io/",
+  "https://bsc-dataseed.binance.org/",
+  "https://bsc-dataseed1.ninicoin.io/"
+];
+var SEL_TOTAL_SUPPLY = "0x18160ddd"; /* totalSupply() */
+var SEL_BALANCE = "0x70a08231";      /* balanceOf(address) */
+
+function $(id) { return document.getElementById(id); }
+function setText(id, t) { var el = $(id); if (el) el.textContent = t; }
+function hexPad32(n) { return BigInt(n).toString(16).padStart(64, "0"); }
+function fmtWei(wei) {
+  try {
+    var b = BigInt(wei);
+    var whole = b / 1000000000000000000n;
+    var frac = b % 1000000000000000000n;
+    var f = frac.toString().padStart(18, "0").replace(/0+$/, "");
+    return whole.toString() + (f ? "." + f.slice(0, 6) : "") + " BNB";
+  } catch (e) { return "?"; }
+}
+
+async function ethCall(to, data) {
+  var body = JSON.stringify({ jsonrpc: "2.0", id: 1, method: "eth_call", params: [{ to: to, data: data }, "latest"] });
+  for (var i = 0; i < RPCS.length; i++) {
+    var ctrl = new AbortController();
+    var t = setTimeout(function () { ctrl.abort(); }, 10000);
+    try {
+      var res = await fetch(RPCS[i], { method: "POST", headers: { "Content-Type": "application/json" }, body: body, signal: ctrl.signal });
+      clearTimeout(t);
+      if (!res.ok) continue;
+      var j = await res.json();
+      if (j && j.result && j.result !== "0x") return j.result;
+    } catch (e) { clearTimeout(t); }
+  }
+  throw new Error("all RPCs failed");
+}
+
+/* ---- live status: growing bamboo ----
+   The stalk grows taller as totalMinted/2222 rises; leaves sprout at
+   15% / 35% / 55% / 80%. Failed reads keep the preview shoot — never 0. */
+var LEAF_THRESHOLDS = [0.15, 0.35, 0.55, 0.8];
+function setBamboo(minted) {
+  var stalk = $("bambooStalk"), bar = $("bambooBar");
+  function setLeaves(frac) {
+    for (var i = 0; i < LEAF_THRESHOLDS.length; i++) {
+      var leaf = $("bambooLeaf" + (i + 1));
+      if (leaf) {
+        if (frac >= LEAF_THRESHOLDS[i]) leaf.classList.add("on");
+        else leaf.classList.remove("on");
+      }
+    }
+  }
+  if (minted === null) {
+    setText("bambooMinted", "—");
+    setText("bambooNote", "Live data unavailable right now. The bamboo wakes when the first animal is minted.");
+    if (bar) bar.style.width = "0%";
+    if (stalk) stalk.style.height = "24px";
+    setLeaves(0);
+    return;
+  }
+  var frac = Math.min(1, minted / MAX_SUPPLY);
+  setText("bambooMinted", String(minted));
+  if (bar) bar.style.width = (frac * 100).toFixed(1) + "%";
+  if (stalk) stalk.style.height = Math.round(24 + frac * 180) + "px";
+  setLeaves(frac);
+  setText("bambooNote", minted >= MAX_SUPPLY
+    ? "Sold out — all 2,222 Phase 2 animals minted. The bamboo stands tall."
+    : "Live on BNB Chain · " + minted + " / 2,222 minted · the bamboo grows with every mint.");
+}
+
+var contractLive = false; /* true once a totalSupply read succeeds */
+var mintOpen = false;
+async function readLive() {
+  try {
+    var raw = await ethCall(NFT, SEL_TOTAL_SUPPLY);
+    var minted = parseInt(raw, 16);
+    if (isNaN(minted)) { setBamboo(null); contractLive = false; updateMintButton(); return; }
+    setBamboo(minted);
+    contractLive = true;
+    try {
+      var openRaw = await ethCall(NFT, SEL_MINT_OPEN);
+      mintOpen = parseInt(openRaw, 16) === 1;
+    } catch (e) { mintOpen = false; }
+    updateMintButton();
+  } catch (e) {
+    /* preview state: never show a failed read as 0 */
+    setBamboo(null);
+    contractLive = false;
+    updateMintButton();
+  }
+}
+
+/* ---- public lane: wallet mint (paid) ---- */
+var connected = null;
+var myPaidCount = null; /* paid mints by the connected wallet, null = unknown */
+var myFreeCount = null; /* free mints by the connected wallet, null = unknown */
+var paidQty = 1;
+/* paid prices in micro-BNB (1e-6 BNB): 1st paid 0.00126, 2nd 0.00316,
+   3rd 0.0041, 4th 0.005 */
+var PAID_MICRO = [1260, 3160, 4100, 5000];
+
+function myPaid() { return myPaidCount === null ? 0 : myPaidCount; }
+function myFree() { return myFreeCount === null ? 0 : myFreeCount; }
+function myMinted() { return (myPaidCount === null || myFreeCount === null) ? null : myPaidCount + myFreeCount; }
+function plannedPaidMicro(paid, q) {
+  var total = 0;
+  for (var i = 1; i <= q; i++) {
+    var idx = paid + i;
+    total += (idx >= 1 && idx <= 4) ? PAID_MICRO[idx - 1] : 0;
+  }
+  return total;
+}
+function fmtMicro(m) {
+  if (m === 0) return "FREE";
+  return (m / 1000000).toFixed(5).replace(/0+$/, "").replace(/\.$/, "") + " BNB";
+}
+function updatePaid() {
+  var maxQ = MAX_PAID_PER_WALLET - myPaid();
+  if (maxQ <= 0) {
+    setText("paidQtyVal", "0");
+    setText("paidTotal", "—");
+    setText("publicStatus", "Your wallet already minted all 4 paid animals (4/4). The free mint, if unclaimed, is for Agent ID holders via their agent.");
+    updateMintButton();
+    return;
+  }
+  if (paidQty > maxQ) paidQty = maxQ;
+  if (paidQty < 1) paidQty = 1;
+  setText("paidQtyVal", String(paidQty));
+  setText("paidTotal", fmtMicro(plannedPaidMicro(myPaid(), paidQty)));
+  updateMintButton();
+}
+function updateMintButton() {
+  var b = $("mintNowBtn");
+  if (!b) return;
+  if (!contractLive || !mintOpen || !connected) { b.disabled = true; updatePackButton(); return; }
+  b.disabled = (MAX_PAID_PER_WALLET - myPaid() < 1);
+  updatePackButton();
+}
+/* 5-pack button: needs a live open contract, a connected wallet, and
+   0 mints so far (the pack uses the full 5/wallet allowance). */
+function updatePackButton() {
+  var b = $("packMintBtn");
+  if (!b) return;
+  var total = myMinted();
+  b.disabled = true;
+  if (!contractLive || !mintOpen || !connected) return;
+  if (total === null) return; /* minted count unknown — keep disabled */
+  if (total === 0) b.disabled = false;
+  var st = $("packStatus");
+  if (st) {
+    if (total > 0) st.textContent = "Your wallet already minted " + total + " animal(s) — the 5-pack needs 0 mints so far.";
+    else st.textContent = "Ready — 5 animals for 0.0108 BNB (save 0.00272 BNB).";
+  }
+}
+function setMyMintsLine() {
+  var el = $("myMintsLine");
+  if (!el) return;
+  if (!connected) { el.textContent = "Your wallet: not connected."; return; }
+  var total = myMinted();
+  if (total === null) { el.textContent = "Your wallet: " + connected.slice(0, 6) + "…" + connected.slice(-4) + " — minted count unknown. Planned price assumes 0 paid so far."; return; }
+  el.textContent = "Your wallet: " + connected.slice(0, 6) + "…" + connected.slice(-4) + " — minted " + total + " / 5 (" + myFree() + " free + " + myPaid() + " paid). " + (MAX_PAID_PER_WALLET - myPaid()) + " paid mint(s) left.";
+}
+async function readMyMints() {
+  if (!connected) return;
+  var pad = "000000000000000000000000" + connected.slice(2).toLowerCase();
+  try {
+    var rawPaid = await ethCall(NFT, SEL_PAID_MINTED_OF + pad);
+    myPaidCount = parseInt(rawPaid, 16);
+    if (isNaN(myPaidCount)) myPaidCount = null;
+  } catch (e) { myPaidCount = null; }
+  try {
+    var rawFree = await ethCall(NFT, SEL_FREE_MINTED_OF + pad);
+    myFreeCount = parseInt(rawFree, 16);
+    if (isNaN(myFreeCount)) myFreeCount = null;
+  } catch (e) { myFreeCount = null; }
+  setMyMintsLine();
+  updatePaid();
+}
+function bindPaid(id, fn) { var b = $(id); if (b) b.addEventListener("click", fn); }
+bindPaid("paidMinus", function () { paidQty = Math.max(1, paidQty - 1); updatePaid(); });
+bindPaid("paidPlus", function () { var cap = MAX_PAID_PER_WALLET - myPaid(); if (cap >= 1) paidQty = Math.min(cap, paidQty + 1); updatePaid(); });
+
+async function connectWallet() {
+  var btn = $("connectWalletBtn");
+  var out = $("publicStatus");
+  if (!window.ethereum) { out.textContent = "No wallet found. Install MetaMask or open this page in the Binance Wallet app."; return; }
+  try {
+    var accs = await window.ethereum.request({ method: "eth_requestAccounts" });
+    connected = accs[0];
+    btn.textContent = connected.slice(0, 6) + "…" + connected.slice(-4);
+    await ensureBsc();
+    out.textContent = "Connected. Reading your minted count from the contract…";
+    await readLive();
+    await readMyMints();
+    out.textContent = contractLive
+      ? (mintOpen ? "Connected — mint is open. Pick your quantity and press Mint now." : "Connected — mint is not open yet. Come back at the announced time.")
+      : "Connected — could not read the contract. Try again in a moment.";
+    updatePaid();
+  } catch (e) {
+    out.textContent = "Wallet connection failed: " + (e && e.message ? e.message : e);
+  }
+}
+async function ensureBsc() {
+  try {
+    var chainId = await window.ethereum.request({ method: "eth_chainId" });
+    if (parseInt(chainId, 16) !== BSC_CHAIN_ID) {
+      await window.ethereum.request({ method: "wallet_switchEthereumChain", params: [{ chainId: "0x38" }] });
+    }
+  } catch (e) {
+    if (e && e.code === 4902) {
+      await window.ethereum.request({ method: "wallet_addEthereumChain", params: [{ chainId: "0x38", chainName: "BNB Smart Chain", nativeCurrency: { name: "BNB", symbol: "BNB", decimals: 18 }, rpcUrls: ["https://bsc-dataseed.binance.org/"], blockExplorerUrls: ["https://bscscan.com"] }] });
+    } else { throw e; }
+  }
+}
+async function doMintPaid() {
+  var out = $("publicStatus");
+  if (!contractLive) { out.textContent = "Could not read the contract. Try again in a moment."; return; }
+  if (!mintOpen) { out.textContent = "Mint is not open yet."; return; }
+  if (!connected) { await connectWallet(); if (!connected) return; }
+  if (MAX_PAID_PER_WALLET - myPaid() < paidQty) { out.textContent = "You already minted " + myPaid() + " paid animal(s) — max 4 paid per wallet."; return; }
+  try {
+    out.textContent = "Reading your exact price from the contract…";
+    var valueWei = null;
+    try {
+      var qdata = SEL_QUOTE_PAID_FOR + "000000000000000000000000" + connected.slice(2).toLowerCase() + hexPad32(paidQty);
+      var qraw = await ethCall(NFT, qdata);
+      valueWei = BigInt(qraw);
+    } catch (e) { valueWei = null; }
+    if (valueWei === null) valueWei = BigInt(plannedPaidMicro(myPaid(), paidQty)) * 1000000000000n;
+    out.textContent = "Confirm " + fmtWei(valueWei.toString()) + " in your wallet…";
+    await ensureBsc();
+    var tx = { from: connected, to: NFT, data: SEL_MINT_PAID + hexPad32(paidQty), value: "0x" + valueWei.toString(16) };
+    var hash = await window.ethereum.request({ method: "eth_sendTransaction", params: [tx] });
+    out.textContent = "Mint sent! Tx " + hash.slice(0, 18) + "… — refreshing your count.";
+    setTimeout(function () { readLive(); readMyMints(); }, 4000);
+  } catch (e) {
+    out.textContent = "Mint failed: " + (e && e.message ? e.message : e);
+  }
+}
+/* ---- 5-pack: mint 5 in one tx for a flat 0.0108 BNB ---- */
+async function doMintPack() {
+  var out = $("packStatus");
+  if (!contractLive) { out.textContent = "Preview — the 5-pack is not deployed yet."; return; }
+  if (!mintOpen) { out.textContent = "Mint is not open yet."; return; }
+  if (!connected) { await connectWallet(); if (!connected) return; }
+  if (myMinted() === null) { await readMyMints(); }
+  if (myMinted() !== 0) { out.textContent = "Your wallet already minted " + myMinted() + " animal(s) — the 5-pack needs 0 mints so far."; return; }
+  try {
+    out.textContent = "Confirm 0.0108 BNB in your wallet…";
+    await ensureBsc();
+    var tx = { from: connected, to: NFT, data: SEL_MINT_PACK5, value: "0x" + PACK_PRICE_WEI.toString(16) };
+    var hash = await window.ethereum.request({ method: "eth_sendTransaction", params: [tx] });
+    out.textContent = "5-pack sent! Tx " + hash.slice(0, 18) + "… — refreshing your count.";
+    setTimeout(function () { readLive(); readMyMints(); }, 4000);
+  } catch (e) {
+    out.textContent = "5-pack failed: " + (e && e.message ? e.message : e);
+  }
+}
+var packMintBtn = $("packMintBtn");
+if (packMintBtn) packMintBtn.addEventListener("click", doMintPack);
+
+var connectWalletBtn = $("connectWalletBtn");
+if (connectWalletBtn) connectWalletBtn.addEventListener("click", connectWallet);
+var mintNowBtn = $("mintNowBtn");
+if (mintNowBtn) mintNowBtn.addEventListener("click", doMintPaid);
+
+/* ---- hamburger menu (mobile nav) ---- */
+var burgerBtn = $("burgerBtn"), mainNav = $("mainNav");
+if (burgerBtn && mainNav) {
+  burgerBtn.addEventListener("click", function () {
+    var open = mainNav.classList.toggle("open");
+    burgerBtn.classList.toggle("open", open);
+    burgerBtn.setAttribute("aria-expanded", open ? "true" : "false");
+  });
+  mainNav.addEventListener("click", function (e) {
+    if (e.target && e.target.tagName === "A") {
+      mainNav.classList.remove("open");
+      burgerBtn.classList.remove("open");
+      burgerBtn.setAttribute("aria-expanded", "false");
+    }
+  });
+}
+
+/* ---- priority lane: agent prompt for the FREE mint ---- */
+function buildAgentPrompt() {
+  var live = "Use my Binance Agentic Wallet on BSC (chain 56) to call mintFree() on the PanduAGENT Phase 2 contract 0x9e5Dd59b5Df1d36de02454A1fD6d77ee5B07778B and mint my FREE PanduAGENT Phase 2 (mint #1, Agent ID required). My wallet holds a .ai Agent ID and has not claimed its free mint yet. Mint is open. Simulate first, then execute.";
+  var preview = "PREVIEW — PanduAGENT Phase 2 is not deployed yet. Do NOT execute any mint. Use my Binance Agentic Wallet on BSC (chain 56) to SIMULATE ONLY a call to mintFree() on the predicted PanduAGENT Phase 2 contract 0x9e5Dd59b5Df1d36de02454A1fD6d77ee5B07778B (mint #1, Agent ID required). My wallet holds a .ai Agent ID. Mint is NOT open yet.";
+  return mintOpen ? live : preview;
+}
+function buildPackPrompt() {
+  return "Use my Binance Agentic Wallet on BSC (chain 56) to call mintPack5() on the PanduAGENT Phase 2 contract 0x9e5Dd59b5Df1d36de02454A1fD6d77ee5B07778B and mint 5 animals in one transaction for a flat 0.0108 BNB (20% off the 0.01352 BNB singles total). My wallet has minted 0 so far and holds a .ai Agent ID, so the first of the 5 is my free mint. Simulate first, then execute. Mint is open.";
+}
+function openAgentPrompt() {
+  var box = $("agentPromptBox");
+  if (box) {
+    $("agentPrompt").textContent = buildAgentPrompt();
+    box.style.display = "block";
+    box.scrollIntoView({ behavior: "smooth", block: "nearest" });
+  }
+}
+var showPromptBtn = $("showPromptBtn");
+if (showPromptBtn) showPromptBtn.addEventListener("click", openAgentPrompt);
+var copyPromptBtn = $("copyPromptBtn");
+if (copyPromptBtn) copyPromptBtn.addEventListener("click", function () {
+  if ($("agentPromptBox").style.display !== "block") openAgentPrompt();
+  var text = $("agentPrompt").textContent;
+  function done(ok) { copyPromptBtn.textContent = ok ? "Copied ✓" : "Copy failed — select the text manually"; }
+  if (navigator.clipboard && navigator.clipboard.writeText) {
+    navigator.clipboard.writeText(text).then(function () { done(true); }, function () { done(false); });
+  } else {
+    var ta = document.createElement("textarea");
+    ta.value = text; document.body.appendChild(ta); ta.select();
+    try { done(document.execCommand("copy")); } catch (e) { done(false); }
+    document.body.removeChild(ta);
+  }
+});
+
+/* ---- Agent ID checker (read-only) ---- */
+var agentCheckBtn = $("agentCheckBtn");
+if (agentCheckBtn) agentCheckBtn.addEventListener("click", function () {
+  var addr = ($("agentAddr").value || "").trim();
+  var out = $("agentCheckOut");
+  if (!/^0x[0-9a-fA-F]{40}$/.test(addr)) { out.textContent = "Enter a valid 0x address (40 hex characters)."; return; }
+  out.textContent = "Checking on-chain…";
+  var data = SEL_BALANCE + "000000000000000000000000" + addr.slice(2).toLowerCase();
+  ethCall(REGISTRY, data).then(function (bal) {
+    var n = parseInt(bal, 16);
+    out.textContent = n > 0
+      ? "✓ This wallet holds an Agent ID (.ai) — it can mint Phase 2 (first mint free, then 0.00126 / 0.00316 / 0.0041 / 0.005 BNB, or the 5-pack at 0.0108 BNB, max 5 per wallet)."
+      : "✗ No Agent ID found for this address — it cannot mint. Claim a free .ai Agent ID in the Binance app first.";
+    out.className = "status " + (n > 0 ? "ok" : "err");
+  }).catch(function () {
+    out.textContent = "Could not read the chain right now — please try again.";
+    out.className = "status err";
+  });
+});
+
+/* ---- share on X — draft built at click time, official handle @PanduAGENT ---- */
+var shareBtn = $("shareBtn");
+if (shareBtn) {
+  shareBtn.addEventListener("click", function () {
+    var minted = $("bambooMinted") ? $("bambooMinted").textContent : "—";
+    var text = (minted === "—")
+      ? "PanduAGENT Phase 2 — preview! 2,222 new street animals on BNB Chain: new outfits, new friends. First mint FREE, then 0.00126 / 0.00316 / 0.0041 / 0.005 BNB, or 5 at once for 0.0108 BNB. Mint opens soon. @PanduAGENT #PanduAGENT #BNBAgents"
+      : "PanduAGENT Phase 2 — " + minted + " / 2,222 street animals minted on BNB Chain. First mint FREE, then 0.00126 / 0.00316 / 0.0041 / 0.005 BNB, or 5 at once for 0.0108 BNB. #PanduAGENT #BNBAgents";
+    var url = "https://twitter.com/intent/tweet?text=" + encodeURIComponent(text) + "&url=" + encodeURIComponent("https://panduagent-phase2.vercel.app/");
+    window.open(url, "_blank", "noopener");
+  });
+}
+
+updatePaid();
+readLive();
+setInterval(readLive, 30000);
+</script>
+</body>
+</html>
